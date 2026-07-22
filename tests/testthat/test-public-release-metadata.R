@@ -22,7 +22,7 @@ testthat::test_that("software and content licence boundaries are explicit", {
   content <- read_repo_text("LICENSE-CONTENT.md")
 
   testthat::expect_match(software, "^MIT License")
-  testthat::expect_match(software, "Hao Lv and contributors", fixed = TRUE)
+  testthat::expect_match(software, "Hao Lyu and contributors", fixed = TRUE)
   testthat::expect_match(content, "Creative Commons Attribution 4.0", fixed = TRUE)
   testthat::expect_match(scope, "CMAISE/OMIX011182", fixed = TRUE)
   testthat::expect_match(scope, "MSigDB Hallmark", fixed = TRUE)
@@ -35,7 +35,7 @@ testthat::test_that("citation metadata uses the final identity without claiming 
   final_url <- "https://github.com/lvhao1123/SIC-longitudinal-multiomics"
 
   testthat::expect_match(citation, "cff-version: 1.2.0", fixed = TRUE)
-  testthat::expect_match(citation, "family-names: Lv", fixed = TRUE)
+  testthat::expect_match(citation, "family-names: Lyu", fixed = TRUE)
   testthat::expect_match(citation, "given-names: Hao", fixed = TRUE)
   testthat::expect_match(citation, paste0("repository-code: ", final_url), fixed = TRUE)
   testthat::expect_false(grepl("(?m)^version:", citation, perl = TRUE))
