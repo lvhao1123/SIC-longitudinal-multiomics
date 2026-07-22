@@ -1,0 +1,7 @@
+scenario	genes_total	genes_converged	nonfinite_beta	nonfinite_robust_SE	genes_entering_GSEA	PH_attempted	PH_success	PH_pass
+entry4_SOFA_D3	14541	14541	0	0	14541	14541	14541	13096
+entry4_SOFA_noD3	14541	14541	0	0	14541	0	0	0
+entry4_PF_PLT_D3	14541	14541	0	0	14541	0	0	0
+entry4_PF_PLT_noD3	14541	14541	0	0	14541	0	0	0
+entry3.75_SOFA_D3	14541	14541	0	0	14541	0	0	0
+entry4.25_SOFA_D3	14541	14541	0	0	14541	0	0	0

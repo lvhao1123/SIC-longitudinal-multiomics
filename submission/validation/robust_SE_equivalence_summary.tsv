@@ -1,0 +1,5 @@
+metric	max_absolute_difference	tolerance	passed
+coefficient	0	1e-10	TRUE
+robust_SE	1.11022302462516e-16	1e-10	TRUE
+Wald_z	8.88178419700125e-16	1e-10	TRUE
+P_value	3.33066907387547e-16	1e-10	TRUE

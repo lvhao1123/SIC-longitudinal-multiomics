@@ -1,0 +1,14 @@
+check	passed
+source_N_504	TRUE
+entry4_support_N_487	TRUE
+entry4_observed_N_320	TRUE
+entry4_events_53	TRUE
+zero_all_partial_centres_3_13_14	TRUE
+availability_missingness_zero	TRUE
+protein_D3_D5_nested	TRUE
+all_entry4_models_full_rank	TRUE
+all_entry4_models_no_separation	TRUE
+all_observation_centres_probability_weight_one	TRUE
+all_analysis_weights_mean_one	TRUE
+all_Cox_scenarios_produced	TRUE
+all_GSEA_scenarios_produced	TRUE

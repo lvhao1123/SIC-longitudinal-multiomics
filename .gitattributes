@@ -1,0 +1,22 @@
+# Normal repository text files use LF in Git.
+*.R text eol=lf
+*.md text eol=lf
+*.tsv text eol=lf
+*.yml text eol=lf
+
+# Preserve the byte identity of frozen canonical scripts across platforms.
+outputs/SIC_reanalysis_2026-07-11/code/*.R -text
+outputs/SIC_reanalysis_2026-07-11/code/00_config.R text eol=lf
+outputs/SIC_reanalysis_2026-07-11/tests/test_10_availability_ipw.R -text
+
+# Preserve frozen submission assets and their manifest hashes byte-for-byte.
+submission/** -text
+submission/figures/** -text -diff
+submission/public_source_data/** -text -diff
+submission/numeric_truth_*.tsv -text -diff
+submission/manuscript_support/** -text -diff
+submission/qa/** -text -diff
+submission/public_manifest.tsv -text -diff
+
+# Vendored renv bootstrap is generated upstream and kept byte-for-byte.
+renv/activate.R -text -diff

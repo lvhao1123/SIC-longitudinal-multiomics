@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: >-
+  If you use this repository, please cite the associated peer-reviewed article
+  when available and the versioned repository release used in your analysis.
+title: >-
+  SIC longitudinal multi-omics analysis: data-free reproducibility repository
+type: software
+authors:
+  - family-names: Lv
+    given-names: Hao
+repository-code: https://github.com/lvhao1123/SIC-longitudinal-multiomics
+url: https://github.com/lvhao1123/SIC-longitudinal-multiomics
+abstract: >-
+  Analysis code, aggregate non-identifiable result tables, figure source data,
+  quality-assurance outputs and software-environment records supporting a
+  longitudinal transcriptomic and proteomic study of sepsis-induced
+  coagulopathy. Participant-level CMAISE/OMIX011182 data are controlled access
+  and are not redistributed.
+keywords:
+  - sepsis-induced coagulopathy
+  - longitudinal multi-omics
+  - transcriptomics
+  - proteomics
+  - survival analysis
+  - reproducibility

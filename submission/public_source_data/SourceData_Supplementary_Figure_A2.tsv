@@ -1,0 +1,361 @@
+scenario	measure	bin	count	mid	scenario_label
+lower__SOFA_D3	analysis_weight	bin01	0	0.0466666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin02	0	0.14	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin03	0	0.233333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin04	0	0.326666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin05	0	0.42	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin06	0	0.513333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin07	0	0.606666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin08	0	0.7	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin09	106	0.793333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin10	80	0.886666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin11	37	0.98	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin12	29	1.07333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin13	18	1.16666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin14	17	1.26	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin15	9	1.35333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin16	0	1.44666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin17	7	1.54	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin18	8	1.63333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin19	0	1.72666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin20	4	1.82	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin21	0	1.91333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin22	0	2.00666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin23	1	2.1	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin24	1	2.19333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin25	0	2.28666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin26	0	2.38	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin27	0	2.47333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin28	0	2.56666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin29	0	2.66	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	analysis_weight	bin30	4	2.75333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin01	36	0.0166666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin02	26	0.05	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin03	4	0.0833333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin04	2	0.116666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin05	2	0.15	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin06	0	0.183333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin07	2	0.216666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin08	3	0.25	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin09	1	0.283333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin10	3	0.316666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin11	8	0.35	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin12	1	0.383333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin13	7	0.416666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin14	12	0.45	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin15	14	0.483333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin16	7	0.516666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin17	12	0.55	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin18	14	0.583333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin19	21	0.616666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin20	21	0.65	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin21	26	0.683333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin22	18	0.716666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin23	24	0.75	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin24	12	0.783333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin25	24	0.816666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin26	38	0.85	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin27	42	0.883333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin28	29	0.916666666666667	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin29	14	0.95	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+lower__SOFA_D3	probability	bin30	66	0.983333333333333	Lower entry boundary | baseline SOFA + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin01	0	0.055	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin02	0	0.165	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin03	0	0.275	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin04	0	0.385	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin05	0	0.495	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin06	0	0.605	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin07	64	0.715	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin08	87	0.825	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin09	63	0.935	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin10	34	1.045	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin11	26	1.155	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin12	16	1.265	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin13	4	1.375	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin14	6	1.485	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin15	5	1.595	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin16	5	1.705	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin17	2	1.815	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin18	3	1.925	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin19	0	2.035	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin20	1	2.145	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin21	0	2.255	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin22	0	2.365	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin23	0	2.475	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin24	0	2.585	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin25	0	2.695	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin26	0	2.805	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin27	0	2.915	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin28	0	3.025	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin29	0	3.135	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	analysis_weight	bin30	4	3.245	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin01	43	0.0166666666666667	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin02	18	0.05	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin03	4	0.0833333333333333	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin04	3	0.116666666666667	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin05	1	0.15	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin06	1	0.183333333333333	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin07	4	0.216666666666667	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin08	2	0.25	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin09	3	0.283333333333333	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin10	2	0.316666666666667	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin11	6	0.35	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin12	6	0.383333333333333	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin13	7	0.416666666666667	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin14	11	0.45	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin15	5	0.483333333333333	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin16	13	0.516666666666667	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin17	9	0.55	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin18	21	0.583333333333333	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin19	20	0.616666666666667	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin20	14	0.65	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin21	24	0.683333333333333	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin22	19	0.716666666666667	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin23	22	0.75	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin24	20	0.783333333333333	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin25	20	0.816666666666667	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin26	37	0.85	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin27	28	0.883333333333333	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin28	36	0.916666666666667	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin29	23	0.95	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_D3	probability	bin30	65	0.983333333333333	Primary entry | P/F + PLT + prior D3 RNA availability
+primary__PF_PLT_noD3	analysis_weight	bin01	0	0.0516666666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin02	0	0.155	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin03	0	0.258333333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin04	0	0.361666666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin05	0	0.465	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin06	0	0.568333333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin07	72	0.671666666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin08	82	0.775	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin09	45	0.878333333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin10	33	0.981666666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin11	24	1.085	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin12	17	1.18833333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin13	11	1.29166666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin14	7	1.395	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin15	4	1.49833333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin16	0	1.60166666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin17	2	1.705	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin18	3	1.80833333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin19	2	1.91166666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin20	1	2.015	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin21	2	2.11833333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin22	0	2.22166666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin23	1	2.325	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin24	2	2.42833333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin25	2	2.53166666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin26	2	2.635	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin27	2	2.73833333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin28	0	2.84166666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin29	1	2.945	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	analysis_weight	bin30	5	3.04833333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin01	0	0.0166666666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin02	0	0.05	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin03	1	0.0833333333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin04	4	0.116666666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin05	9	0.15	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin06	7	0.183333333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin07	15	0.216666666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin08	16	0.25	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin09	9	0.283333333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin10	8	0.316666666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin11	10	0.35	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin12	11	0.383333333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin13	8	0.416666666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin14	18	0.45	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin15	9	0.483333333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin16	19	0.516666666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin17	22	0.55	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin18	20	0.583333333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin19	21	0.616666666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin20	23	0.65	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin21	27	0.683333333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin22	14	0.716666666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin23	28	0.75	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin24	13	0.783333333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin25	35	0.816666666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin26	26	0.85	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin27	25	0.883333333333333	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin28	25	0.916666666666667	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin29	4	0.95	Primary entry | P/F + PLT
+primary__PF_PLT_noD3	probability	bin30	60	0.983333333333333	Primary entry | P/F + PLT
+primary__SOFA_D3	analysis_weight	bin01	0	0.045	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin02	0	0.135	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin03	0	0.225	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin04	0	0.315	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin05	0	0.405	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin06	0	0.495	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin07	0	0.585	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin08	0	0.675	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin09	79	0.765	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin10	91	0.855	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin11	35	0.945	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin12	33	1.035	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin13	22	1.125	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin14	21	1.215	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin15	5	1.305	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin16	8	1.395	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin17	5	1.485	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin18	4	1.575	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin19	6	1.665	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin20	4	1.755	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin21	1	1.845	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin22	0	1.935	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin23	1	2.025	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin24	1	2.115	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin25	0	2.205	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin26	0	2.295	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin27	0	2.385	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin28	0	2.475	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin29	0	2.565	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	analysis_weight	bin30	4	2.655	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin01	38	0.0166666666666667	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin02	24	0.05	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin03	4	0.0833333333333333	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin04	2	0.116666666666667	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin05	2	0.15	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin06	0	0.183333333333333	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin07	0	0.216666666666667	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin08	4	0.25	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin09	3	0.283333333333333	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin10	4	0.316666666666667	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin11	1	0.35	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin12	7	0.383333333333333	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin13	5	0.416666666666667	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin14	15	0.45	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin15	14	0.483333333333333	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin16	8	0.516666666666667	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin17	10	0.55	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin18	12	0.583333333333333	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin19	22	0.616666666666667	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin20	21	0.65	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin21	23	0.683333333333333	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin22	21	0.716666666666667	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin23	22	0.75	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin24	13	0.783333333333333	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin25	20	0.816666666666667	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin26	37	0.85	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin27	40	0.883333333333333	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin28	33	0.916666666666667	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin29	16	0.95	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_D3	probability	bin30	66	0.983333333333333	Primary entry | baseline SOFA + prior D3 RNA availability
+primary__SOFA_noD3	analysis_weight	bin01	0	0.055	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin02	0	0.165	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin03	0	0.275	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin04	0	0.385	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin05	0	0.495	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin06	60	0.605	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin07	54	0.715	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin08	66	0.825	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin09	30	0.935	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin10	40	1.045	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin11	22	1.155	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin12	13	1.265	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin13	7	1.375	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin14	3	1.485	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin15	2	1.595	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin16	1	1.705	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin17	2	1.815	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin18	1	1.925	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin19	2	2.035	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin20	0	2.145	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin21	2	2.255	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin22	2	2.365	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin23	1	2.475	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin24	2	2.585	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin25	2	2.695	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin26	1	2.805	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin27	1	2.915	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin28	1	3.025	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin29	1	3.135	Primary entry | baseline SOFA
+primary__SOFA_noD3	analysis_weight	bin30	4	3.245	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin01	0	0.0166666666666667	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin02	0	0.05	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin03	0	0.0833333333333333	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin04	3	0.116666666666667	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin05	3	0.15	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin06	11	0.183333333333333	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin07	19	0.216666666666667	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin08	13	0.25	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin09	12	0.283333333333333	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin10	6	0.316666666666667	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin11	12	0.35	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin12	6	0.383333333333333	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin13	6	0.416666666666667	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin14	13	0.45	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin15	15	0.483333333333333	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin16	17	0.516666666666667	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin17	22	0.55	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin18	28	0.583333333333333	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin19	29	0.616666666666667	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin20	29	0.65	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin21	20	0.683333333333333	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin22	14	0.716666666666667	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin23	16	0.75	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin24	21	0.783333333333333	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin25	32	0.816666666666667	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin26	33	0.85	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin27	30	0.883333333333333	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin28	11	0.916666666666667	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin29	6	0.95	Primary entry | baseline SOFA
+primary__SOFA_noD3	probability	bin30	60	0.983333333333333	Primary entry | baseline SOFA
+upper__SOFA_D3	analysis_weight	bin01	0	0.045	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin02	0	0.135	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin03	0	0.225	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin04	0	0.315	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin05	0	0.405	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin06	0	0.495	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin07	0	0.585	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin08	0	0.675	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin09	79	0.765	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin10	91	0.855	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin11	35	0.945	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin12	33	1.035	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin13	22	1.125	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin14	21	1.215	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin15	5	1.305	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin16	8	1.395	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin17	5	1.485	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin18	4	1.575	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin19	6	1.665	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin20	4	1.755	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin21	1	1.845	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin22	0	1.935	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin23	1	2.025	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin24	1	2.115	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin25	0	2.205	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin26	0	2.295	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin27	0	2.385	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin28	0	2.475	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin29	0	2.565	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	analysis_weight	bin30	4	2.655	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin01	38	0.0166666666666667	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin02	24	0.05	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin03	4	0.0833333333333333	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin04	2	0.116666666666667	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin05	2	0.15	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin06	0	0.183333333333333	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin07	0	0.216666666666667	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin08	4	0.25	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin09	3	0.283333333333333	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin10	4	0.316666666666667	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin11	1	0.35	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin12	7	0.383333333333333	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin13	5	0.416666666666667	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin14	15	0.45	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin15	14	0.483333333333333	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin16	8	0.516666666666667	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin17	10	0.55	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin18	12	0.583333333333333	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin19	22	0.616666666666667	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin20	21	0.65	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin21	23	0.683333333333333	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin22	21	0.716666666666667	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin23	22	0.75	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin24	13	0.783333333333333	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin25	20	0.816666666666667	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin26	37	0.85	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin27	40	0.883333333333333	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin28	33	0.916666666666667	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin29	16	0.95	Upper entry boundary | baseline SOFA + prior D3 RNA availability
+upper__SOFA_D3	probability	bin30	66	0.983333333333333	Upper entry boundary | baseline SOFA + prior D3 RNA availability

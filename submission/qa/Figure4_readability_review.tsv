@@ -1,0 +1,4 @@
+format	status	conclusion
+single-column 89 mm	PASS_EXTENDED_HEIGHT	Readable after a one-column-by-six-panel reflow; the 440-mm height is a review export, not a single-page submission layout.
+double-column 183 mm	PASS	Readable after a two-column-by-three-row reflow; axes and confidence intervals remain visible.
+full-page 183x225 mm	PASS	Preferred submission layout; labels, confidence intervals and legends are readable.

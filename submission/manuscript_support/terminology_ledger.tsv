@@ -1,0 +1,8 @@
+canonical_term	original_identifier_or_variant	decision
+TNF-α signaling via NF-κB	TNFA_SIGNALING_VIA_NFKB	Standardize display label; retain original Hallmark ID in source data
+IL-6/JAK/STAT3 signaling	IL6_JAK_STAT3_SIGNALING	Standardize display label; retain original Hallmark ID in source data
+MYC targets V1	MYC_TARGETS_V1	Standardize display label; retain original Hallmark ID in source data
+E2F targets	E2F_TARGETS	Standardize display label; retain original Hallmark ID in source data
+DNA repair	DNA_REPAIR	Standardize display label; retain original Hallmark ID in source data
+mTORC1 signaling	MTORC1_SIGNALING	Standardize display label; retain original Hallmark ID in source data
+time-specific prognostic models	deprecated longitudinal-exposure wording	Use for separate day-specific Cox analyses; prohibit single-model time-dependent wording

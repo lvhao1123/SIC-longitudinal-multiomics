@@ -1,0 +1,289 @@
+analysis	pathway	NES	padj	size	analysis_label	pathway_label
+entry3.75_SOFA_D3__all_valid	APICAL_JUNCTION	1.50630184365662	0.014728255438882	131	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Apical junction
+entry3.75_SOFA_D3__all_valid	COAGULATION	1.42968449731774	0.0482006879516477	87	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Coagulation
+entry3.75_SOFA_D3__all_valid	COMPLEMENT	1.63628312331987	0.00220763665467045	169	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Complement
+entry3.75_SOFA_D3__all_valid	DNA_REPAIR	-1.53546973341132	0.00778370667400168	144	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	DNA repair
+entry3.75_SOFA_D3__all_valid	E2F_TARGETS	-1.80004102946708	4.72064984085344e-05	200	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	E2F targets
+entry3.75_SOFA_D3__all_valid	EPITHELIAL_MESENCHYMAL_TRANSITION	1.21178464347557	0.197936310646323	119	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Epithelial–mesenchymal transition
+entry3.75_SOFA_D3__all_valid	GLYCOLYSIS	1.29303105976049	0.0800574046475686	166	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Glycolysis
+entry3.75_SOFA_D3__all_valid	HEME_METABOLISM	2.2881261506849	9.34028598269587e-10	189	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Heme metabolism
+entry3.75_SOFA_D3__all_valid	HYPOXIA	2.1659905562205	2.16105810634151e-07	153	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Hypoxia
+entry3.75_SOFA_D3__all_valid	IL6_JAK_STAT3_SIGNALING	2.23050741715712	4.86193059967199e-06	72	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	IL-6/JAK/STAT3 signaling
+entry3.75_SOFA_D3__all_valid	INFLAMMATORY_RESPONSE	1.92714314348398	2.51503174890731e-05	157	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Inflammatory response
+entry3.75_SOFA_D3__all_valid	INTERFERON_ALPHA_RESPONSE	1.37137240805197	0.0738357843137255	94	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	IFN-α response
+entry3.75_SOFA_D3__all_valid	INTERFERON_GAMMA_RESPONSE	1.437850400233	0.018016414336732	189	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	IFN-γ response
+entry3.75_SOFA_D3__all_valid	MYC_TARGETS_V1	-3.02996820878921	5.94093832549138e-24	198	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	MYC targets V1
+entry3.75_SOFA_D3__all_valid	OXIDATIVE_PHOSPHORYLATION	-2.28123406682109	5.34048143191144e-10	200	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Oxidative phosphorylation
+entry3.75_SOFA_D3__all_valid	REACTIVE_OXYGEN_SPECIES_PATHWAY	1.89989936746786	0.00157250458535305	48	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Reactive oxygen species pathway
+entry3.75_SOFA_D3__all_valid	TNFA_SIGNALING_VIA_NFKB	1.92512094328559	1.2999522590736e-05	173	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	TNF-α signaling via NF-κB
+entry3.75_SOFA_D3__all_valid	UNFOLDED_PROTEIN_RESPONSE	-1.83819141934517	0.000455776226429058	109	"Lower entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Unfolded protein response
+entry4.25_SOFA_D3__all_valid	APICAL_JUNCTION	1.50909596490436	0.01396289104962	131	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Apical junction
+entry4.25_SOFA_D3__all_valid	COAGULATION	1.41483160140496	0.0542513546083714	87	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Coagulation
+entry4.25_SOFA_D3__all_valid	COMPLEMENT	1.68154743291526	0.00122628942144099	169	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Complement
+entry4.25_SOFA_D3__all_valid	DNA_REPAIR	-1.55113730865596	0.00674211268020074	144	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	DNA repair
+entry4.25_SOFA_D3__all_valid	E2F_TARGETS	-1.79104562429361	5.57363283654835e-05	200	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	E2F targets
+entry4.25_SOFA_D3__all_valid	EPITHELIAL_MESENCHYMAL_TRANSITION	1.14179058123221	0.297381739052315	119	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Epithelial–mesenchymal transition
+entry4.25_SOFA_D3__all_valid	GLYCOLYSIS	1.23781111854907	0.146756298846805	166	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Glycolysis
+entry4.25_SOFA_D3__all_valid	HEME_METABOLISM	2.31322948980737	3.84320697693675e-10	189	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Heme metabolism
+entry4.25_SOFA_D3__all_valid	HYPOXIA	2.16341857206327	2.07180491868739e-07	153	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Hypoxia
+entry4.25_SOFA_D3__all_valid	IL6_JAK_STAT3_SIGNALING	2.24106222627068	4.01622563731064e-06	72	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	IL-6/JAK/STAT3 signaling
+entry4.25_SOFA_D3__all_valid	INFLAMMATORY_RESPONSE	1.9022031364708	4.34166978021386e-05	157	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Inflammatory response
+entry4.25_SOFA_D3__all_valid	INTERFERON_ALPHA_RESPONSE	1.42329493616154	0.0520031722529415	94	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	IFN-α response
+entry4.25_SOFA_D3__all_valid	INTERFERON_GAMMA_RESPONSE	1.46151804797504	0.0143501989226702	189	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	IFN-γ response
+entry4.25_SOFA_D3__all_valid	MYC_TARGETS_V1	-3.07759948415921	5.5233786088382e-25	198	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	MYC targets V1
+entry4.25_SOFA_D3__all_valid	OXIDATIVE_PHOSPHORYLATION	-2.32842871718327	1.40389773056818e-10	200	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Oxidative phosphorylation
+entry4.25_SOFA_D3__all_valid	REACTIVE_OXYGEN_SPECIES_PATHWAY	1.98207188578584	0.0006032233609045	48	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Reactive oxygen species pathway
+entry4.25_SOFA_D3__all_valid	TNFA_SIGNALING_VIA_NFKB	1.93782544894283	1.32815011107031e-05	173	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	TNF-α signaling via NF-κB
+entry4.25_SOFA_D3__all_valid	UNFOLDED_PROTEIN_RESPONSE	-1.87916994808493	0.000262073514318275	109	"Upper entry boundary
+baseline SOFA
++ prior D3 RNA availability"	Unfolded protein response
+entry4_PF_PLT_D3__all_valid	APICAL_JUNCTION	1.56589441142299	0.00940692665014048	131	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	Apical junction
+entry4_PF_PLT_D3__all_valid	COAGULATION	1.49225472870956	0.026424504546543	87	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	Coagulation
+entry4_PF_PLT_D3__all_valid	COMPLEMENT	1.67722594223463	0.00121985121525663	169	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	Complement
+entry4_PF_PLT_D3__all_valid	DNA_REPAIR	-1.52109448518532	0.00918710029693997	144	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	DNA repair
+entry4_PF_PLT_D3__all_valid	E2F_TARGETS	-1.6527602955424	0.000748546740733101	200	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	E2F targets
+entry4_PF_PLT_D3__all_valid	EPITHELIAL_MESENCHYMAL_TRANSITION	1.2671310398308	0.12977069568597	119	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	Epithelial–mesenchymal transition
+entry4_PF_PLT_D3__all_valid	GLYCOLYSIS	1.35240207610881	0.0457683624562876	166	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	Glycolysis
+entry4_PF_PLT_D3__all_valid	HEME_METABOLISM	2.45039993652939	1.84392999834753e-12	189	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	Heme metabolism
+entry4_PF_PLT_D3__all_valid	HYPOXIA	2.22477326355746	3.97575418938202e-08	153	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	Hypoxia
+entry4_PF_PLT_D3__all_valid	IL6_JAK_STAT3_SIGNALING	2.30245048630249	1.11406379276513e-06	72	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	IL-6/JAK/STAT3 signaling
+entry4_PF_PLT_D3__all_valid	INFLAMMATORY_RESPONSE	1.91899967019153	2.80750808832019e-05	157	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	Inflammatory response
+entry4_PF_PLT_D3__all_valid	INTERFERON_ALPHA_RESPONSE	1.45806792351975	0.0308928464091431	94	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	IFN-α response
+entry4_PF_PLT_D3__all_valid	INTERFERON_GAMMA_RESPONSE	1.42896945716774	0.0210785524035258	189	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	IFN-γ response
+entry4_PF_PLT_D3__all_valid	MYC_TARGETS_V1	-2.94419111774764	5.97247551290994e-22	198	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	MYC targets V1
+entry4_PF_PLT_D3__all_valid	OXIDATIVE_PHOSPHORYLATION	-2.23218266476767	1.81137555093778e-09	200	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	Oxidative phosphorylation
+entry4_PF_PLT_D3__all_valid	REACTIVE_OXYGEN_SPECIES_PATHWAY	1.96898533008965	0.00077408320316244	48	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	Reactive oxygen species pathway
+entry4_PF_PLT_D3__all_valid	TNFA_SIGNALING_VIA_NFKB	1.98379949143188	3.76340502480939e-06	173	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	TNF-α signaling via NF-κB
+entry4_PF_PLT_D3__all_valid	UNFOLDED_PROTEIN_RESPONSE	-1.75182202267968	0.00122288803079207	109	"Primary entry
+P/F + PLT
++ prior D3 RNA availability"	Unfolded protein response
+entry4_PF_PLT_noD3__all_valid	APICAL_JUNCTION	1.5161787628967	0.0154797636914206	131	"Primary entry
+P/F + PLT"	Apical junction
+entry4_PF_PLT_noD3__all_valid	COAGULATION	1.55344139847173	0.015058583565477	87	"Primary entry
+P/F + PLT"	Coagulation
+entry4_PF_PLT_noD3__all_valid	COMPLEMENT	1.70980164116156	0.000621536654994144	169	"Primary entry
+P/F + PLT"	Complement
+entry4_PF_PLT_noD3__all_valid	DNA_REPAIR	-1.51495446100009	0.0105930935693721	144	"Primary entry
+P/F + PLT"	DNA repair
+entry4_PF_PLT_noD3__all_valid	E2F_TARGETS	-1.66773383430912	0.000532683613416459	200	"Primary entry
+P/F + PLT"	E2F targets
+entry4_PF_PLT_noD3__all_valid	EPITHELIAL_MESENCHYMAL_TRANSITION	1.28692360208091	0.110881940433958	119	"Primary entry
+P/F + PLT"	Epithelial–mesenchymal transition
+entry4_PF_PLT_noD3__all_valid	GLYCOLYSIS	1.41052896591298	0.0225749134323387	166	"Primary entry
+P/F + PLT"	Glycolysis
+entry4_PF_PLT_noD3__all_valid	HEME_METABOLISM	2.53642644669834	1.07661393140912e-13	189	"Primary entry
+P/F + PLT"	Heme metabolism
+entry4_PF_PLT_noD3__all_valid	HYPOXIA	2.23378039471223	3.83372182143582e-08	153	"Primary entry
+P/F + PLT"	Hypoxia
+entry4_PF_PLT_noD3__all_valid	IL6_JAK_STAT3_SIGNALING	2.39163427674797	1.65213568035452e-07	72	"Primary entry
+P/F + PLT"	IL-6/JAK/STAT3 signaling
+entry4_PF_PLT_noD3__all_valid	INFLAMMATORY_RESPONSE	2.00874161597813	4.206909340411e-06	157	"Primary entry
+P/F + PLT"	Inflammatory response
+entry4_PF_PLT_noD3__all_valid	INTERFERON_ALPHA_RESPONSE	1.51968596099509	0.0173030042085868	94	"Primary entry
+P/F + PLT"	IFN-α response
+entry4_PF_PLT_noD3__all_valid	INTERFERON_GAMMA_RESPONSE	1.56084102526351	0.00410031113566547	189	"Primary entry
+P/F + PLT"	IFN-γ response
+entry4_PF_PLT_noD3__all_valid	MYC_TARGETS_V1	-2.90504577542737	3.50777440591952e-21	198	"Primary entry
+P/F + PLT"	MYC targets V1
+entry4_PF_PLT_noD3__all_valid	OXIDATIVE_PHOSPHORYLATION	-2.12306208191994	3.83372182143582e-08	200	"Primary entry
+P/F + PLT"	Oxidative phosphorylation
+entry4_PF_PLT_noD3__all_valid	REACTIVE_OXYGEN_SPECIES_PATHWAY	2.07665207550628	0.000226601923916215	48	"Primary entry
+P/F + PLT"	Reactive oxygen species pathway
+entry4_PF_PLT_noD3__all_valid	TNFA_SIGNALING_VIA_NFKB	2.01864943279757	1.63397627491387e-06	173	"Primary entry
+P/F + PLT"	TNF-α signaling via NF-κB
+entry4_PF_PLT_noD3__all_valid	UNFOLDED_PROTEIN_RESPONSE	-1.70763776803358	0.00203235182715725	109	"Primary entry
+P/F + PLT"	Unfolded protein response
+entry4_SOFA_D3__all_valid	APICAL_JUNCTION	1.50909596490436	0.01396289104962	131	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	Apical junction
+entry4_SOFA_D3__all_valid	COAGULATION	1.41483160140496	0.0542513546083714	87	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	Coagulation
+entry4_SOFA_D3__all_valid	COMPLEMENT	1.68154743291526	0.00122628942144099	169	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	Complement
+entry4_SOFA_D3__all_valid	DNA_REPAIR	-1.55113730865596	0.00674211268020074	144	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	DNA repair
+entry4_SOFA_D3__all_valid	E2F_TARGETS	-1.79104562429361	5.57363283654835e-05	200	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	E2F targets
+entry4_SOFA_D3__all_valid	EPITHELIAL_MESENCHYMAL_TRANSITION	1.14179058123221	0.297381739052315	119	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	Epithelial–mesenchymal transition
+entry4_SOFA_D3__all_valid	GLYCOLYSIS	1.23781111854907	0.146756298846805	166	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	Glycolysis
+entry4_SOFA_D3__all_valid	HEME_METABOLISM	2.31322948980737	3.84320697693675e-10	189	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	Heme metabolism
+entry4_SOFA_D3__all_valid	HYPOXIA	2.16341857206327	2.07180491868739e-07	153	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	Hypoxia
+entry4_SOFA_D3__all_valid	IL6_JAK_STAT3_SIGNALING	2.24106222627068	4.01622563731064e-06	72	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	IL-6/JAK/STAT3 signaling
+entry4_SOFA_D3__all_valid	INFLAMMATORY_RESPONSE	1.9022031364708	4.34166978021386e-05	157	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	Inflammatory response
+entry4_SOFA_D3__all_valid	INTERFERON_ALPHA_RESPONSE	1.42329493616154	0.0520031722529415	94	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	IFN-α response
+entry4_SOFA_D3__all_valid	INTERFERON_GAMMA_RESPONSE	1.46151804797504	0.0143501989226702	189	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	IFN-γ response
+entry4_SOFA_D3__all_valid	MYC_TARGETS_V1	-3.07759948415921	5.5233786088382e-25	198	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	MYC targets V1
+entry4_SOFA_D3__all_valid	OXIDATIVE_PHOSPHORYLATION	-2.32842871718327	1.40389773056818e-10	200	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	Oxidative phosphorylation
+entry4_SOFA_D3__all_valid	REACTIVE_OXYGEN_SPECIES_PATHWAY	1.98207188578584	0.0006032233609045	48	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	Reactive oxygen species pathway
+entry4_SOFA_D3__all_valid	TNFA_SIGNALING_VIA_NFKB	1.93782544894283	1.32815011107031e-05	173	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	TNF-α signaling via NF-κB
+entry4_SOFA_D3__all_valid	UNFOLDED_PROTEIN_RESPONSE	-1.87916994808493	0.000262073514318275	109	"Primary entry
+baseline SOFA
++ prior D3 RNA availability"	Unfolded protein response
+entry4_SOFA_noD3__all_valid	APICAL_JUNCTION	1.47968785615912	0.0168901586786418	131	"Primary entry
+baseline SOFA"	Apical junction
+entry4_SOFA_noD3__all_valid	COAGULATION	1.39795659598145	0.0579047738143621	87	"Primary entry
+baseline SOFA"	Coagulation
+entry4_SOFA_noD3__all_valid	COMPLEMENT	1.70692843421006	0.000716804831621389	169	"Primary entry
+baseline SOFA"	Complement
+entry4_SOFA_noD3__all_valid	DNA_REPAIR	-1.5803221177962	0.00462968373195343	144	"Primary entry
+baseline SOFA"	DNA repair
+entry4_SOFA_noD3__all_valid	E2F_TARGETS	-1.82458206139389	2.68596699681725e-05	200	"Primary entry
+baseline SOFA"	E2F targets
+entry4_SOFA_noD3__all_valid	EPITHELIAL_MESENCHYMAL_TRANSITION	1.13417088893446	0.317074235331347	119	"Primary entry
+baseline SOFA"	Epithelial–mesenchymal transition
+entry4_SOFA_noD3__all_valid	GLYCOLYSIS	1.2617199091241	0.104248830142986	166	"Primary entry
+baseline SOFA"	Glycolysis
+entry4_SOFA_noD3__all_valid	HEME_METABOLISM	2.29804339646371	8.08443090232142e-10	189	"Primary entry
+baseline SOFA"	Heme metabolism
+entry4_SOFA_noD3__all_valid	HYPOXIA	2.18204262969695	1.76949670875932e-07	153	"Primary entry
+baseline SOFA"	Hypoxia
+entry4_SOFA_noD3__all_valid	IL6_JAK_STAT3_SIGNALING	2.33707569663866	6.67473506132481e-07	72	"Primary entry
+baseline SOFA"	IL-6/JAK/STAT3 signaling
+entry4_SOFA_noD3__all_valid	INFLAMMATORY_RESPONSE	1.96526537599256	1.55822289310602e-05	157	"Primary entry
+baseline SOFA"	Inflammatory response
+entry4_SOFA_noD3__all_valid	INTERFERON_ALPHA_RESPONSE	1.54017744525075	0.0168901586786418	94	"Primary entry
+baseline SOFA"	IFN-α response
+entry4_SOFA_noD3__all_valid	INTERFERON_GAMMA_RESPONSE	1.61261358885122	0.00193521531257874	189	"Primary entry
+baseline SOFA"	IFN-γ response
+entry4_SOFA_noD3__all_valid	MYC_TARGETS_V1	-3.03311088914165	4.79406970700072e-24	198	"Primary entry
+baseline SOFA"	MYC targets V1
+entry4_SOFA_noD3__all_valid	OXIDATIVE_PHOSPHORYLATION	-2.26994176792003	8.08443090232142e-10	200	"Primary entry
+baseline SOFA"	Oxidative phosphorylation
+entry4_SOFA_noD3__all_valid	REACTIVE_OXYGEN_SPECIES_PATHWAY	2.00531171514395	0.000533085909021513	48	"Primary entry
+baseline SOFA"	Reactive oxygen species pathway
+entry4_SOFA_noD3__all_valid	TNFA_SIGNALING_VIA_NFKB	1.99933150100215	3.66732421369443e-06	173	"Primary entry
+baseline SOFA"	TNF-α signaling via NF-κB
+entry4_SOFA_noD3__all_valid	UNFOLDED_PROTEIN_RESPONSE	-1.8295132600532	0.000533085909021513	109	"Primary entry
+baseline SOFA"	Unfolded protein response

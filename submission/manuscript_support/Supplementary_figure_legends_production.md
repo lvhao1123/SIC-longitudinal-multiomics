@@ -1,0 +1,28 @@
+# Supplementary figure legends
+
+## Supplementary Figure A1 | Empirical centre positivity for day-5 RNA availability.
+Centre-level counts of observed and unobserved day-5 RNA among day-4 landmark survivors are shown for the prespecified lower, primary and upper entry definitions. Centres were classified as zero observation, complete observation or partial observation. In the primary definition, 3 zero-observation, 13 complete-observation and 14 partial-observation centres were identified. Zero-observation centres were outside the IPW estimand; complete-observation centres received observation probability and weight equal to one. Centre labels describe study sites and do not identify individual patients. Source data are provided as a Source Data file.
+
+## Supplementary Figure A2 | Observation-probability and inverse-observation-weight distributions.
+Aggregate histograms show estimated day-5 RNA observation probabilities and analysis weights across all six prespecified availability scenarios. The primary model included baseline SOFA and prior day-3 RNA availability; alternative models and entry-boundary scenarios were retained without post hoc replacement. Unstabilised inverse observation weights were truncated at the 1% and 99% percentiles and normalized to mean one among observed patients. Histograms contain no individual probability or weight. Extreme probabilities and weights indicate potential positivity limitations. Source data are provided as a Source Data file.
+
+## Supplementary Figure A3 | Covariate balance before and after inverse-observation weighting.
+Absolute and signed standardized mean differences (SMDs) are shown before and after weighting for all prespecified scenarios. Dashed reference lines mark |SMD|=0.10. The primary model retained a maximum weighted |SMD| of 0.450, indicating residual imbalance; the plot is therefore a diagnostic rather than evidence that weighting eliminated selection bias. Source data are provided as a Source Data file.
+
+## Supplementary Figure A4 | Comparison of unweighted and IPW Hallmark enrichment.
+Each point compares day-5 mortality-association NES from the frozen unweighted centre-stratified primary analysis with NES from a prespecified weighted scenario across the complete Hallmark family. Colour denotes the joint FDR classification based on BH-FDR <0.05. The primary weighted scenario showed an NES Spearman correlation of 0.980, direction agreement of 95.9% and significant-set Jaccard index of 0.88 relative to the unweighted analysis. Concordance supports sensitivity of the overall pathway pattern but does not remove availability bias. Source data are provided as a Source Data file.
+
+## Supplementary Figure A5 | Core pathways across prespecified IPW scenarios.
+Heat-map cells show weighted day-5 mortality-association NES for the prespecified core Hallmark pathways across all six availability scenarios. Original Hallmark pathway identifiers were retained in source data, whereas display names were standardized for the manuscript. The panel compares robustness across frozen scenarios and must not be used to select a replacement primary model. Source data are provided as a Source Data file.
+
+## Supplementary Figure A6 | Scenario-level Hallmark robustness metrics.
+NES Spearman correlation, pathway-direction agreement and significant-set Jaccard overlap compare each weighted scenario with the frozen unweighted day-5 primary analysis. Metrics cover the complete Hallmark family and all six prespecified scenarios. Better numerical diagnostics in an alternative scenario do not authorize replacement of the prespecified primary availability model. Source data are provided as a Source Data file.
+
+## Supplementary Figure A7 | Day-5 entry-boundary sensitivity.
+Core-pathway mortality-association NES values are compared across the prespecified lower, primary and upper day-5 entry boundaries. The primary landmark was day 4; boundary scenarios evaluate coding sensitivity only and do not redefine the main estimand. Source data are provided as a Source Data file.
+
+## Supplementary Figure A8 | Descriptive availability of day-5 plasma proteomics.
+Raw measured and delayed-entry risk-valid plasma-protein sample counts are shown across days 1, 3 and 5. This audit is descriptive: no protein availability weights were estimated, and the figure does not imply recovery of unobserved protein states. Source data are provided as a Source Data file.
+
+## Supplementary Figure A9 | Exploratory clinical univariable Cox associations with 60-day mortality.
+Points and horizontal bars show hazard ratios (HRs) and 95% confidence intervals from separate univariable Cox models in 504 patients with 84 deaths. Continuous variables are shown using the prespecified increments indicated in each label. aPTT, activated partial thromboplastin time; BMI, body mass index; BUN, blood urea nitrogen; COPD, chronic obstructive pulmonary disease; CRP, C-reactive protein; INR, international normalised ratio; MAP, mean arterial pressure; SBP, systolic blood pressure; SOFA, Sequential Organ Failure Assessment; WBC, white blood cell. The Benjamini–Hochberg procedure was applied across all 41 displayed contrasts; * indicates BH-FDR <0.05. † denotes nominal evidence against the proportional-hazards assumption (P<0.05), and ‡ denotes nominal evidence of nonlinearity (P<0.05). Infection source was additionally associated with outcome in an overall likelihood-ratio test (P=0.0038). These univariable estimates are descriptive and are not mutually adjusted or causal. Source data are provided as a Source Data file.

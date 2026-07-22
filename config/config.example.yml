@@ -1,0 +1,6 @@
+project_dir: "."
+controlled_data_env: "CMAISE_DATA_DIR"
+output_dir_env: "SIC_OUTPUT_DIR"
+default_private_output: "private_outputs/SIC_reanalysis_2026-07-11"
+repository_visibility_required: "private"
+redistribute_controlled_data: false

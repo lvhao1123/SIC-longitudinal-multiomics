@@ -1,0 +1,13 @@
+figure	pdf_render	fonts_embedded	svg_render	tiff_600dpi	png_dimensions	border_nonwhite_fraction	crop_ok
+Figure1_study_design_risksets_availability	TRUE	TRUE	TRUE	TRUE	TRUE	0	TRUE
+Figure2_RNA_core_NES	TRUE	TRUE	TRUE	TRUE	TRUE	0	TRUE
+Figure3_Protein_core_NES	TRUE	TRUE	TRUE	TRUE	TRUE	0	TRUE
+Figure4_CrossOmics_integrated_A_to_F	TRUE	TRUE	TRUE	TRUE	TRUE	0	TRUE
+Supplementary_Figure_A1_centre_positivity	TRUE	TRUE	TRUE	TRUE	TRUE	0	TRUE
+Supplementary_Figure_A2_probability_weight_distributions	TRUE	TRUE	TRUE	TRUE	TRUE	0.00199340115479791	TRUE
+Supplementary_Figure_A3_pre_post_weight_SMD	TRUE	TRUE	TRUE	TRUE	TRUE	0	TRUE
+Supplementary_Figure_A4_all_Hallmark_unweighted_vs_IPW	TRUE	TRUE	TRUE	TRUE	TRUE	0	TRUE
+Supplementary_Figure_A5_core_pathway_scenario_heatmap	TRUE	TRUE	TRUE	TRUE	TRUE	0	TRUE
+Supplementary_Figure_A6_six_scenario_robustness_metrics	TRUE	TRUE	TRUE	TRUE	TRUE	0	TRUE
+Supplementary_Figure_A7_entry_boundary_sensitivity	TRUE	TRUE	TRUE	TRUE	TRUE	0	TRUE
+Supplementary_Figure_A8_D5_protein_availability	TRUE	TRUE	TRUE	TRUE	TRUE	0	TRUE

@@ -1,0 +1,493 @@
+scenario	variable	stage	SMD
+primary__SOFA_D3	age_z	Before weighting	0.047545432638351
+primary__SOFA_D3	age_z	After weighting	0.0175979267540286
+primary__SOFA_D3	sex=0	Before weighting	-0.0386806521415991
+primary__SOFA_D3	sex=0	After weighting	-0.00918057749048351
+primary__SOFA_D3	sex=1	Before weighting	0.0386806521415989
+primary__SOFA_D3	sex=1	After weighting	0.0091805774904834
+primary__SOFA_D3	SOFA_z	Before weighting	0.0154294559445194
+primary__SOFA_D3	SOFA_z	After weighting	0.000547800132056212
+primary__SOFA_D3	log2_lac_z	Before weighting	0.0604785838759077
+primary__SOFA_D3	log2_lac_z	After weighting	0.010106028210832
+primary__SOFA_D3	log2_inr_z	Before weighting	0.0883035435832812
+primary__SOFA_D3	log2_inr_z	After weighting	0.0591110598013203
+primary__SOFA_D3	log2_ddimer_z	Before weighting	-0.0371287647963449
+primary__SOFA_D3	log2_ddimer_z	After weighting	-0.0261211229077111
+primary__SOFA_D3	infectionSite_SD=Lung/Chest	Before weighting	0.0603487520918672
+primary__SOFA_D3	infectionSite_SD=Lung/Chest	After weighting	0.0318921338968611
+primary__SOFA_D3	infectionSite_SD=Urinary	Before weighting	-0.0367740200339473
+primary__SOFA_D3	infectionSite_SD=Urinary	After weighting	-0.0404983542539902
+primary__SOFA_D3	infectionSite_SD=SoftTissue	Before weighting	-0.03562904200715
+primary__SOFA_D3	infectionSite_SD=SoftTissue	After weighting	-0.0154584284611792
+primary__SOFA_D3	infectionSite_SD=Abdomen	Before weighting	-0.00388956180155798
+primary__SOFA_D3	infectionSite_SD=Abdomen	After weighting	0.000115193040715766
+primary__SOFA_D3	infectionSite_SD=Biliary/Liver	Before weighting	-0.0225845943457366
+primary__SOFA_D3	infectionSite_SD=Biliary/Liver	After weighting	0.0119273141558971
+primary__SOFA_D3	infectionSite_SD=Others/Unknown	Before weighting	0.00410438129815693
+primary__SOFA_D3	infectionSite_SD=Others/Unknown	After weighting	-0.00331440926999384
+primary__SOFA_D3	center=Centre 01	Before weighting	-0.0163475491914997
+primary__SOFA_D3	center=Centre 01	After weighting	-0.0162193042141521
+primary__SOFA_D3	center=Centre 02	Before weighting	0.0298516749861506
+primary__SOFA_D3	center=Centre 02	After weighting	0.0093232537348894
+primary__SOFA_D3	center=Centre 03	Before weighting	0.0366104035859039
+primary__SOFA_D3	center=Centre 03	After weighting	0.0114313520628804
+primary__SOFA_D3	center=Centre 05	Before weighting	-0.0446298268303618
+primary__SOFA_D3	center=Centre 05	After weighting	0.00489356436511477
+primary__SOFA_D3	center=Centre 06	Before weighting	0.0210797338870439
+primary__SOFA_D3	center=Centre 06	After weighting	0.0065852022431156
+primary__SOFA_D3	center=Centre 07	Before weighting	-0.290042679883213
+primary__SOFA_D3	center=Centre 07	After weighting	-0.166179437446501
+primary__SOFA_D3	center=Centre 08	Before weighting	0.0423316966822672
+primary__SOFA_D3	center=Centre 08	After weighting	0.0132145542731852
+primary__SOFA_D3	center=Centre 09	Before weighting	-0.0278754371225123
+primary__SOFA_D3	center=Centre 09	After weighting	0.0630918918992811
+primary__SOFA_D3	center=Centre 10	Before weighting	0.0942081572151159
+primary__SOFA_D3	center=Centre 10	After weighting	0.0292965145218667
+primary__SOFA_D3	center=Centre 11	Before weighting	0.0210797338870439
+primary__SOFA_D3	center=Centre 11	After weighting	0.0065852022431156
+primary__SOFA_D3	center=Centre 13	Before weighting	0.0298516749861506
+primary__SOFA_D3	center=Centre 13	After weighting	0.0093232537348894
+primary__SOFA_D3	center=Centre 14	Before weighting	0.0210412454029532
+primary__SOFA_D3	center=Centre 14	After weighting	0.00794857524290468
+primary__SOFA_D3	center=Centre 15	Before weighting	0.129240344179966
+primary__SOFA_D3	center=Centre 15	After weighting	0.0548319121846938
+primary__SOFA_D3	center=Centre 16	Before weighting	0.0181001102855676
+primary__SOFA_D3	center=Centre 16	After weighting	-0.00646209235035514
+primary__SOFA_D3	center=Centre 17	Before weighting	0.0519875974378265
+primary__SOFA_D3	center=Centre 17	After weighting	0.0162208092951938
+primary__SOFA_D3	center=Centre 19	Before weighting	-0.0328779133793129
+primary__SOFA_D3	center=Centre 19	After weighting	-0.0516538908657513
+primary__SOFA_D3	center=Centre 20	Before weighting	-0.0163475491914997
+primary__SOFA_D3	center=Centre 20	After weighting	0.00967019517102626
+primary__SOFA_D3	center=Centre 21	Before weighting	0.0298516749861506
+primary__SOFA_D3	center=Centre 21	After weighting	0.0093232537348894
+primary__SOFA_D3	center=Centre 22	Before weighting	-0.078116590263798
+primary__SOFA_D3	center=Centre 22	After weighting	-0.0461372703229606
+primary__SOFA_D3	center=Centre 23	Before weighting	0.0366104035859039
+primary__SOFA_D3	center=Centre 23	After weighting	0.0114313520628804
+primary__SOFA_D3	center=Centre 24	Before weighting	-0.0202163590282927
+primary__SOFA_D3	center=Centre 24	After weighting	-0.00213034743309664
+primary__SOFA_D3	center=Centre 25	Before weighting	0.0210797338870439
+primary__SOFA_D3	center=Centre 25	After weighting	0.0065852022431156
+primary__SOFA_D3	center=Centre 26	Before weighting	0.0639412822989903
+primary__SOFA_D3	center=Centre 26	After weighting	0.0482543675387719
+primary__SOFA_D3	center=Centre 27	Before weighting	0.0741343703449962
+primary__SOFA_D3	center=Centre 27	After weighting	0.0230960194556006
+primary__SOFA_D3	center=Centre 28	Before weighting	-0.0804225880083308
+primary__SOFA_D3	center=Centre 28	After weighting	-0.0539982891787728
+primary__SOFA_D3	center=Centre 29	Before weighting	0.0423316966822672
+primary__SOFA_D3	center=Centre 29	After weighting	0.0132145542731852
+primary__SOFA_D3	center=Centre 30	Before weighting	-0.0368099093436772
+primary__SOFA_D3	center=Centre 30	After weighting	0.0137472089723568
+primary__SOFA_D3	RNA_D3_available	Before weighting	0.531919273543168
+primary__SOFA_D3	RNA_D3_available	After weighting	0.44985291306032
+primary__SOFA_noD3	age_z	Before weighting	0.047545432638351
+primary__SOFA_noD3	age_z	After weighting	0.012344420400682
+primary__SOFA_noD3	sex=0	Before weighting	-0.0386806521415991
+primary__SOFA_noD3	sex=0	After weighting	0.021846072386836
+primary__SOFA_noD3	sex=1	Before weighting	0.0386806521415989
+primary__SOFA_noD3	sex=1	After weighting	-0.0218460723868361
+primary__SOFA_noD3	SOFA_z	Before weighting	0.0154294559445194
+primary__SOFA_noD3	SOFA_z	After weighting	0.0290811897918897
+primary__SOFA_noD3	log2_lac_z	Before weighting	0.0604785838759077
+primary__SOFA_noD3	log2_lac_z	After weighting	0.00691614088451445
+primary__SOFA_noD3	log2_inr_z	Before weighting	0.0883035435832812
+primary__SOFA_noD3	log2_inr_z	After weighting	0.00323837273451792
+primary__SOFA_noD3	log2_ddimer_z	Before weighting	-0.0371287647963449
+primary__SOFA_noD3	log2_ddimer_z	After weighting	-0.00689971822794708
+primary__SOFA_noD3	infectionSite_SD=Lung/Chest	Before weighting	0.0603487520918672
+primary__SOFA_noD3	infectionSite_SD=Lung/Chest	After weighting	-0.00840304471144185
+primary__SOFA_noD3	infectionSite_SD=Urinary	Before weighting	-0.0367740200339473
+primary__SOFA_noD3	infectionSite_SD=Urinary	After weighting	-0.0142104099919064
+primary__SOFA_noD3	infectionSite_SD=SoftTissue	Before weighting	-0.03562904200715
+primary__SOFA_noD3	infectionSite_SD=SoftTissue	After weighting	0.00270971910942117
+primary__SOFA_noD3	infectionSite_SD=Abdomen	Before weighting	-0.00388956180155798
+primary__SOFA_noD3	infectionSite_SD=Abdomen	After weighting	0.0109877058243946
+primary__SOFA_noD3	infectionSite_SD=Biliary/Liver	Before weighting	-0.0225845943457366
+primary__SOFA_noD3	infectionSite_SD=Biliary/Liver	After weighting	0.0253447396582425
+primary__SOFA_noD3	infectionSite_SD=Others/Unknown	Before weighting	0.00410438129815693
+primary__SOFA_noD3	infectionSite_SD=Others/Unknown	After weighting	-0.0153079231487233
+primary__SOFA_noD3	center=Centre 01	Before weighting	-0.0163475491914997
+primary__SOFA_noD3	center=Centre 01	After weighting	-0.0191503174045033
+primary__SOFA_noD3	center=Centre 02	Before weighting	0.0298516749861506
+primary__SOFA_noD3	center=Centre 02	After weighting	1.91841618289683e-05
+primary__SOFA_noD3	center=Centre 03	Before weighting	0.0366104035859039
+primary__SOFA_noD3	center=Centre 03	After weighting	2.35199673520621e-05
+primary__SOFA_noD3	center=Centre 05	Before weighting	-0.0446298268303618
+primary__SOFA_noD3	center=Centre 05	After weighting	-0.00653053287098822
+primary__SOFA_noD3	center=Centre 06	Before weighting	0.0210797338870439
+primary__SOFA_noD3	center=Centre 06	After weighting	1.35512856242882e-05
+primary__SOFA_noD3	center=Centre 07	Before weighting	-0.290042679883213
+primary__SOFA_noD3	center=Centre 07	After weighting	-0.00275971900556486
+primary__SOFA_noD3	center=Centre 08	Before weighting	0.0423316966822672
+primary__SOFA_noD3	center=Centre 08	After weighting	2.71866230647138e-05
+primary__SOFA_noD3	center=Centre 09	Before weighting	-0.0278754371225123
+primary__SOFA_noD3	center=Centre 09	After weighting	0.0114975084715762
+primary__SOFA_noD3	center=Centre 10	Before weighting	0.0942081572151159
+primary__SOFA_noD3	center=Centre 10	After weighting	6.01940767152929e-05
+primary__SOFA_noD3	center=Centre 11	Before weighting	0.0210797338870439
+primary__SOFA_noD3	center=Centre 11	After weighting	1.35512856242882e-05
+primary__SOFA_noD3	center=Centre 13	Before weighting	0.0298516749861506
+primary__SOFA_noD3	center=Centre 13	After weighting	1.91841618289683e-05
+primary__SOFA_noD3	center=Centre 14	Before weighting	0.0210412454029532
+primary__SOFA_noD3	center=Centre 14	After weighting	-0.00603463355763946
+primary__SOFA_noD3	center=Centre 15	Before weighting	0.129240344179966
+primary__SOFA_noD3	center=Centre 15	After weighting	-0.000570161590512547
+primary__SOFA_noD3	center=Centre 16	Before weighting	0.0181001102855676
+primary__SOFA_noD3	center=Centre 16	After weighting	-0.00873507973357317
+primary__SOFA_noD3	center=Centre 17	Before weighting	0.0519875974378265
+primary__SOFA_noD3	center=Centre 17	After weighting	3.3365839665319e-05
+primary__SOFA_noD3	center=Centre 19	Before weighting	-0.0328779133793129
+primary__SOFA_noD3	center=Centre 19	After weighting	-0.00622286321713091
+primary__SOFA_noD3	center=Centre 20	Before weighting	-0.0163475491914997
+primary__SOFA_noD3	center=Centre 20	After weighting	-0.00203556743157307
+primary__SOFA_noD3	center=Centre 21	Before weighting	0.0298516749861506
+primary__SOFA_noD3	center=Centre 21	After weighting	1.91841618289683e-05
+primary__SOFA_noD3	center=Centre 22	Before weighting	-0.078116590263798
+primary__SOFA_noD3	center=Centre 22	After weighting	0.00342280684107231
+primary__SOFA_noD3	center=Centre 23	Before weighting	0.0366104035859039
+primary__SOFA_noD3	center=Centre 23	After weighting	2.35199673520621e-05
+primary__SOFA_noD3	center=Centre 24	Before weighting	-0.0202163590282927
+primary__SOFA_noD3	center=Centre 24	After weighting	0.00309854496966341
+primary__SOFA_noD3	center=Centre 25	Before weighting	0.0210797338870439
+primary__SOFA_noD3	center=Centre 25	After weighting	1.35512856242882e-05
+primary__SOFA_noD3	center=Centre 26	Before weighting	0.0639412822989903
+primary__SOFA_noD3	center=Centre 26	After weighting	0.00129328805728828
+primary__SOFA_noD3	center=Centre 27	Before weighting	0.0741343703449962
+primary__SOFA_noD3	center=Centre 27	After weighting	4.74835526130607e-05
+primary__SOFA_noD3	center=Centre 28	Before weighting	-0.0804225880083308
+primary__SOFA_noD3	center=Centre 28	After weighting	0.0256005264409872
+primary__SOFA_noD3	center=Centre 29	Before weighting	0.0423316966822672
+primary__SOFA_noD3	center=Centre 29	After weighting	2.71866230647138e-05
+primary__SOFA_noD3	center=Centre 30	Before weighting	-0.0368099093436772
+primary__SOFA_noD3	center=Centre 30	After weighting	-0.00893827073208256
+primary__PF_PLT_D3	age_z	Before weighting	0.047545432638351
+primary__PF_PLT_D3	age_z	After weighting	0.0201262374708131
+primary__PF_PLT_D3	sex=0	Before weighting	-0.0386806521415991
+primary__PF_PLT_D3	sex=0	After weighting	-0.00963512983545207
+primary__PF_PLT_D3	sex=1	Before weighting	0.0386806521415989
+primary__PF_PLT_D3	sex=1	After weighting	0.00963512983545173
+primary__PF_PLT_D3	pf_z	Before weighting	-0.121844752003021
+primary__PF_PLT_D3	pf_z	After weighting	-0.0363346752937236
+primary__PF_PLT_D3	log2_plt_z	Before weighting	0.0756629248165377
+primary__PF_PLT_D3	log2_plt_z	After weighting	0.0541651146142825
+primary__PF_PLT_D3	log2_lac_z	Before weighting	0.0604785838759077
+primary__PF_PLT_D3	log2_lac_z	After weighting	0.00317494469079705
+primary__PF_PLT_D3	log2_inr_z	Before weighting	0.0883035435832812
+primary__PF_PLT_D3	log2_inr_z	After weighting	0.0721432129413069
+primary__PF_PLT_D3	log2_ddimer_z	Before weighting	-0.0371287647963449
+primary__PF_PLT_D3	log2_ddimer_z	After weighting	-0.031806530537147
+primary__PF_PLT_D3	infectionSite_SD=Lung/Chest	Before weighting	0.0603487520918672
+primary__PF_PLT_D3	infectionSite_SD=Lung/Chest	After weighting	0.0343460591399336
+primary__PF_PLT_D3	infectionSite_SD=Urinary	Before weighting	-0.0367740200339473
+primary__PF_PLT_D3	infectionSite_SD=Urinary	After weighting	-0.0473146895470345
+primary__PF_PLT_D3	infectionSite_SD=SoftTissue	Before weighting	-0.03562904200715
+primary__PF_PLT_D3	infectionSite_SD=SoftTissue	After weighting	-0.0143970402973999
+primary__PF_PLT_D3	infectionSite_SD=Abdomen	Before weighting	-0.00388956180155798
+primary__PF_PLT_D3	infectionSite_SD=Abdomen	After weighting	0.00026804581247281
+primary__PF_PLT_D3	infectionSite_SD=Biliary/Liver	Before weighting	-0.0225845943457366
+primary__PF_PLT_D3	infectionSite_SD=Biliary/Liver	After weighting	0.0153778195412557
+primary__PF_PLT_D3	infectionSite_SD=Others/Unknown	Before weighting	0.00410438129815693
+primary__PF_PLT_D3	infectionSite_SD=Others/Unknown	After weighting	-0.003792766031806
+primary__PF_PLT_D3	center=Centre 01	Before weighting	-0.0163475491914997
+primary__PF_PLT_D3	center=Centre 01	After weighting	-0.014836238348414
+primary__PF_PLT_D3	center=Centre 02	Before weighting	0.0298516749861506
+primary__PF_PLT_D3	center=Centre 02	After weighting	0.00897822112389671
+primary__PF_PLT_D3	center=Centre 03	Before weighting	0.0366104035859039
+primary__PF_PLT_D3	center=Centre 03	After weighting	0.0110082661874383
+primary__PF_PLT_D3	center=Centre 05	Before weighting	-0.0446298268303618
+primary__PF_PLT_D3	center=Centre 05	After weighting	-0.00947072395534464
+primary__PF_PLT_D3	center=Centre 06	Before weighting	0.0210797338870439
+primary__PF_PLT_D3	center=Centre 06	After weighting	0.00634152013722014
+primary__PF_PLT_D3	center=Centre 07	Before weighting	-0.290042679883213
+primary__PF_PLT_D3	center=Centre 07	After weighting	-0.163831510865272
+primary__PF_PLT_D3	center=Centre 08	Before weighting	0.0423316966822672
+primary__PF_PLT_D3	center=Centre 08	After weighting	0.0127254269781446
+primary__PF_PLT_D3	center=Centre 09	Before weighting	-0.0278754371225123
+primary__PF_PLT_D3	center=Centre 09	After weighting	0.0799901182449162
+primary__PF_PLT_D3	center=Centre 10	Before weighting	0.0942081572151159
+primary__PF_PLT_D3	center=Centre 10	After weighting	0.0282106315543317
+primary__PF_PLT_D3	center=Centre 11	Before weighting	0.0210797338870439
+primary__PF_PLT_D3	center=Centre 11	After weighting	0.00634152013722014
+primary__PF_PLT_D3	center=Centre 13	Before weighting	0.0298516749861506
+primary__PF_PLT_D3	center=Centre 13	After weighting	0.00897822112389671
+primary__PF_PLT_D3	center=Centre 14	Before weighting	0.0210412454029532
+primary__PF_PLT_D3	center=Centre 14	After weighting	0.00702658206614715
+primary__PF_PLT_D3	center=Centre 15	Before weighting	0.129240344179966
+primary__PF_PLT_D3	center=Centre 15	After weighting	0.0532519852687261
+primary__PF_PLT_D3	center=Centre 16	Before weighting	0.0181001102855676
+primary__PF_PLT_D3	center=Centre 16	After weighting	-0.00836113893018357
+primary__PF_PLT_D3	center=Centre 17	Before weighting	0.0519875974378265
+primary__PF_PLT_D3	center=Centre 17	After weighting	0.0156203005838876
+primary__PF_PLT_D3	center=Centre 19	Before weighting	-0.0328779133793129
+primary__PF_PLT_D3	center=Centre 19	After weighting	-0.0523175063070543
+primary__PF_PLT_D3	center=Centre 20	Before weighting	-0.0163475491914997
+primary__PF_PLT_D3	center=Centre 20	After weighting	0.0088597934225832
+primary__PF_PLT_D3	center=Centre 21	Before weighting	0.0298516749861506
+primary__PF_PLT_D3	center=Centre 21	After weighting	0.00897822112389671
+primary__PF_PLT_D3	center=Centre 22	Before weighting	-0.078116590263798
+primary__PF_PLT_D3	center=Centre 22	After weighting	-0.0453655003993399
+primary__PF_PLT_D3	center=Centre 23	Before weighting	0.0366104035859039
+primary__PF_PLT_D3	center=Centre 23	After weighting	0.0110082661874383
+primary__PF_PLT_D3	center=Centre 24	Before weighting	-0.0202163590282927
+primary__PF_PLT_D3	center=Centre 24	After weighting	-0.00711106680929586
+primary__PF_PLT_D3	center=Centre 25	Before weighting	0.0210797338870439
+primary__PF_PLT_D3	center=Centre 25	After weighting	0.00634152013722014
+primary__PF_PLT_D3	center=Centre 26	Before weighting	0.0639412822989903
+primary__PF_PLT_D3	center=Centre 26	After weighting	0.0562828637856515
+primary__PF_PLT_D3	center=Centre 27	Before weighting	0.0741343703449962
+primary__PF_PLT_D3	center=Centre 27	After weighting	0.0222405188699952
+primary__PF_PLT_D3	center=Centre 28	Before weighting	-0.0804225880083308
+primary__PF_PLT_D3	center=Centre 28	After weighting	-0.0630679907195366
+primary__PF_PLT_D3	center=Centre 29	Before weighting	0.0423316966822672
+primary__PF_PLT_D3	center=Centre 29	After weighting	0.0127254269781446
+primary__PF_PLT_D3	center=Centre 30	Before weighting	-0.0368099093436772
+primary__PF_PLT_D3	center=Centre 30	After weighting	0.00776575143601082
+primary__PF_PLT_D3	RNA_D3_available	Before weighting	0.531919273543168
+primary__PF_PLT_D3	RNA_D3_available	After weighting	0.419716140012327
+primary__PF_PLT_noD3	age_z	Before weighting	0.047545432638351
+primary__PF_PLT_noD3	age_z	After weighting	0.0174121617513974
+primary__PF_PLT_noD3	sex=0	Before weighting	-0.0386806521415991
+primary__PF_PLT_noD3	sex=0	After weighting	0.0133157011373339
+primary__PF_PLT_noD3	sex=1	Before weighting	0.0386806521415989
+primary__PF_PLT_noD3	sex=1	After weighting	-0.0133157011373342
+primary__PF_PLT_noD3	pf_z	Before weighting	-0.121844752003021
+primary__PF_PLT_noD3	pf_z	After weighting	-0.0423109525440725
+primary__PF_PLT_noD3	log2_plt_z	Before weighting	0.0756629248165377
+primary__PF_PLT_noD3	log2_plt_z	After weighting	0.00840333781931251
+primary__PF_PLT_noD3	log2_lac_z	Before weighting	0.0604785838759077
+primary__PF_PLT_noD3	log2_lac_z	After weighting	0.00366971753676553
+primary__PF_PLT_noD3	log2_inr_z	Before weighting	0.0883035435832812
+primary__PF_PLT_noD3	log2_inr_z	After weighting	0.00692718900035525
+primary__PF_PLT_noD3	log2_ddimer_z	Before weighting	-0.0371287647963449
+primary__PF_PLT_noD3	log2_ddimer_z	After weighting	-0.010533381665424
+primary__PF_PLT_noD3	infectionSite_SD=Lung/Chest	Before weighting	0.0603487520918672
+primary__PF_PLT_noD3	infectionSite_SD=Lung/Chest	After weighting	0.00627741148565917
+primary__PF_PLT_noD3	infectionSite_SD=Urinary	Before weighting	-0.0367740200339473
+primary__PF_PLT_noD3	infectionSite_SD=Urinary	After weighting	-0.0180716650745856
+primary__PF_PLT_noD3	infectionSite_SD=SoftTissue	Before weighting	-0.03562904200715
+primary__PF_PLT_noD3	infectionSite_SD=SoftTissue	After weighting	0.0123721503588359
+primary__PF_PLT_noD3	infectionSite_SD=Abdomen	Before weighting	-0.00388956180155798
+primary__PF_PLT_noD3	infectionSite_SD=Abdomen	After weighting	0.00485481306150993
+primary__PF_PLT_noD3	infectionSite_SD=Biliary/Liver	Before weighting	-0.0225845943457366
+primary__PF_PLT_noD3	infectionSite_SD=Biliary/Liver	After weighting	0.00616095937034398
+primary__PF_PLT_noD3	infectionSite_SD=Others/Unknown	Before weighting	0.00410438129815693
+primary__PF_PLT_noD3	infectionSite_SD=Others/Unknown	After weighting	-0.0109384610354373
+primary__PF_PLT_noD3	center=Centre 01	Before weighting	-0.0163475491914997
+primary__PF_PLT_noD3	center=Centre 01	After weighting	-0.0180301000924174
+primary__PF_PLT_noD3	center=Centre 02	Before weighting	0.0298516749861506
+primary__PF_PLT_noD3	center=Centre 02	After weighting	0.000857898210306721
+primary__PF_PLT_noD3	center=Centre 03	Before weighting	0.0366104035859039
+primary__PF_PLT_noD3	center=Centre 03	After weighting	0.0010517986711282
+primary__PF_PLT_noD3	center=Centre 05	Before weighting	-0.0446298268303618
+primary__PF_PLT_noD3	center=Centre 05	After weighting	-0.0261486256700017
+primary__PF_PLT_noD3	center=Centre 06	Before weighting	0.0210797338870439
+primary__PF_PLT_noD3	center=Centre 06	After weighting	0.0006059969987181
+primary__PF_PLT_noD3	center=Centre 07	Before weighting	-0.290042679883213
+primary__PF_PLT_noD3	center=Centre 07	After weighting	-0.0282619160331877
+primary__PF_PLT_noD3	center=Centre 08	Before weighting	0.0423316966822672
+primary__PF_PLT_noD3	center=Centre 08	After weighting	0.00121577764085921
+primary__PF_PLT_noD3	center=Centre 09	Before weighting	-0.0278754371225123
+primary__PF_PLT_noD3	center=Centre 09	After weighting	0.0226927543294464
+primary__PF_PLT_noD3	center=Centre 10	Before weighting	0.0942081572151159
+primary__PF_PLT_noD3	center=Centre 10	After weighting	0.00269214795458896
+primary__PF_PLT_noD3	center=Centre 11	Before weighting	0.0210797338870439
+primary__PF_PLT_noD3	center=Centre 11	After weighting	0.0006059969987181
+primary__PF_PLT_noD3	center=Centre 13	Before weighting	0.0298516749861506
+primary__PF_PLT_noD3	center=Centre 13	After weighting	0.000857898210306721
+primary__PF_PLT_noD3	center=Centre 14	Before weighting	0.0210412454029532
+primary__PF_PLT_noD3	center=Centre 14	After weighting	-0.0043758869595484
+primary__PF_PLT_noD3	center=Centre 15	Before weighting	0.129240344179966
+primary__PF_PLT_noD3	center=Centre 15	After weighting	0.00797426970141933
+primary__PF_PLT_noD3	center=Centre 16	Before weighting	0.0181001102855676
+primary__PF_PLT_noD3	center=Centre 16	After weighting	-0.00560323748701955
+primary__PF_PLT_noD3	center=Centre 17	Before weighting	0.0519875974378265
+primary__PF_PLT_noD3	center=Centre 17	After weighting	0.00149213098248935
+primary__PF_PLT_noD3	center=Centre 19	Before weighting	-0.0328779133793129
+primary__PF_PLT_noD3	center=Centre 19	After weighting	-0.00377571359957461
+primary__PF_PLT_noD3	center=Centre 20	Before weighting	-0.0163475491914997
+primary__PF_PLT_noD3	center=Centre 20	After weighting	-0.00523570210047596
+primary__PF_PLT_noD3	center=Centre 21	Before weighting	0.0298516749861506
+primary__PF_PLT_noD3	center=Centre 21	After weighting	0.000857898210306721
+primary__PF_PLT_noD3	center=Centre 22	Before weighting	-0.078116590263798
+primary__PF_PLT_noD3	center=Centre 22	After weighting	0.0130675879980563
+primary__PF_PLT_noD3	center=Centre 23	Before weighting	0.0366104035859039
+primary__PF_PLT_noD3	center=Centre 23	After weighting	0.0010517986711282
+primary__PF_PLT_noD3	center=Centre 24	Before weighting	-0.0202163590282927
+primary__PF_PLT_noD3	center=Centre 24	After weighting	0.00439814255224723
+primary__PF_PLT_noD3	center=Centre 25	Before weighting	0.0210797338870439
+primary__PF_PLT_noD3	center=Centre 25	After weighting	0.0006059969987181
+primary__PF_PLT_noD3	center=Centre 26	Before weighting	0.0639412822989903
+primary__PF_PLT_noD3	center=Centre 26	After weighting	0.00433944909876828
+primary__PF_PLT_noD3	center=Centre 27	Before weighting	0.0741343703449962
+primary__PF_PLT_noD3	center=Centre 27	After weighting	0.00212356915486921
+primary__PF_PLT_noD3	center=Centre 28	Before weighting	-0.0804225880083308
+primary__PF_PLT_noD3	center=Centre 28	After weighting	0.00804485907439003
+primary__PF_PLT_noD3	center=Centre 29	Before weighting	0.0423316966822672
+primary__PF_PLT_noD3	center=Centre 29	After weighting	0.00121577764085921
+primary__PF_PLT_noD3	center=Centre 30	Before weighting	-0.0368099093436772
+primary__PF_PLT_noD3	center=Centre 30	After weighting	-0.0112302022995448
+lower__SOFA_D3	age_z	Before weighting	0.0511466548678526
+lower__SOFA_D3	age_z	After weighting	0.0157636011050429
+lower__SOFA_D3	sex=0	Before weighting	-0.0355423613650168
+lower__SOFA_D3	sex=0	After weighting	-0.00975125733713988
+lower__SOFA_D3	sex=1	Before weighting	0.0355423613650167
+lower__SOFA_D3	sex=1	After weighting	0.00975125733713977
+lower__SOFA_D3	SOFA_z	Before weighting	0.0110812760519329
+lower__SOFA_D3	SOFA_z	After weighting	0.00261406362976475
+lower__SOFA_D3	log2_lac_z	Before weighting	0.0603952750380755
+lower__SOFA_D3	log2_lac_z	After weighting	0.011542309850307
+lower__SOFA_D3	log2_inr_z	Before weighting	0.0846213969229036
+lower__SOFA_D3	log2_inr_z	After weighting	0.0607712798455873
+lower__SOFA_D3	log2_ddimer_z	Before weighting	-0.0372821202591925
+lower__SOFA_D3	log2_ddimer_z	After weighting	-0.0253656850250971
+lower__SOFA_D3	infectionSite_SD=Lung/Chest	Before weighting	0.063078443952767
+lower__SOFA_D3	infectionSite_SD=Lung/Chest	After weighting	0.030064573878689
+lower__SOFA_D3	infectionSite_SD=Urinary	Before weighting	-0.0362432510240994
+lower__SOFA_D3	infectionSite_SD=Urinary	After weighting	-0.041731943418503
+lower__SOFA_D3	infectionSite_SD=SoftTissue	Before weighting	-0.0353442055453371
+lower__SOFA_D3	infectionSite_SD=SoftTissue	After weighting	-0.0176631387063484
+lower__SOFA_D3	infectionSite_SD=Abdomen	Before weighting	-0.00342082685257582
+lower__SOFA_D3	infectionSite_SD=Abdomen	After weighting	0.000219921876671644
+lower__SOFA_D3	infectionSite_SD=Biliary/Liver	Before weighting	-0.0282478706360197
+lower__SOFA_D3	infectionSite_SD=Biliary/Liver	After weighting	0.0175022134296191
+lower__SOFA_D3	infectionSite_SD=Others/Unknown	Before weighting	0.00437317826621863
+lower__SOFA_D3	infectionSite_SD=Others/Unknown	After weighting	-0.00402963030390294
+lower__SOFA_D3	center=Centre 01	Before weighting	-0.0162597524707504
+lower__SOFA_D3	center=Centre 01	After weighting	-0.0162632824351299
+lower__SOFA_D3	center=Centre 02	Before weighting	0.0298665609642527
+lower__SOFA_D3	center=Centre 02	After weighting	0.00910068447435682
+lower__SOFA_D3	center=Centre 03	Before weighting	0.0366284937285201
+lower__SOFA_D3	center=Centre 03	After weighting	0.0111583837891313
+lower__SOFA_D3	center=Centre 05	Before weighting	-0.0444859310209811
+lower__SOFA_D3	center=Centre 05	After weighting	0.0042744552826212
+lower__SOFA_D3	center=Centre 06	Before weighting	0.021090340771864
+lower__SOFA_D3	center=Centre 06	After weighting	0.00642803921462182
+lower__SOFA_D3	center=Centre 07	Before weighting	-0.289188711588282
+lower__SOFA_D3	center=Centre 07	After weighting	-0.163622462983964
+lower__SOFA_D3	center=Centre 08	Before weighting	0.0423524206727058
+lower__SOFA_D3	center=Centre 08	After weighting	0.0128989197673815
+lower__SOFA_D3	center=Centre 09	Before weighting	-0.0275490157007892
+lower__SOFA_D3	center=Centre 09	After weighting	0.0646155399757596
+lower__SOFA_D3	center=Centre 10	Before weighting	0.0942475359991555
+lower__SOFA_D3	center=Centre 10	After weighting	0.0285938151884494
+lower__SOFA_D3	center=Centre 11	Before weighting	0.021090340771864
+lower__SOFA_D3	center=Centre 11	After weighting	0.00642803921462182
+lower__SOFA_D3	center=Centre 13	Before weighting	0.0298665609642527
+lower__SOFA_D3	center=Centre 13	After weighting	0.00910068447435682
+lower__SOFA_D3	center=Centre 14	Before weighting	0.0211071624628767
+lower__SOFA_D3	center=Centre 14	After weighting	0.00720527727261952
+lower__SOFA_D3	center=Centre 15	Before weighting	0.126543836050169
+lower__SOFA_D3	center=Centre 15	After weighting	0.054391870439069
+lower__SOFA_D3	center=Centre 16	Before weighting	0.0182776692702283
+lower__SOFA_D3	center=Centre 16	After weighting	-0.00623393150380945
+lower__SOFA_D3	center=Centre 17	Before weighting	0.0520125701796291
+lower__SOFA_D3	center=Centre 17	After weighting	0.0158331584623516
+lower__SOFA_D3	center=Centre 19	Before weighting	-0.0327006393266532
+lower__SOFA_D3	center=Centre 19	After weighting	-0.0522926071552294
+lower__SOFA_D3	center=Centre 20	Before weighting	-0.0162597524707504
+lower__SOFA_D3	center=Centre 20	After weighting	0.0103210138570917
+lower__SOFA_D3	center=Centre 21	Before weighting	0.0298665609642527
+lower__SOFA_D3	center=Centre 21	After weighting	0.00910068447435682
+lower__SOFA_D3	center=Centre 22	Before weighting	-0.0777494485419651
+lower__SOFA_D3	center=Centre 22	After weighting	-0.045753753987621
+lower__SOFA_D3	center=Centre 23	Before weighting	0.0366284937285201
+lower__SOFA_D3	center=Centre 23	After weighting	0.0111583837891313
+lower__SOFA_D3	center=Centre 24	Before weighting	-0.0197167121070384
+lower__SOFA_D3	center=Centre 24	After weighting	-0.00486581461390759
+lower__SOFA_D3	center=Centre 25	Before weighting	0.021090340771864
+lower__SOFA_D3	center=Centre 25	After weighting	0.00642803921462182
+lower__SOFA_D3	center=Centre 26	Before weighting	0.0640269406374533
+lower__SOFA_D3	center=Centre 26	After weighting	0.0494745273585077
+lower__SOFA_D3	center=Centre 27	Before weighting	0.0741678892964971
+lower__SOFA_D3	center=Centre 27	After weighting	0.0225431454760648
+lower__SOFA_D3	center=Centre 28	Before weighting	-0.080183914347328
+lower__SOFA_D3	center=Centre 28	After weighting	-0.0520280216101989
+lower__SOFA_D3	center=Centre 29	Before weighting	0.0423524206727058
+lower__SOFA_D3	center=Centre 29	After weighting	0.0128989197673815
+lower__SOFA_D3	center=Centre 30	Before weighting	-0.0364439762518949
+lower__SOFA_D3	center=Centre 30	After weighting	0.0136706916971335
+lower__SOFA_D3	RNA_D3_available	Before weighting	0.530603646655387
+lower__SOFA_D3	RNA_D3_available	After weighting	0.44186827574991
+upper__SOFA_D3	age_z	Before weighting	0.047545432638351
+upper__SOFA_D3	age_z	After weighting	0.0175979267540286
+upper__SOFA_D3	sex=0	Before weighting	-0.0386806521415991
+upper__SOFA_D3	sex=0	After weighting	-0.00918057749048351
+upper__SOFA_D3	sex=1	Before weighting	0.0386806521415989
+upper__SOFA_D3	sex=1	After weighting	0.0091805774904834
+upper__SOFA_D3	SOFA_z	Before weighting	0.0154294559445194
+upper__SOFA_D3	SOFA_z	After weighting	0.000547800132056212
+upper__SOFA_D3	log2_lac_z	Before weighting	0.0604785838759077
+upper__SOFA_D3	log2_lac_z	After weighting	0.010106028210832
+upper__SOFA_D3	log2_inr_z	Before weighting	0.0883035435832812
+upper__SOFA_D3	log2_inr_z	After weighting	0.0591110598013203
+upper__SOFA_D3	log2_ddimer_z	Before weighting	-0.0371287647963449
+upper__SOFA_D3	log2_ddimer_z	After weighting	-0.0261211229077111
+upper__SOFA_D3	infectionSite_SD=Lung/Chest	Before weighting	0.0603487520918672
+upper__SOFA_D3	infectionSite_SD=Lung/Chest	After weighting	0.0318921338968611
+upper__SOFA_D3	infectionSite_SD=Urinary	Before weighting	-0.0367740200339473
+upper__SOFA_D3	infectionSite_SD=Urinary	After weighting	-0.0404983542539902
+upper__SOFA_D3	infectionSite_SD=SoftTissue	Before weighting	-0.03562904200715
+upper__SOFA_D3	infectionSite_SD=SoftTissue	After weighting	-0.0154584284611792
+upper__SOFA_D3	infectionSite_SD=Abdomen	Before weighting	-0.00388956180155798
+upper__SOFA_D3	infectionSite_SD=Abdomen	After weighting	0.000115193040715766
+upper__SOFA_D3	infectionSite_SD=Biliary/Liver	Before weighting	-0.0225845943457366
+upper__SOFA_D3	infectionSite_SD=Biliary/Liver	After weighting	0.0119273141558971
+upper__SOFA_D3	infectionSite_SD=Others/Unknown	Before weighting	0.00410438129815693
+upper__SOFA_D3	infectionSite_SD=Others/Unknown	After weighting	-0.00331440926999384
+upper__SOFA_D3	center=Centre 01	Before weighting	-0.0163475491914997
+upper__SOFA_D3	center=Centre 01	After weighting	-0.0162193042141521
+upper__SOFA_D3	center=Centre 02	Before weighting	0.0298516749861506
+upper__SOFA_D3	center=Centre 02	After weighting	0.0093232537348894
+upper__SOFA_D3	center=Centre 03	Before weighting	0.0366104035859039
+upper__SOFA_D3	center=Centre 03	After weighting	0.0114313520628804
+upper__SOFA_D3	center=Centre 05	Before weighting	-0.0446298268303618
+upper__SOFA_D3	center=Centre 05	After weighting	0.00489356436511477
+upper__SOFA_D3	center=Centre 06	Before weighting	0.0210797338870439
+upper__SOFA_D3	center=Centre 06	After weighting	0.0065852022431156
+upper__SOFA_D3	center=Centre 07	Before weighting	-0.290042679883213
+upper__SOFA_D3	center=Centre 07	After weighting	-0.166179437446501
+upper__SOFA_D3	center=Centre 08	Before weighting	0.0423316966822672
+upper__SOFA_D3	center=Centre 08	After weighting	0.0132145542731852
+upper__SOFA_D3	center=Centre 09	Before weighting	-0.0278754371225123
+upper__SOFA_D3	center=Centre 09	After weighting	0.0630918918992811
+upper__SOFA_D3	center=Centre 10	Before weighting	0.0942081572151159
+upper__SOFA_D3	center=Centre 10	After weighting	0.0292965145218667
+upper__SOFA_D3	center=Centre 11	Before weighting	0.0210797338870439
+upper__SOFA_D3	center=Centre 11	After weighting	0.0065852022431156
+upper__SOFA_D3	center=Centre 13	Before weighting	0.0298516749861506
+upper__SOFA_D3	center=Centre 13	After weighting	0.0093232537348894
+upper__SOFA_D3	center=Centre 14	Before weighting	0.0210412454029532
+upper__SOFA_D3	center=Centre 14	After weighting	0.00794857524290468
+upper__SOFA_D3	center=Centre 15	Before weighting	0.129240344179966
+upper__SOFA_D3	center=Centre 15	After weighting	0.0548319121846938
+upper__SOFA_D3	center=Centre 16	Before weighting	0.0181001102855676
+upper__SOFA_D3	center=Centre 16	After weighting	-0.00646209235035514
+upper__SOFA_D3	center=Centre 17	Before weighting	0.0519875974378265
+upper__SOFA_D3	center=Centre 17	After weighting	0.0162208092951938
+upper__SOFA_D3	center=Centre 19	Before weighting	-0.0328779133793129
+upper__SOFA_D3	center=Centre 19	After weighting	-0.0516538908657513
+upper__SOFA_D3	center=Centre 20	Before weighting	-0.0163475491914997
+upper__SOFA_D3	center=Centre 20	After weighting	0.00967019517102626
+upper__SOFA_D3	center=Centre 21	Before weighting	0.0298516749861506
+upper__SOFA_D3	center=Centre 21	After weighting	0.0093232537348894
+upper__SOFA_D3	center=Centre 22	Before weighting	-0.078116590263798
+upper__SOFA_D3	center=Centre 22	After weighting	-0.0461372703229606
+upper__SOFA_D3	center=Centre 23	Before weighting	0.0366104035859039
+upper__SOFA_D3	center=Centre 23	After weighting	0.0114313520628804
+upper__SOFA_D3	center=Centre 24	Before weighting	-0.0202163590282927
+upper__SOFA_D3	center=Centre 24	After weighting	-0.00213034743309664
+upper__SOFA_D3	center=Centre 25	Before weighting	0.0210797338870439
+upper__SOFA_D3	center=Centre 25	After weighting	0.0065852022431156
+upper__SOFA_D3	center=Centre 26	Before weighting	0.0639412822989903
+upper__SOFA_D3	center=Centre 26	After weighting	0.0482543675387719
+upper__SOFA_D3	center=Centre 27	Before weighting	0.0741343703449962
+upper__SOFA_D3	center=Centre 27	After weighting	0.0230960194556006
+upper__SOFA_D3	center=Centre 28	Before weighting	-0.0804225880083308
+upper__SOFA_D3	center=Centre 28	After weighting	-0.0539982891787728
+upper__SOFA_D3	center=Centre 29	Before weighting	0.0423316966822672
+upper__SOFA_D3	center=Centre 29	After weighting	0.0132145542731852
+upper__SOFA_D3	center=Centre 30	Before weighting	-0.0368099093436772
+upper__SOFA_D3	center=Centre 30	After weighting	0.0137472089723568
+upper__SOFA_D3	RNA_D3_available	Before weighting	0.531919273543168
+upper__SOFA_D3	RNA_D3_available	After weighting	0.44985291306032

@@ -1,0 +1,16 @@
+figure	edge_ink_fraction	pass
+Figure1_study_design_risksets_availability.png	0	TRUE
+Figure2_RNA_core_NES.png	0	TRUE
+Figure3_Protein_core_NES.png	0	TRUE
+Figure4_CrossOmics_integrated_A_to_F.png	0	TRUE
+Figure4_review_double_column.png	0	TRUE
+Figure4_review_full_page.png	0	TRUE
+Figure4_review_single_column.png	0	TRUE
+Supplementary_Figure_A1_centre_positivity.png	0	TRUE
+Supplementary_Figure_A2_probability_weight_distributions.png	0.00192466318394281	TRUE
+Supplementary_Figure_A3_pre_post_weight_SMD.png	0	TRUE
+Supplementary_Figure_A4_all_Hallmark_unweighted_vs_IPW.png	0	TRUE
+Supplementary_Figure_A5_core_pathway_scenario_heatmap.png	0	TRUE
+Supplementary_Figure_A6_six_scenario_robustness_metrics.png	0	TRUE
+Supplementary_Figure_A7_entry_boundary_sensitivity.png	0	TRUE
+Supplementary_Figure_A8_D5_protein_availability.png	0	TRUE

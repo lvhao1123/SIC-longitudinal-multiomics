@@ -1,0 +1,13 @@
+Omics	Time	sample_level	N
+Protein	D1	Raw measured	168
+Protein	D3	Raw measured	148
+Protein	D5	Raw measured	115
+RNA	D1	Raw measured	504
+RNA	D3	Raw measured	421
+RNA	D5	Raw measured	321
+Protein	D1	Delayed-entry risk-valid	168
+Protein	D3	Delayed-entry risk-valid	147
+Protein	D5	Delayed-entry risk-valid	114
+RNA	D1	Delayed-entry risk-valid	504
+RNA	D3	Delayed-entry risk-valid	420
+RNA	D5	Delayed-entry risk-valid	320

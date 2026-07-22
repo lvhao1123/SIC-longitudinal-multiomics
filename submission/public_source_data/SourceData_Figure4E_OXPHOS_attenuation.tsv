@@ -1,0 +1,11 @@
+association	model	effect
+Same-time D1	Before centre adjustment	-0.214295837741255
+Same-time D1	After centre adjustment	-0.0649748685216212
+Same-time D3	Before centre adjustment	-0.256116871634113
+Same-time D3	After centre adjustment	-0.00294992363957881
+Same-time D5	Before centre adjustment	-0.287628579371699
+Same-time D5	After centre adjustment	-0.0577981651376147
+D1 -> D3	Before centre adjustment	-0.206572630837101
+D1 -> D3	After centre adjustment	-0.0737064243930183
+D3 -> D5	Before centre adjustment	-0.28005686063156
+D3 -> D5	After centre adjustment	-0.113755874204176

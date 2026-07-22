@@ -1,0 +1,5 @@
+source("submission/code/12_run_sandwich_equivalence_test.R")
+stopifnot(exists("result"), nrow(result) >= 20L)
+stopifnot(all(summary_tbl$passed), all(hash_audit$unchanged))
+stopifnot(all(is.finite(unlist(result[, -"gene_symbol"]))))
+cat("Sandwich equivalence automated test passed.\n")
