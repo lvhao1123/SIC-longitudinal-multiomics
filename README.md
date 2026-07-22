@@ -123,6 +123,9 @@ MSigDB Hallmark gene-set files or other third-party materials.
 
 ## Release status
 
-The intended submission release tag is `jic-submission-v1.0`. The tag and GitHub
-Release will be created only after the final manuscript and repository QA are
-frozen; this README does not claim that the release already exists.
+This repository snapshot corresponds to the Journal of Intensive Care submission
+and is versioned as `jic-submission-v1.0`.
+
+Release URL:
+
+https://github.com/lvhao1123/SIC-longitudinal-multiomics/releases/tag/jic-submission-v1.0
