@@ -43,7 +43,16 @@ jobs:
           status=$?
           if [[ $status -ne 0 ]]; then
             mkdir -p submission/qa
-            tail -n 120 "$RUNNER_TEMP/sr-support.log" > submission/qa/scientific_reports_support_error.log
+            {
+              tail -n 120 "$RUNNER_TEMP/sr-support.log"
+              echo
+              echo '--- scientific_reports_cross_reference_audit.tsv ---'
+              if [[ -f submission/qa/scientific_reports_cross_reference_audit.tsv ]]; then
+                cat submission/qa/scientific_reports_cross_reference_audit.tsv
+              else
+                echo 'audit file was not produced'
+              fi
+            } > submission/qa/scientific_reports_support_error.log
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git add submission/qa/scientific_reports_support_error.log
