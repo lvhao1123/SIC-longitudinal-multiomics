@@ -1,0 +1,94 @@
+t=WD_ALIGN_PARAGRAPH.CENTER, space_after=12)
+    add_text_paragraph(doc, 'Scientific freeze', size=12, bold=True, space_after=4)
+    add_text_paragraph(doc, 'No cohort count, event count, effect estimate, confidence interval, P value, false-discovery rate, normalised enrichment score, pathway direction, estimand, model definition or scientific figure was changed. The conversion is editorial and journal-specific.')
+    table = doc.add_table(rows=1, cols=4)
+    table.alignment = WD_TABLE_ALIGNMENT.CENTER
+    for j, v in enumerate(['Location', 'Classification', 'Change', 'Scientific boundary']):
+        table.rows[0].cells[j].text = v
+        set_cell_shading(table.rows[0].cells[j], 'D9EAF7')
+    boundary = {
+        'clarification': 'Clarifies the existing design or reporting without changing results.',
+        'interpretive expansion': 'Adds bounded interpretation supported by frozen findings and existing citations.',
+        'claim restriction': 'Reduces overinterpretation and explicitly excludes unsupported causal or clinical claims.',
+        'journal compliance': 'Implements a Scientific Reports submission requirement.',
+        'structural relocation': 'Moves existing text without changing its scientific meaning.',
+        'cross-reference renumbering': 'Updates identifiers consistently without changing content.'
+    }
+    for loc, cls, change in CHANGE_LOG:
+        cells = table.add_row().cells
+        vals = [loc, cls, change, boundary[cls]]
+        for j, v in enumerate(vals):
+            cells[j].text = v
+    for i, row in enumerate(table.rows):
+        for cell in row.cells:
+            set_cell_margins(cell)
+            for p in cell.paragraphs:
+                p.paragraph_format.space_before = Pt(0)
+                p.paragraph_format.space_after = Pt(2)
+                for r in p.runs:
+                    set_run_font(r, size=8.5, bold=(i == 0))
+    set_repeat_header_and_nosplit(table)
+    add_text_paragraph(doc, 'Highlighting convention', size=12, bold=True, space_before=10, space_after=4)
+    add_text_paragraph(doc, 'The highlighted manuscript uses yellow highlighting for newly written or substantively rewritten scientific text, methodological-boundary clarifications, claim restrictions and new policy disclosures. Routine section moves, Nature-style reference conversion and systematic supplementary renumbering are documented here rather than highlighted throughout.')
+    doc.save(output)
+
+
+def build_cover_letter(output: Path):
+    doc = Document()
+    setup_styles(doc)
+    configure_section(doc.sections[0], margins=(0.62, 0.62, 0.62, 0.62), line_numbers=False)
+    add_text_paragraph(doc, '25 July 2026', size=9.4, space_after=6)
+    add_text_paragraph(doc, 'Editors\nScientific Reports', size=9.4, space_after=6)
+    add_text_paragraph(doc, 'Dear Editors,', size=9.4, space_after=5)
+    paragraphs = [
+        f'On behalf of my co-authors, I am pleased to submit the Article entitled “{TITLE}” for consideration in Scientific Reports.',
+        'This manuscript was previously submitted to the Journal of Intensive Care and is now being submitted to Scientific Reports following a Springer Nature journal-transfer recommendation. The earlier journal did not provide scientific peer-review comments requiring a response, and the present submission has been reformatted and clarified for Scientific Reports.',
+        'The study addresses a methodological and biological problem relevant to a broad readership in sepsis, haemostasis, systems biology and prognostic research. Using a fixed Day-1 cohort of 504 adults with sepsis-induced coagulopathy, we applied separate risk-set-aware landmark survival analyses to whole-blood transcriptomic and plasma proteomic measurements obtained on Days 1, 3 and 5. The design distinguishes later-landmark prognosis from within-patient molecular trajectories, explicitly separates structural non-availability caused by death from sample observation, and evaluates the robustness of Day-5 RNA-seq findings through positivity-supported inverse-probability weighting.',
+        'The principal contribution is a technically validated, reproducible description of stage- and compartment-dependent molecular associations with 60-day mortality. Recurrent whole-blood heme, hypoxia and inflammatory enrichment coexisted with broader negative enrichment of cellular-maintenance programmes at Day 5; later plasma protein rankings were dominated by extracellular-matrix and tissue-remodelling signals; and interferon pathways showed selective contemporaneous and forward cross-omic associations. The conclusions are deliberately bounded: the observational models do not establish causal transfer, within-patient trajectories, incremental clinical prediction or therapeutic benefit.',
+        f'Participant-level clinical, transcriptomic and proteomic data remain controlled access under OMIX011182 and cannot be redistributed by the authors. Version-controlled code, aggregate source data, numerical-truth interfaces and quality-assurance outputs are archived in the Scientific Reports-specific repository release at {RELEASE_URL}.',
+        'The work is original, has not been published, and is not under consideration by another journal. All authors have reviewed and approved the submitted version and agree to be accountable for their contributions. We have no preferred reviewers and request no reviewer exclusions. We have had no prior discussions with a Scientific Reports Editorial Board Member regarding this work.',
+        'Thank you for considering this manuscript. We believe its multicentre longitudinal design, explicit landmark estimands, multi-omic integration and transparent reproducibility framework are well aligned with Scientific Reports’ emphasis on technical robustness and scientific validity.'
+    ]
+    for text in paragraphs:
+        add_text_paragraph(doc, text, size=9.4, space_after=5)
+    add_text_paragraph(doc, 'Sincerely,', size=9.4, space_before=5, space_after=6)
+    add_text_paragraph(doc, 'Dong Zhang, MD, PhD\nCorresponding author\nDepartment of Critical Care Medicine\nThe First Hospital of Jilin University\nNo. 1 Xinmin Street, Changchun, Jilin 130021, China\nEmail: zhangdong@jlu.edu.cn\nOn behalf of all authors', size=9.4, space_after=0)
+    doc.core_properties.title = 'Cover letter to Scientific Reports'
+    doc.core_properties.author = 'Dong Zhang'
+    doc.core_properties.last_modified_by = 'Dong Zhang'
+    doc.save(output)
+
+
+def write_mapping():
+    path = WORK / 'citation_renumbering.tsv'
+    with path.open('w', encoding='utf-8', newline='') as f:
+        w = csv.writer(f, delimiter='\t')
+        w.writerow(['old_reference_number', 'new_reference_number'])
+        for old in citation_order:
+            w.writerow([old, CITATION_MAP[old]])
+
+
+def main():
+    import argparse
+    parser = argparse.ArgumentParser(description='Build Scientific Reports submission documents from the frozen JIC interface.')
+    parser.add_argument('--mode', choices=['manuscript', 'supplementary', 'cover', 'all'], default='manuscript')
+    parser.add_argument('--cover-out', type=Path, default=None)
+    args = parser.parse_args()
+    if args.mode in {'manuscript', 'all'}:
+        build_manuscript(OUT / 'Scientific_Reports_manuscript_clean.docx', highlighted=False)
+        build_manuscript(OUT / 'Scientific_Reports_manuscript_highlighted.docx', highlighted=True)
+        build_revision_report(OUT / 'Scientific_Reports_revision_report.docx')
+        write_mapping()
+    if args.mode in {'supplementary', 'all'}:
+        build_supplementary(OUT / 'Scientific_Reports_Supplementary_Information.docx')
+    if args.mode in {'cover', 'all'}:
+        if args.cover_out is None:
+            raise SystemExit('--cover-out is required for cover generation because the cover letter is private and must not be written into the repository.')
+        args.cover_out.parent.mkdir(parents=True, exist_ok=True)
+        build_cover_letter(args.cover_out)
+    print('Scientific Reports build completed:', args.mode)
+
+
+
+if __name__ == '__main__':
+    main()
