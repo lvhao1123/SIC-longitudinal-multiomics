@@ -31,22 +31,41 @@ jobs:
           python submission/code/27_patch_scientific_reports_reference_discovery.py
       - name: Install Python dependencies
         run: python -m pip install -q python-docx openpyxl
-      - name: Build main manuscript with persisted diagnostics
+      - name: Build main manuscript
+        run: python submission/code/30_build_scientific_reports_manuscript.py --mode manuscript
+      - name: Build supplementary DOCX
+        run: python submission/code/31_build_scientific_reports_supplementary.py
+      - name: Build support maps and Tables S1-S9 with persisted diagnostics
         shell: bash
         run: |
           set +e
-          python submission/code/30_build_scientific_reports_manuscript.py --mode manuscript > "$RUNNER_TEMP/sr-build.log" 2>&1
+          python submission/code/29_build_scientific_reports_support.py > "$RUNNER_TEMP/sr-support.log" 2>&1
           status=$?
           if [[ $status -ne 0 ]]; then
             mkdir -p submission/qa
-            tail -n 100 "$RUNNER_TEMP/sr-build.log" > submission/qa/scientific_reports_build_error.log
+            tail -n 120 "$RUNNER_TEMP/sr-support.log" > submission/qa/scientific_reports_support_error.log
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git add submission/qa/scientific_reports_build_error.log
-            git commit -m 'Record Scientific Reports build diagnostic [skip generation]'
+            git add submission/qa/scientific_reports_support_error.log
+            git commit -m 'Record Scientific Reports support diagnostic [skip generation]'
             git push origin HEAD:release/scientific-reports-submission-v1.1
             exit $status
           fi
-          cat "$RUNNER_TEMP/sr-build.log"
-      - name: Build supplementary DOCX
-        run: python submission/code/31_build_scientific_reports_supplementary.py
+          cat "$RUNNER_TEMP/sr-support.log"
+      - name: Build STROBE with persisted diagnostics
+        shell: bash
+        run: |
+          set +e
+          python submission/code/33_build_scientific_reports_strobe.py > "$RUNNER_TEMP/sr-strobe.log" 2>&1
+          status=$?
+          if [[ $status -ne 0 ]]; then
+            mkdir -p submission/qa
+            tail -n 120 "$RUNNER_TEMP/sr-strobe.log" > submission/qa/scientific_reports_strobe_error.log
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add submission/qa/scientific_reports_strobe_error.log
+            git commit -m 'Record Scientific Reports STROBE diagnostic [skip generation]'
+            git push origin HEAD:release/scientific-reports-submission-v1.1
+            exit $status
+          fi
+          cat "$RUNNER_TEMP/sr-strobe.log"
