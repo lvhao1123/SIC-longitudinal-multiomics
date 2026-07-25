@@ -1,0 +1,76 @@
+name: Rebuild Scientific Reports manifest once
+
+on:
+  push:
+    branches:
+      - release/scientific-reports-submission-v1.1
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild-manifest:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: release/scientific-reports-submission-v1.1
+          fetch-depth: 0
+      - name: Rebuild manifest from final submission tree
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib
+
+          repo = Path('.').resolve()
+          root = repo / 'submission'
+          rows = []
+          for path in sorted(p for p in root.rglob('*') if p.is_file()):
+              rel = path.relative_to(repo).as_posix()
+              if path.name == 'public_manifest.tsv':
+                  continue
+              if any(part in {'__pycache__', '.pytest_cache', '_sr_builder_parts'} for part in path.parts):
+                  continue
+              if path.suffix.lower() in {'.pyc', '.pyo'}:
+                  continue
+              if '/figures/' in rel:
+                  role = 'publication_figure'
+              elif '/supplementary_files/' in rel:
+                  role = 'supplementary_workbook'
+              elif '/manuscript_files/' in rel:
+                  role = 'submission_manuscript_file'
+              elif '/public_source_data/' in rel:
+                  role = 'aggregate_source_data'
+              elif '/manuscript_support/' in rel:
+                  role = 'manuscript_support'
+              elif '/code/' in rel:
+                  role = 'submission_production_code'
+              elif '/tests/' in rel:
+                  role = 'submission_test'
+              elif '/qa/' in rel:
+                  role = 'aggregate_QA'
+              elif 'numeric_truth' in rel:
+                  role = 'numeric_truth'
+              else:
+                  role = 'repository_interface'
+              digest = hashlib.sha256(path.read_bytes()).hexdigest()
+              rows.append((rel, path.stat().st_size, role, digest))
+          manifest = root / 'public_manifest.tsv'
+          with manifest.open('w', encoding='utf-8', newline='') as handle:
+              handle.write('path\tbytes\trole\tsha256\n')
+              for row in rows:
+                  handle.write('\t'.join(map(str, row)) + '\n')
+          print(f'{len(rows)} submission assets recorded.')
+          PY
+      - name: Remove one-time workflow and commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm .github/workflows/rebuild-scientific-reports-manifest-once.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add submission/public_manifest.tsv .github/workflows/rebuild-scientific-reports-manifest-once.yml
+          git commit -m 'Rebuild Scientific Reports release manifest [skip generation]'
+          git push origin HEAD:release/scientific-reports-submission-v1.1
