@@ -4,55 +4,55 @@
 
 **Goal:** Convert the immutable `jic-submission-v1.0` package into a fully validated Scientific Reports submission package without changing any frozen scientific result.
 
-**Architecture:** Treat the JIC release as read-only input and generate a separate Scientific Reports submission subtree. Build outputs through deterministic Python scripts, preserve machine-readable supplementary workbooks, and validate text, numbers, cross-references, document hygiene, rendering, privacy, hashes, and release metadata before opening a pull request.
+**Architecture:** Treat the JIC release as read-only input and generate a separate Scientific Reports submission subtree. Use deterministic Python/R builders, keep S1-S8 machine-readable, create a new S9 baseline workbook, and gate release on numerical, cross-reference, document-hygiene, rendering, privacy, manifest, and repository QA.
 
-**Tech Stack:** Python 3, `python-docx`, OOXML/ZIP inspection, LibreOffice headless rendering, R 4.4.2/testthat, `artifact_tool` for XLSX editing, SHA-256 manifests, Git/GitHub Actions.
+**Tech Stack:** Python 3, `python-docx`, OOXML/ZIP inspection, LibreOffice headless, R 4.4.2/testthat, `artifact_tool` for XLSX creation/editing, SHA-256 manifests, GitHub Actions.
 
 ## Global Constraints
 
-- Authoritative baseline: GitHub tag `jic-submission-v1.0` only.
-- Target branch: `release/scientific-reports-submission-v1.1`.
-- Target article type: `Article` in `Scientific Reports`.
-- Manuscript title must remain exactly: `Landmark-specific transcriptomic and proteomic associations with 60-day mortality in Day-1-defined sepsis-induced coagulopathy: a multicentre longitudinal cohort study`.
-- No cohort count, event count, HR, CI, P value, FDR, NES, pathway direction, model definition, estimand, figure, or frozen QA result may change without a separately documented discrepancy and explicit author approval.
-- No new statistical analysis, pathway analysis, subgroup analysis, prediction model, or mechanistic experiment.
-- Abstract must be unstructured and contain no more than 200 words.
-- Keywords must be exactly six: Sepsis-induced coagulopathy; Multi-omics; Landmark analysis; Transcriptomics; Proteomics; Mortality.
-- Main-text order: Title page; Abstract; Keywords; Introduction; Results; Discussion; Methods; Data availability; Code availability; References; Acknowledgements; Author contributions; Competing interests; Figure legends; Table 1.
-- `AI-assisted tools in manuscript and code preparation` must be the final Methods subsection.
-- Main Table 1 must fit on one rendered page; the complete baseline table becomes Supplementary Table S9.
-- Submission-facing supplementary figures must be renamed from A1-A9 to S1-S9 everywhere.
-- Existing S1-S8 workbooks remain separate machine-readable files.
-- Composite Supplementary Information must be produced as DOCX and PDF and remain below 50 MB.
-- Clean files must contain no comments or tracked changes; the highlighted manuscript uses yellow highlighting only for substantive edits defined in the approved design.
-- The original `jic-submission-v1.0` tag and release must never be edited, retagged, deleted, or overwritten.
-- The new release tag is `scientific-reports-submission-v1.1`, created only from the final merged `main` commit and dated with the actual publication date.
-- Cover Letter is a private submission file and must not be included in the public GitHub release.
+- Authoritative baseline: tag `jic-submission-v1.0` only.
+- Work branch: `release/scientific-reports-submission-v1.1`.
+- Article type: `Article` in `Scientific Reports`.
+- Title remains exactly: `Landmark-specific transcriptomic and proteomic associations with 60-day mortality in Day-1-defined sepsis-induced coagulopathy: a multicentre longitudinal cohort study`.
+- No cohort count, event count, HR, CI, P value, adjusted P value, FDR, NES, pathway direction, model, estimand, figure content, or frozen QA outcome may change without a documented discrepancy and explicit author approval.
+- No new statistical, subgroup, pathway, prediction, or mechanistic analysis.
+- Abstract: unstructured, no references, no more than 200 words.
+- Keywords: exactly six approved terms.
+- Main order: Title page; Abstract; Keywords; Introduction; Results; Discussion; Methods; Data availability; References; Acknowledgements; Author contributions; Additional Information/Competing interests; Figure legends; Table 1.
+- Methods includes a subsection headed `Code availability`; the final Methods subsection is `AI-assisted tools in manuscript and code preparation`.
+- Main Table 1 must fit on one rendered page; the complete original table becomes Supplementary Table S9.
+- Submission-facing supplementary figures are S1-S9, not A1-A9.
+- Existing S1-S8 workbooks remain separate machine-readable files and retain byte identity.
+- Composite Supplementary Information is delivered as DOCX and PDF and must remain below 50 MB.
+- Clean files contain no comments, tracked changes, hidden text, or stale links.
+- The highlighted manuscript uses yellow highlighting only for substantive additions/revisions approved in the design.
+- The original JIC release remains unchanged.
+- New public release tag: `scientific-reports-submission-v1.1`, created from final merged `main` and dated with the actual publication date.
+- Cover Letter remains private and is never committed or released.
 
----
+## File Map
 
-## File Structure
+### Create production scripts
 
-### New production scripts
+- `submission/code/28_lock_scientific_reports_baseline.py`
+- `submission/code/29_build_scientific_reports_table1_s9.py`
+- `submission/code/30_build_scientific_reports_manuscript.py`
+- `submission/code/31_build_scientific_reports_supplementary.py`
+- `submission/code/32_build_scientific_reports_cover_letter.py`
+- `submission/code/33_build_scientific_reports_strobe.py`
+- `submission/code/34_validate_scientific_reports_package.py`
+- `submission/code/35_build_scientific_reports_release_manifest.R`
 
-- `submission/code/28_lock_scientific_reports_baseline.py` - verify baseline hashes and extract a deterministic text/table inventory.
-- `submission/code/29_build_scientific_reports_manuscript.py` - build clean and highlighted main manuscripts plus revision report.
-- `submission/code/30_build_scientific_reports_supplementary.py` - build the composite Supplementary Information DOCX/PDF and submission-facing S1-S9 figure copies.
-- `submission/code/31_build_scientific_reports_cover_letter.py` - build the private Cover Letter.
-- `submission/code/32_build_scientific_reports_strobe.py` - update STROBE after final pagination stabilises.
-- `submission/code/33_validate_scientific_reports_package.py` - run semantic, numerical, cross-reference, hygiene, and package validations.
-- `submission/code/34_build_scientific_reports_release_manifest.R` - rebuild the Scientific Reports manifest and SHA-256 layer.
+### Create support files
 
-### New manuscript support files
+- `submission/manuscript_support/scientific_reports_text_map.tsv`
+- `submission/manuscript_support/scientific_reports_reference_map.tsv`
+- `submission/manuscript_support/scientific_reports_table1_rows.tsv`
+- `submission/manuscript_support/scientific_reports_crossref_map.tsv`
 
-- `submission/manuscript_support/scientific_reports_text_map.tsv` - paragraph-level source, destination, edit class, and approval boundary.
-- `submission/manuscript_support/scientific_reports_reference_map.tsv` - old reference number, new number, DOI/PMID, and verification status.
-- `submission/manuscript_support/scientific_reports_table1_rows.tsv` - exact rows retained in main Table 1.
-- `submission/manuscript_support/scientific_reports_crossref_map.tsv` - A1-A9 to S1-S9 and all manuscript/supplement citations.
+### Create public submission files
 
-### New submission-facing files
-
-Create under `submission/manuscript_files/scientific_reports/`:
+Under `submission/manuscript_files/scientific_reports/`:
 
 - `Scientific_Reports_manuscript_clean.docx`
 - `Scientific_Reports_manuscript_highlighted.docx`
@@ -71,44 +71,45 @@ Create under `submission/manuscript_files/scientific_reports/`:
 - `STROBE_Scientific_Reports_completed.docx`
 - `STROBE_Scientific_Reports_audit.tsv`
 
-Create privately in `/mnt/data/scientific_reports_private_submission/` and do not commit:
+### Create private submission file
 
-- `Scientific_Reports_Cover_Letter.docx`
+- `/mnt/data/scientific_reports_private_submission/Scientific_Reports_Cover_Letter.docx`
 
-### New QA files
+### Create QA outputs
 
 - `submission/qa/scientific_reports_baseline_lock.json`
-- `submission/qa/scientific_reports_manuscript_validation.json`
-- `submission/qa/scientific_reports_cross_reference_audit.tsv`
 - `submission/qa/scientific_reports_numeric_audit.tsv`
+- `submission/qa/scientific_reports_cross_reference_audit.tsv`
 - `submission/qa/scientific_reports_render_audit.tsv`
 - `submission/qa/scientific_reports_package_validation.json`
 
-### Tests and metadata
+### Create/modify tests and metadata
 
-- Create `tests/testthat/test-scientific-reports-release-metadata.R`.
 - Create `tests/testthat/test-scientific-reports-package.R`.
+- Create `tests/testthat/test-scientific-reports-release-metadata.R`.
 - Modify `README.md`.
-- Modify `CITATION.cff` only immediately before the new release freeze.
-- Modify `submission/public_manifest.tsv` through the manifest builder, never by hand.
+- Modify `CITATION.cff` only on the actual release-freeze date.
+- Regenerate `submission/public_manifest.tsv`; never edit it manually.
 
 ---
 
-### Task 1: Lock the immutable JIC baseline
+### Task 1: Lock the immutable baseline
 
 **Files:**
 - Create: `submission/code/28_lock_scientific_reports_baseline.py`
 - Create: `submission/qa/scientific_reports_baseline_lock.json`
-- Test: `tests/testthat/test-scientific-reports-package.R`
+- Create: `tests/testthat/test-scientific-reports-package.R`
 
 **Interfaces:**
-- Consumes: `submission/public_manifest.tsv`, the four JIC submission files, all frozen source-data and numerical-truth files.
-- Produces: JSON containing `path`, `expected_sha256`, `observed_sha256`, `bytes`, and `match` for every required baseline file.
+- Consumes: `submission/public_manifest.tsv` and required JIC release files.
+- Produces: deterministic JSON with observed and expected SHA-256 values.
 
-- [ ] **Step 1: Write the failing baseline-lock test**
+- [ ] **Step 1: Write the failing test**
 
 ```r
-testthat::test_that("Scientific Reports baseline lock is complete and green", {
+repo_root <- normalizePath(file.path(testthat::test_path(), "..", ".."), winslash = "/")
+
+testthat::test_that("Scientific Reports baseline is locked", {
   path <- file.path(repo_root, "submission/qa/scientific_reports_baseline_lock.json")
   testthat::expect_true(file.exists(path))
   lock <- jsonlite::read_json(path, simplifyVector = TRUE)
@@ -118,34 +119,30 @@ testthat::test_that("Scientific Reports baseline lock is complete and green", {
 })
 ```
 
-- [ ] **Step 2: Run the test and verify that it fails**
-
-Run:
+- [ ] **Step 2: Run the test and confirm failure**
 
 ```bash
 Rscript -e "testthat::test_file('tests/testthat/test-scientific-reports-package.R')"
 ```
 
-Expected: FAIL because the lock JSON and builder do not exist.
+Expected: FAIL because the JSON does not exist.
 
-- [ ] **Step 3: Implement deterministic hash verification**
-
-The script must:
+- [ ] **Step 3: Implement the hash lock**
 
 ```python
-REQUIRED = [
+REQUIRED = (
     "submission/manuscript_files/JIC_manuscript_clean.docx",
     "submission/manuscript_files/Additional_file_1_Supplementary_methods_and_figures.docx",
     "submission/manuscript_files/Additional_file_2_Supplementary_Tables_S1-S8.zip",
     "submission/manuscript_files/STROBE_checklist_cohort_completed.docx",
     "submission/numeric_truth_table.tsv",
     "submission/numeric_truth_dictionary.tsv",
-]
+)
 ```
 
-For each path, read the expected SHA-256 from `submission/public_manifest.tsv`, calculate the observed SHA-256, fail on a missing path or mismatch, and write sorted JSON with `source_tag: jic-submission-v1.0` and `all_match`.
+Read expected hashes from `submission/public_manifest.tsv`, calculate observed hashes, fail on any missing/mismatched file, sort rows by path, and write `source_tag`, `files`, and `all_match`.
 
-- [ ] **Step 4: Run the lock builder and test**
+- [ ] **Step 4: Run builder and test**
 
 ```bash
 python submission/code/28_lock_scientific_reports_baseline.py \
@@ -155,7 +152,7 @@ python submission/code/28_lock_scientific_reports_baseline.py \
 Rscript -e "testthat::test_file('tests/testthat/test-scientific-reports-package.R')"
 ```
 
-Expected: PASS and `all_match=true`.
+Expected: PASS.
 
 - [ ] **Step 5: Commit**
 
@@ -168,222 +165,107 @@ git commit -m "test: lock Scientific Reports baseline"
 
 ---
 
-### Task 2: Build the approved editorial map and reference verification map
+### Task 2: Define editorial, reference, and cross-reference maps
 
 **Files:**
 - Create: `submission/manuscript_support/scientific_reports_text_map.tsv`
 - Create: `submission/manuscript_support/scientific_reports_reference_map.tsv`
 - Create: `submission/manuscript_support/scientific_reports_crossref_map.tsv`
-- Test: `tests/testthat/test-scientific-reports-package.R`
+- Modify: `tests/testthat/test-scientific-reports-package.R`
 
 **Interfaces:**
-- Consumes: paragraphs, headings, tables, and reference list from the JIC manuscript and Supplementary Information.
-- Produces: deterministic edit instructions used by Tasks 3-6.
+- Consumes: JIC manuscript paragraphs, references, figure legends, and supplementary citations.
+- Produces: deterministic instructions used by all document builders.
 
-- [ ] **Step 1: Add failing map-completeness tests**
+- [ ] **Step 1: Add failing map tests**
 
 ```r
-testthat::test_that("Scientific Reports editorial maps have no unresolved rows", {
-  text_map <- read.delim(file.path(repo_root, "submission/manuscript_support/scientific_reports_text_map.tsv"), check.names = FALSE)
-  ref_map <- read.delim(file.path(repo_root, "submission/manuscript_support/scientific_reports_reference_map.tsv"), check.names = FALSE)
-  crossref <- read.delim(file.path(repo_root, "submission/manuscript_support/scientific_reports_crossref_map.tsv"), check.names = FALSE)
-  testthat::expect_false(any(is.na(text_map$destination_section) | text_map$destination_section == ""))
-  testthat::expect_true(all(text_map$edit_class %in% c("unchanged", "clarification", "interpretive expansion", "claim restriction", "journal compliance", "structural relocation", "cross-reference renumbering")))
-  testthat::expect_false(any(ref_map$verification_status != "verified"))
+testthat::test_that("Scientific Reports maps are complete", {
+  support <- file.path(repo_root, "submission/manuscript_support")
+  text_map <- read.delim(file.path(support, "scientific_reports_text_map.tsv"), check.names = FALSE)
+  ref_map <- read.delim(file.path(support, "scientific_reports_reference_map.tsv"), check.names = FALSE)
+  crossref <- read.delim(file.path(support, "scientific_reports_crossref_map.tsv"), check.names = FALSE)
+  allowed <- c("unchanged", "clarification", "interpretive expansion", "claim restriction", "journal compliance", "structural relocation", "cross-reference renumbering")
+  testthat::expect_true(all(text_map$edit_class %in% allowed))
+  testthat::expect_false(any(text_map$destination_section == ""))
+  testthat::expect_true(all(ref_map$verification_status == "verified"))
   testthat::expect_setequal(crossref$old_id, paste0("A", 1:9))
   testthat::expect_setequal(crossref$new_id, paste0("S", 1:9))
 })
 ```
 
-- [ ] **Step 2: Run the tests and verify failure**
+- [ ] **Step 2: Run and confirm failure**
 
 ```bash
 Rscript -e "testthat::test_file('tests/testthat/test-scientific-reports-package.R')"
 ```
 
-Expected: FAIL because the maps are absent.
+- [ ] **Step 3: Build `scientific_reports_text_map.tsv`**
 
-- [ ] **Step 3: Populate the text map**
-
-Required columns:
+Use columns:
 
 ```text
 source_order	source_heading	source_sha256	destination_section	destination_order	edit_class	highlight	approved_boundary
 ```
 
-Every substantive paragraph must have one destination. `highlight` is `TRUE` only for the five approved highlighted-edit classes; structural moves and systematic renumbering use `FALSE`.
+Every source paragraph receives exactly one destination. `highlight=TRUE` only for clarification, interpretive expansion, claim restriction, and journal-compliance text that is substantively new or rewritten.
 
-- [ ] **Step 4: Populate and verify the reference map**
+- [ ] **Step 4: Build and verify the reference map**
 
-Required columns:
+Use columns:
 
 ```text
 old_number	new_number	first_author	year	title	doi_or_pmid	primary_source_url	verification_status
 ```
 
-Verify every reference against a primary bibliographic source. Preserve citation-to-reference mapping. Add a new reference only when it directly supports an approved interpretive clarification and record `old_number=NEW`.
+Verify each item against the publisher page, DOI record, PubMed, Crossref, or another primary bibliographic source. Preserve citation mapping; add references only when needed for an approved interpretive clarification.
 
-- [ ] **Step 5: Populate the cross-reference map**
+- [ ] **Step 5: Build the A1-A9 to S1-S9 cross-reference map**
 
-Include exact filename and caption mappings from A1-A9 to S1-S9 plus every main-text citation location.
+Use columns:
+
+```text
+old_id	new_id	old_filename	new_filename	caption_title	main_text_locations	supplement_locations
+```
 
 - [ ] **Step 6: Run tests and commit**
 
 ```bash
 Rscript -e "testthat::test_file('tests/testthat/test-scientific-reports-package.R')"
-git add submission/manuscript_support/scientific_reports_*.tsv tests/testthat/test-scientific-reports-package.R
+git add submission/manuscript_support/scientific_reports_*map.tsv \
+        tests/testthat/test-scientific-reports-package.R
 git commit -m "docs: define Scientific Reports editorial maps"
 ```
 
 ---
 
-### Task 3: Build the Scientific Reports main manuscript and revision report
+### Task 3: Create concise Table 1 and complete Supplementary Table S9
 
 **Files:**
-- Create: `submission/code/29_build_scientific_reports_manuscript.py`
-- Create: `submission/manuscript_files/scientific_reports/Scientific_Reports_manuscript_clean.docx`
-- Create: `submission/manuscript_files/scientific_reports/Scientific_Reports_manuscript_highlighted.docx`
-- Create: `submission/manuscript_files/scientific_reports/Scientific_Reports_revision_report.docx`
-- Create: `submission/qa/scientific_reports_manuscript_validation.json`
-- Test: `tests/testthat/test-scientific-reports-package.R`
-
-**Interfaces:**
-- Consumes: baseline JIC manuscript, text map, reference map, Table 1 row map from Task 4, and final Scientific Reports release URL placeholder token `[[SCIENTIFIC_REPORTS_RELEASE_URL]]`.
-- Produces: clean manuscript, highlighted manuscript, revision report, and JSON validation summary.
-
-- [ ] **Step 1: Add failing manuscript-interface tests**
-
-```r
-testthat::test_that("Scientific Reports manuscripts satisfy structural rules", {
-  report <- jsonlite::read_json(file.path(repo_root, "submission/qa/scientific_reports_manuscript_validation.json"), simplifyVector = TRUE)
-  testthat::expect_true(isTRUE(report$all_pass))
-  testthat::expect_lte(report$abstract_words, 200)
-  testthat::expect_identical(report$keyword_count, 6L)
-  testthat::expect_identical(report$title, "Landmark-specific transcriptomic and proteomic associations with 60-day mortality in Day-1-defined sepsis-induced coagulopathy: a multicentre longitudinal cohort study")
-  testthat::expect_false(report$residual_A_figure_citations)
-  testthat::expect_false(report$clean_has_comments)
-  testthat::expect_false(report$clean_has_tracked_changes)
-})
-```
-
-- [ ] **Step 2: Run the test and verify failure**
-
-```bash
-Rscript -e "testthat::test_file('tests/testthat/test-scientific-reports-package.R')"
-```
-
-Expected: FAIL because outputs do not exist.
-
-- [ ] **Step 3: Implement document construction**
-
-Use `python-docx` for paragraphs, styles, tables, section order, page numbers, and line-numbering OOXML. The builder must:
-
-```python
-SECTION_ORDER = [
-    "Abstract", "Keywords", "Introduction", "Results", "Discussion", "Methods",
-    "Data availability", "Code availability", "References", "Acknowledgements",
-    "Author contributions", "Competing interests", "Figure legends", "Table 1",
-]
-KEYWORDS = [
-    "Sepsis-induced coagulopathy", "Multi-omics", "Landmark analysis",
-    "Transcriptomics", "Proteomics", "Mortality",
-]
-```
-
-It must also:
-
-- preserve the exact approved title and author/affiliation block;
-- write a single-paragraph abstract of at most 200 words using frozen principal results only;
-- relocate Background content to Introduction;
-- place Results before Discussion and Methods;
-- merge Conclusions into the final Discussion paragraph;
-- ensure the final Methods subsection is `AI-assisted tools in manuscript and code preparation` with the approved disclosure verbatim;
-- move ethics and informed-consent language into Methods;
-- separate Data availability and Code availability;
-- use Nature-style references while preserving mapping;
-- insert one-page concise Table 1 from Task 4;
-- include `Supplementary Table S9` in the Table 1 legend and Results text;
-- replace every A1-A9 citation with S1-S9;
-- generate a clean file with no comments or tracked changes;
-- generate a highlighted file in which approved substantive text runs use yellow highlighting;
-- generate a revision report grouped by edit class.
-
-- [ ] **Step 4: Validate document XML and text**
-
-The script must calculate and write:
-
-```json
-{
-  "title": "...",
-  "abstract_words": 0,
-  "keyword_count": 6,
-  "section_order_pass": true,
-  "ird_words": 0,
-  "residual_A_figure_citations": false,
-  "clean_has_comments": false,
-  "clean_has_tracked_changes": false,
-  "highlighted_has_yellow_highlight": true,
-  "ai_statement_exact": true,
-  "all_pass": true
-}
-```
-
-`ird_words` means Introduction + Results + Discussion words and must be no more than 4,500 unless the author approves a documented exception.
-
-- [ ] **Step 5: Run builder and tests**
-
-```bash
-python submission/code/29_build_scientific_reports_manuscript.py \
-  --source submission/manuscript_files/JIC_manuscript_clean.docx \
-  --text-map submission/manuscript_support/scientific_reports_text_map.tsv \
-  --reference-map submission/manuscript_support/scientific_reports_reference_map.tsv \
-  --table1-map submission/manuscript_support/scientific_reports_table1_rows.tsv \
-  --out-dir submission/manuscript_files/scientific_reports \
-  --validation-out submission/qa/scientific_reports_manuscript_validation.json
-Rscript -e "testthat::test_file('tests/testthat/test-scientific-reports-package.R')"
-```
-
-Expected: PASS.
-
-- [ ] **Step 6: Commit**
-
-```bash
-git add submission/code/29_build_scientific_reports_manuscript.py \
-        submission/manuscript_files/scientific_reports/Scientific_Reports_manuscript_*.docx \
-        submission/manuscript_files/scientific_reports/Scientific_Reports_revision_report.docx \
-        submission/qa/scientific_reports_manuscript_validation.json \
-        tests/testthat/test-scientific-reports-package.R
-git commit -m "feat: build Scientific Reports manuscript package"
-```
-
----
-
-### Task 4: Create concise main Table 1 and complete Supplementary Table S9
-
-**Files:**
+- Create: `submission/code/29_build_scientific_reports_table1_s9.py`
 - Create: `submission/manuscript_support/scientific_reports_table1_rows.tsv`
 - Create: `submission/manuscript_files/scientific_reports/Supplementary_Table_S9_Complete_baseline_characteristics.xlsx`
-- Modify through Task 3 builder: main manuscript Table 1.
-- Test: `tests/testthat/test-scientific-reports-package.R`
+- Create/update: `submission/qa/scientific_reports_numeric_audit.tsv`
+- Modify: `tests/testthat/test-scientific-reports-package.R`
 
 **Interfaces:**
-- Consumes: the frozen full Table 1 in the JIC manuscript.
-- Produces: exact retained-row map and a machine-readable complete baseline workbook.
+- Consumes: the frozen full JIC Table 1.
+- Produces: an exact retained-row map, an editable complete S9 workbook, and table-parity audit rows.
 
-- [ ] **Step 1: Write failing table-parity tests**
+- [ ] **Step 1: Add the failing parity test**
 
 ```r
-testthat::test_that("main Table 1 is an exact subset of Supplementary Table S9", {
+testthat::test_that("main Table 1 values are an exact subset of S9", {
   audit <- read.delim(file.path(repo_root, "submission/qa/scientific_reports_numeric_audit.tsv"), check.names = FALSE)
-  subset <- audit[audit$domain == "table1_vs_s9", ]
-  testthat::expect_gt(nrow(subset), 0)
-  testthat::expect_true(all(subset$match))
+  x <- audit[audit$domain == "table1_vs_s9", ]
+  testthat::expect_gt(nrow(x), 0)
+  testthat::expect_true(all(x$match))
 })
 ```
 
-- [ ] **Step 2: Define retained rows explicitly**
+- [ ] **Step 2: Create the retained-row map**
 
-The row map must retain clinically central variables and their infection-source subrows:
+Use this initial exact list:
 
 ```text
 Age
@@ -395,7 +277,13 @@ D-dimer
 Lactate
 BUN
 PaO2/FiO2 ratio
-Infection source overall row and six source categories
+Infection source overall row
+Abdomen
+Biliary/liver
+Lung/chest
+Others/unknown
+Soft tissue
+Urinary
 Diabetes mellitus
 Hypertension
 Heart failure
@@ -404,79 +292,190 @@ COPD
 Renal failure
 ```
 
-Reduce this exact list only if rendered Table 1 exceeds one page; any reduction requires author approval and an updated row map commit.
+If the rendered table exceeds one page, stop and obtain author approval before removing any row.
 
-- [ ] **Step 3: Build S9 with `artifact_tool`**
+- [ ] **Step 3: Build S9 using `artifact_tool`**
 
-Import the extracted full baseline table, write it to a workbook with:
+The script imports the extracted baseline table, writes all original rows and six columns, applies readable header/wrap formatting, creates a `Notes` sheet with the complete footnote and provenance, and preserves every displayed numeric string exactly.
 
-- editable cells;
-- the original six columns and all frozen rows;
-- styled header row;
-- wrapped variable labels;
-- preserved numeric text exactly as shown in the frozen table;
-- a Notes sheet containing the full footnote and provenance path;
-- no formulas that alter scientific values.
+- [ ] **Step 4: Write exact comparison rows**
 
-- [ ] **Step 4: Verify S9 and main-table equality**
+For every retained cell write:
 
-Use exact string comparison after Unicode normalisation for every retained cell, denominator, P value, and SMD. Write each comparison to `submission/qa/scientific_reports_numeric_audit.tsv`.
-
-- [ ] **Step 5: Render and verify one-page Table 1**
-
-```bash
-python /home/oai/skills/docx/render_docx.py \
-  submission/manuscript_files/scientific_reports/Scientific_Reports_manuscript_clean.docx \
-  --output_dir /mnt/data/sr_main_render --emit_pdf
+```text
+domain	variable	column	main_value	s9_value	match
 ```
 
-Inspect the Table 1 page at 100% zoom. Fail the task if text clips, font becomes illegible, or the table spans more than one page.
+Normalise Unicode only; do not numerically round or reformat.
 
-- [ ] **Step 6: Commit**
+- [ ] **Step 5: Run test and commit**
 
 ```bash
-git add submission/manuscript_support/scientific_reports_table1_rows.tsv \
+python submission/code/29_build_scientific_reports_table1_s9.py \
+  --source submission/manuscript_files/JIC_manuscript_clean.docx \
+  --row-map submission/manuscript_support/scientific_reports_table1_rows.tsv \
+  --s9-out submission/manuscript_files/scientific_reports/Supplementary_Table_S9_Complete_baseline_characteristics.xlsx \
+  --audit-out submission/qa/scientific_reports_numeric_audit.tsv
+Rscript -e "testthat::test_file('tests/testthat/test-scientific-reports-package.R')"
+git add submission/code/29_build_scientific_reports_table1_s9.py \
+        submission/manuscript_support/scientific_reports_table1_rows.tsv \
         submission/manuscript_files/scientific_reports/Supplementary_Table_S9_Complete_baseline_characteristics.xlsx \
         submission/qa/scientific_reports_numeric_audit.tsv \
-        submission/manuscript_files/scientific_reports/Scientific_Reports_manuscript_*.docx
-git commit -m "feat: add concise Table 1 and complete baseline supplement"
+        tests/testthat/test-scientific-reports-package.R
+git commit -m "feat: add concise Table 1 map and complete baseline S9"
 ```
 
 ---
 
-### Task 5: Build composite Supplementary Information and propagate S1-S9 numbering
+### Task 4: Build clean/highlighted manuscripts and revision report
 
 **Files:**
-- Create: `submission/code/30_build_scientific_reports_supplementary.py`
-- Create: `submission/manuscript_files/scientific_reports/Scientific_Reports_Supplementary_Information.docx`
-- Create: `submission/manuscript_files/scientific_reports/Scientific_Reports_Supplementary_Information.pdf`
-- Create submission-facing copies of Supplementary Figs. S1-S9 under `submission/figures/scientific_reports/`.
-- Copy S1-S8 workbooks into `submission/manuscript_files/scientific_reports/` without changing bytes.
-- Test: `tests/testthat/test-scientific-reports-package.R`
+- Create: `submission/code/30_build_scientific_reports_manuscript.py`
+- Create: `submission/manuscript_files/scientific_reports/Scientific_Reports_manuscript_clean.docx`
+- Create: `submission/manuscript_files/scientific_reports/Scientific_Reports_manuscript_highlighted.docx`
+- Create: `submission/manuscript_files/scientific_reports/Scientific_Reports_revision_report.docx`
+- Modify: `tests/testthat/test-scientific-reports-package.R`
 
 **Interfaces:**
-- Consumes: Additional file 1, S1-S8 workbooks, S9, A1-A9 figures, cross-reference map.
-- Produces: one composite Supplementary Information DOCX/PDF, S1-S9 submission-facing figure copies, and separate machine-readable tables S1-S9.
+- Consumes: JIC manuscript, text/reference/table maps, S9, and cross-reference map.
+- Produces: three DOCX files with stable content and formatting.
 
-- [ ] **Step 1: Add failing supplementary-package tests**
+- [ ] **Step 1: Add failing manuscript tests**
 
 ```r
-testthat::test_that("Scientific Reports supplementary package is complete", {
-  root <- file.path(repo_root, "submission/manuscript_files/scientific_reports")
-  testthat::expect_true(file.exists(file.path(root, "Scientific_Reports_Supplementary_Information.docx")))
-  testthat::expect_true(file.exists(file.path(root, "Scientific_Reports_Supplementary_Information.pdf")))
-  testthat::expect_true(all(file.exists(file.path(root, sprintf("Supplementary_Table_S%d%s", 1:9, c(rep("", 9)))))) == FALSE)
+testthat::test_that("Scientific Reports manuscript interface is valid", {
   report <- jsonlite::read_json(file.path(repo_root, "submission/qa/scientific_reports_package_validation.json"), simplifyVector = TRUE)
-  testthat::expect_false(report$residual_A_labels)
-  testthat::expect_true(report$supplement_pdf_bytes < 50 * 1024^2)
+  testthat::expect_identical(report$title, "Landmark-specific transcriptomic and proteomic associations with 60-day mortality in Day-1-defined sepsis-induced coagulopathy: a multicentre longitudinal cohort study")
+  testthat::expect_lte(report$abstract_words, 200)
+  testthat::expect_identical(report$keyword_count, 6L)
+  testthat::expect_true(report$section_order_pass)
+  testthat::expect_true(report$data_availability_before_references)
+  testthat::expect_true(report$code_availability_in_methods)
+  testthat::expect_true(report$ai_is_final_methods_subsection)
 })
 ```
 
-Replace the temporary filename assertion in the same commit with an explicit vector of the nine exact workbook names listed in the File Structure section; do not leave generated-name logic in the final test.
+- [ ] **Step 2: Implement section reconstruction**
 
-- [ ] **Step 2: Implement S1-S9 renumbering**
+```python
+SECTION_ORDER = (
+    "Abstract", "Keywords", "Introduction", "Results", "Discussion", "Methods",
+    "Data availability", "References", "Acknowledgements", "Author contributions",
+    "Additional Information", "Figure legends", "Table 1",
+)
+KEYWORDS = (
+    "Sepsis-induced coagulopathy", "Multi-omics", "Landmark analysis",
+    "Transcriptomics", "Proteomics", "Mortality",
+)
+```
 
-Create exact submission-facing copies:
+The builder must:
+
+- preserve title, authors, affiliations, and corresponding-author details;
+- write a single-paragraph abstract of no more than 200 words using frozen results only;
+- convert Background to Introduction;
+- order Results, Discussion, then Methods;
+- merge Conclusions into the final Discussion paragraph;
+- remove Discussion subheadings unless essential for readability;
+- place ethics and informed consent in Methods;
+- create a Methods subsection headed `Code availability`;
+- place the approved AI disclosure as the final Methods subsection;
+- place Data availability before References;
+- place Competing interests under Additional Information;
+- convert citations and references to Nature style while preserving the map;
+- insert the concise Table 1 and cite Supplementary Table S9;
+- replace all A1-A9 citations with S1-S9;
+- add page and line numbering;
+- keep all tables editable.
+
+- [ ] **Step 3: Implement highlighted and revision-report outputs**
+
+Yellow-highlight only paragraphs/runs marked `highlight=TRUE`. Do not add comments or tracked changes. The revision report groups changes under:
+
+```text
+clarification
+interpretive expansion
+claim restriction
+journal compliance
+structural relocation
+cross-reference renumbering
+```
+
+- [ ] **Step 4: Build outputs**
+
+```bash
+python submission/code/30_build_scientific_reports_manuscript.py \
+  --source submission/manuscript_files/JIC_manuscript_clean.docx \
+  --text-map submission/manuscript_support/scientific_reports_text_map.tsv \
+  --reference-map submission/manuscript_support/scientific_reports_reference_map.tsv \
+  --table1-map submission/manuscript_support/scientific_reports_table1_rows.tsv \
+  --crossref-map submission/manuscript_support/scientific_reports_crossref_map.tsv \
+  --out-dir submission/manuscript_files/scientific_reports
+```
+
+- [ ] **Step 5: Render and inspect the three DOCX files**
+
+```bash
+for f in Scientific_Reports_manuscript_clean Scientific_Reports_manuscript_highlighted Scientific_Reports_revision_report; do
+  python /home/oai/skills/docx/render_docx.py \
+    "submission/manuscript_files/scientific_reports/${f}.docx" \
+    --output_dir "/mnt/data/render_${f}" --emit_pdf
+done
+```
+
+Inspect every page at 100% zoom. Confirm the main Table 1 is one page and all typography, page breaks, and figure legends are clean.
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add submission/code/30_build_scientific_reports_manuscript.py \
+        submission/manuscript_files/scientific_reports/Scientific_Reports_manuscript_*.docx \
+        submission/manuscript_files/scientific_reports/Scientific_Reports_revision_report.docx \
+        tests/testthat/test-scientific-reports-package.R
+git commit -m "feat: build Scientific Reports manuscript package"
+```
+
+---
+
+### Task 5: Build Supplementary Information and S1-S9 submission package
+
+**Files:**
+- Create: `submission/code/31_build_scientific_reports_supplementary.py`
+- Create: `submission/manuscript_files/scientific_reports/Scientific_Reports_Supplementary_Information.docx`
+- Create: `submission/manuscript_files/scientific_reports/Scientific_Reports_Supplementary_Information.pdf`
+- Create: `submission/figures/scientific_reports/Supplementary_Figure_S1-*` through `S9-*` copies.
+- Copy: S1-S8 workbooks into the Scientific Reports directory without changing bytes.
+- Modify: `tests/testthat/test-scientific-reports-package.R`
+
+**Interfaces:**
+- Consumes: Additional file 1, A1-A9 figures/legends, S1-S8 workbooks, S9, and cross-reference map.
+- Produces: composite SI DOCX/PDF and nine separate XLSX files.
+
+- [ ] **Step 1: Add failing package tests**
+
+```r
+testthat::test_that("Scientific Reports supplementary files are complete", {
+  root <- file.path(repo_root, "submission/manuscript_files/scientific_reports")
+  expected <- c(
+    "Supplementary_Table_S1_Clinical_variable_definitions.xlsx",
+    "Supplementary_Table_S2_Clinical_univariable_Cox.xlsx",
+    "Supplementary_Table_S3_RNA_gene_wise_Cox_PH.xlsx",
+    "Supplementary_Table_S4_RNA_Hallmark_GSEA.xlsx",
+    "Supplementary_Table_S5_Protein_wise_Cox_PH.xlsx",
+    "Supplementary_Table_S6_Protein_Hallmark_GSEA.xlsx",
+    "Supplementary_Table_S7_Cross_omics_models.xlsx",
+    "Supplementary_Table_S8_D5_availability_IPW.xlsx",
+    "Supplementary_Table_S9_Complete_baseline_characteristics.xlsx"
+  )
+  testthat::expect_true(all(file.exists(file.path(root, expected))))
+  testthat::expect_true(file.exists(file.path(root, "Scientific_Reports_Supplementary_Information.docx")))
+  testthat::expect_true(file.exists(file.path(root, "Scientific_Reports_Supplementary_Information.pdf")))
+})
+```
+
+- [ ] **Step 2: Create S1-S9 figure copies**
+
+Create exact hash-identical submission-facing copies named:
 
 ```text
 Supplementary_Figure_S1_centre_positivity.*
@@ -490,43 +489,43 @@ Supplementary_Figure_S8_D5_protein_availability.*
 Supplementary_Figure_S9_clinical_univariable_Cox.*
 ```
 
-Do not modify image pixels or scientific content. Verify copied-file hashes equal their A-numbered sources.
+Do not change pixels or metadata needed for scientific fidelity.
 
-- [ ] **Step 3: Build the Supplementary Information DOCX**
+- [ ] **Step 3: Build composite SI DOCX**
 
-The first page must contain the exact manuscript title and complete author list. Include:
+First page: exact title and full author list. Then:
 
 1. Supplementary Methods.
 2. Supplementary Figs. S1-S9 with updated legends.
 3. Supplementary Table S9.
-4. An index and field-note section for separate Supplementary Tables S1-S8.
+4. Titles, descriptions, field notes, and file index for separate Tables S1-S8.
 
-Every internal and main-manuscript reference must use `Supplementary Fig. S#` or `Supplementary Table S#`.
+Every citation includes `Supplementary`; no individual panel is cited separately.
 
-- [ ] **Step 4: Convert to PDF and inspect**
+- [ ] **Step 4: Copy and hash-check S1-S8**
+
+Copy the eight workbooks byte-for-byte and record source/destination hashes in `submission/qa/scientific_reports_package_validation.json`.
+
+- [ ] **Step 5: Render DOCX, create PDF, and inspect**
 
 ```bash
 python /home/oai/skills/docx/render_docx.py \
   submission/manuscript_files/scientific_reports/Scientific_Reports_Supplementary_Information.docx \
-  --output_dir /mnt/data/sr_supp_render --emit_pdf
-cp /mnt/data/sr_supp_render/Scientific_Reports_Supplementary_Information.pdf \
+  --output_dir /mnt/data/render_sr_supp --emit_pdf
+cp /mnt/data/render_sr_supp/Scientific_Reports_Supplementary_Information.pdf \
    submission/manuscript_files/scientific_reports/Scientific_Reports_Supplementary_Information.pdf
 python /home/oai/skills/pdfs/scripts/render_pdf.py \
   submission/manuscript_files/scientific_reports/Scientific_Reports_Supplementary_Information.pdf \
-  --output_dir /mnt/data/sr_supp_pdf_render
+  --output_dir /mnt/data/render_sr_supp_pdf
 ```
 
-Inspect every page at 100% zoom. Confirm no clipped captions, stretched figures, unreadable text, blank pages, or broken glyphs.
-
-- [ ] **Step 5: Verify byte identity of S1-S8 workbooks**
-
-Copy each workbook and compare SHA-256 with the frozen original. Record results in the package-validation JSON.
+Inspect every page and confirm file size below 50 MB.
 
 - [ ] **Step 6: Run tests and commit**
 
 ```bash
 Rscript -e "testthat::test_file('tests/testthat/test-scientific-reports-package.R')"
-git add submission/code/30_build_scientific_reports_supplementary.py \
+git add submission/code/31_build_scientific_reports_supplementary.py \
         submission/figures/scientific_reports \
         submission/manuscript_files/scientific_reports/Scientific_Reports_Supplementary_Information.* \
         submission/manuscript_files/scientific_reports/Supplementary_Table_S*.xlsx \
@@ -536,104 +535,94 @@ git commit -m "feat: build Scientific Reports supplementary package"
 
 ---
 
-### Task 6: Build the private Scientific Reports Cover Letter
+### Task 6: Build the private Cover Letter
 
 **Files:**
-- Create: `submission/code/31_build_scientific_reports_cover_letter.py`
+- Create: `submission/code/32_build_scientific_reports_cover_letter.py`
 - Create privately: `/mnt/data/scientific_reports_private_submission/Scientific_Reports_Cover_Letter.docx`
-- Do not add the Cover Letter to Git.
+- Do not commit the DOCX.
 
 **Interfaces:**
-- Consumes: title, author/affiliation block, corresponding-author contact details, and approved transfer/reviewer statements.
-- Produces: one clean private DOCX.
+- Consumes: final manuscript metadata and approved transfer/reviewer statements.
+- Produces: clean private Cover Letter.
 
-- [ ] **Step 1: Implement exact content checks in the builder**
+- [ ] **Step 1: Implement required statements**
 
-The builder must assert the letter contains:
+The builder must assert these exact strings are present:
 
 ```text
-Scientific Reports
-Article
 This manuscript was previously submitted to the Journal of Intensive Care and is now being submitted to Scientific Reports following a Springer Nature journal-transfer recommendation.
 We have no preferred reviewers and request no reviewer exclusions.
 We have had no prior discussions with a Scientific Reports Editorial Board Member regarding this work.
 ```
 
-It must also state that the work is original, unpublished, not under consideration elsewhere, approved by all authors, and supported by controlled-access data plus public aggregate code/results.
+It must also confirm originality, no concurrent consideration, author approval, corresponding-author details, journal fit, controlled-data limits, and public code/results.
 
-- [ ] **Step 2: Build the DOCX**
+- [ ] **Step 2: Build and render**
 
 ```bash
-python submission/code/31_build_scientific_reports_cover_letter.py \
+python submission/code/32_build_scientific_reports_cover_letter.py \
   --manuscript submission/manuscript_files/scientific_reports/Scientific_Reports_manuscript_clean.docx \
   --out /mnt/data/scientific_reports_private_submission/Scientific_Reports_Cover_Letter.docx
-```
-
-- [ ] **Step 3: Render and visually inspect**
-
-```bash
 python /home/oai/skills/docx/render_docx.py \
   /mnt/data/scientific_reports_private_submission/Scientific_Reports_Cover_Letter.docx \
-  --output_dir /mnt/data/sr_cover_render
+  --output_dir /mnt/data/render_sr_cover
 ```
 
-Confirm professional one- to two-page layout, correct corresponding-author details, no JIC addressee residue, no reviewer names, and no implication of completed peer review.
+Inspect for correct addressee, no JIC residue, no reviewer names, and no implication of completed peer review.
 
-- [ ] **Step 4: Commit the builder only**
+- [ ] **Step 3: Commit the builder only**
 
 ```bash
-git add submission/code/31_build_scientific_reports_cover_letter.py
+git add submission/code/32_build_scientific_reports_cover_letter.py
 git commit -m "feat: add Scientific Reports cover letter builder"
 ```
 
 ---
 
-### Task 7: Update STROBE after pagination is stable
+### Task 7: Update STROBE after final pagination
 
 **Files:**
-- Create: `submission/code/32_build_scientific_reports_strobe.py`
+- Create: `submission/code/33_build_scientific_reports_strobe.py`
 - Create: `submission/manuscript_files/scientific_reports/STROBE_Scientific_Reports_completed.docx`
 - Create: `submission/manuscript_files/scientific_reports/STROBE_Scientific_Reports_audit.tsv`
-- Test: `tests/testthat/test-scientific-reports-package.R`
+- Modify: `tests/testthat/test-scientific-reports-package.R`
 
 **Interfaces:**
-- Consumes: final clean manuscript PDF page map, final Supplementary Information PDF page map, and baseline STROBE checklist.
-- Produces: completed STROBE DOCX and row-level audit.
+- Consumes: final rendered manuscript/SI page maps and baseline STROBE.
+- Produces: completed STROBE and row-level audit.
 
-- [ ] **Step 1: Add failing STROBE audit tests**
+- [ ] **Step 1: Add failing STROBE test**
 
 ```r
 testthat::test_that("Scientific Reports STROBE audit is complete", {
   audit <- read.delim(file.path(repo_root, "submission/manuscript_files/scientific_reports/STROBE_Scientific_Reports_audit.tsv"), check.names = FALSE)
-  testthat::expect_false(any(is.na(audit$reported_location) | audit$reported_location == ""))
-  testthat::expect_false(any(audit$status != "verified"))
-  testthat::expect_true(all(grepl("p\\.", audit$reported_location) | grepl("Not applicable", audit$reported_location)))
+  testthat::expect_false(any(audit$reported_location == ""))
+  testthat::expect_true(all(audit$status == "verified"))
 })
 ```
 
-- [ ] **Step 2: Build a stable page map**
+- [ ] **Step 2: Build stable page maps**
 
-Extract headings and page numbers from the final rendered manuscript and Supplementary Information. Do not use approximate page numbers from the JIC version.
+Use final PDFs, not JIC page numbers. Map every heading and relevant paragraph to its final page.
 
-- [ ] **Step 3: Update every STROBE row**
+- [ ] **Step 3: Update all STROBE rows**
 
-Explicitly verify cohort design, eligibility, Day-1 SIC definition, Day-3/Day-5 landmark risk sets, outcome, missing data, assay availability, positivity, IPW, Cox/PH diagnostics, FDR, sensitivity analyses, limitations, generalisability, ethics, and data/code availability.
+Explicitly verify design, eligibility, Day-1 SIC definition, Day-3/Day-5 landmark risk sets, outcome, missing data, assay availability, positivity, IPW, Cox/PH diagnostics, multiplicity/FDR, sensitivity analyses, limitations, generalisability, ethics, and data/code availability.
 
-- [ ] **Step 4: Render and inspect STROBE**
+- [ ] **Step 4: Render and inspect**
 
 ```bash
 python /home/oai/skills/docx/render_docx.py \
   submission/manuscript_files/scientific_reports/STROBE_Scientific_Reports_completed.docx \
-  --output_dir /mnt/data/sr_strobe_render
+  --output_dir /mnt/data/render_sr_strobe
 ```
 
-Inspect every page for clipping, row splitting, unreadable columns, or stale JIC page references.
-
-- [ ] **Step 5: Run tests and commit**
+- [ ] **Step 5: Test and commit**
 
 ```bash
 Rscript -e "testthat::test_file('tests/testthat/test-scientific-reports-package.R')"
-git add submission/code/32_build_scientific_reports_strobe.py \
+git add submission/code/33_build_scientific_reports_strobe.py \
         submission/manuscript_files/scientific_reports/STROBE_Scientific_Reports_completed.docx \
         submission/manuscript_files/scientific_reports/STROBE_Scientific_Reports_audit.tsv \
         tests/testthat/test-scientific-reports-package.R
@@ -642,109 +631,117 @@ git commit -m "feat: update STROBE for Scientific Reports"
 
 ---
 
-### Task 8: Implement cross-document, numerical, and hygiene validation
+### Task 8: Validate the complete package and render every deliverable
 
 **Files:**
-- Create: `submission/code/33_validate_scientific_reports_package.py`
-- Create: `submission/qa/scientific_reports_cross_reference_audit.tsv`
-- Create: `submission/qa/scientific_reports_numeric_audit.tsv`
-- Create: `submission/qa/scientific_reports_render_audit.tsv`
-- Create: `submission/qa/scientific_reports_package_validation.json`
-- Test: `tests/testthat/test-scientific-reports-package.R`
+- Create: `submission/code/34_validate_scientific_reports_package.py`
+- Create/update: all Scientific Reports QA files.
+- Modify: `tests/testthat/test-scientific-reports-package.R`
 
 **Interfaces:**
-- Consumes: all Scientific Reports submission files, frozen numerical truth, source data, figure files, baseline lock, and render outputs.
-- Produces: one machine-readable release gate with `all_pass`.
+- Consumes: all final public files, private Cover Letter for local-only validation, numerical truth, source data, and baseline lock.
+- Produces: release gate with `all_pass=true`.
 
-- [ ] **Step 1: Define the validator schema and failing test**
+- [ ] **Step 1: Add failing release-gate test**
 
 ```r
 testthat::test_that("Scientific Reports package release gate is green", {
   report <- jsonlite::read_json(file.path(repo_root, "submission/qa/scientific_reports_package_validation.json"), simplifyVector = TRUE)
   testthat::expect_true(isTRUE(report$all_pass))
-  testthat::expect_equal(report$residual_A_labels, FALSE)
-  testthat::expect_equal(report$broken_cross_references, 0L)
   testthat::expect_equal(report$numeric_mismatches, 0L)
+  testthat::expect_equal(report$broken_cross_references, 0L)
+  testthat::expect_equal(report$residual_A_labels, 0L)
   testthat::expect_equal(report$privacy_findings, 0L)
   testthat::expect_equal(report$clean_comments, 0L)
   testthat::expect_equal(report$clean_tracked_changes, 0L)
 })
 ```
 
-- [ ] **Step 2: Implement scientific-text and numerical checks**
+- [ ] **Step 2: Implement numerical checks**
 
-The validator must compare every numeric token in Abstract, Results, Discussion, Methods, Table 1, and figure legends against the frozen numerical-truth/source-data layers. It must fail on a new numeric result, changed sign, changed exponent, changed denominator, or changed effect estimate.
+Compare all numeric tokens in Abstract, Results, Discussion, Methods, Table 1, and figure legends against frozen numerical-truth/source-data layers. Fail on new values, sign changes, denominator changes, exponent changes, or rounding changes not already present in the baseline.
 
-- [ ] **Step 3: Implement cross-reference checks**
+- [ ] **Step 3: Implement structure/cross-reference checks**
 
 Require:
 
-- zero residual `Supplementary Figure A1-A9` or `Supplementary Fig. A1-A9`;
-- all S1-S9 figures cited exactly where mapped;
-- all S1-S9 tables cited or indexed;
-- main Figures 1-4 cited in order;
-- no Figure 5 or graphical abstract;
-- all reference citations resolve to exactly one bibliography item.
+```text
+abstract <= 200 words
+keywords = 6
+unchanged title
+Introduction + Results + Discussion <= 4500 words
+Data availability before References
+Code availability within Methods
+AI disclosure as final Methods subsection
+zero A1-A9 labels
+S1-S9 figures cited
+S1-S9 tables cited or indexed
+Figures 1-4 cited in order
+no graphical abstract
+no footnotes
+figure legends <= 350 words each
+main display items <= 8
+```
 
-- [ ] **Step 4: Implement DOCX hygiene checks**
+- [ ] **Step 4: Implement DOCX hygiene and privacy checks**
 
-Inspect OOXML ZIP parts for:
+Inspect OOXML for comments, `w:ins`, `w:del`, `w:vanish`, broken relationships, stale JIC release links, local paths, credentials, participant identifiers, and controlled raw-data filenames.
+
+- [ ] **Step 5: Render every DOCX/PDF and record page audit**
+
+Use `/home/oai/skills/docx/render_docx.py` for DOCX and `/home/oai/skills/pdfs/scripts/render_pdf.py` for PDF. Write one row per page to:
 
 ```text
-word/comments.xml
-w:ins
-w:del
-w:vanish
-personal core-properties values
-stale JIC hyperlinks
-broken relationships
+file	page	clipping	overlap	broken_glyph	figure_legible	table_legible	page_break_ok	status	notes
 ```
 
-Clean submission files must have no comments, tracked changes, hidden text, or stale JIC release URLs. The highlighted manuscript may contain highlighting but no comments or tracked changes.
+All rows must be `PASS`.
 
-- [ ] **Step 5: Implement privacy and package-size checks**
-
-Scan all new text and tabular files for participant identifiers, local Windows paths, credentials, email addresses other than author contact fields, and controlled raw-data filenames. Confirm the Supplementary Information PDF is below 50 MB.
-
-- [ ] **Step 6: Run full validator and tests**
+- [ ] **Step 6: Run package and repository tests**
 
 ```bash
-python submission/code/33_validate_scientific_reports_package.py \
+python submission/code/34_validate_scientific_reports_package.py \
   --repo-root . \
+  --private-cover-letter /mnt/data/scientific_reports_private_submission/Scientific_Reports_Cover_Letter.docx \
   --out submission/qa/scientific_reports_package_validation.json
-Rscript -e "testthat::test_file('tests/testthat/test-scientific-reports-package.R')"
+Rscript -e "testthat::test_dir('tests/testthat')"
+Rscript submission/tests/test_submission_semantics.R
+Rscript submission/tests/test_sandwich_equivalence.R
+git diff --check
 ```
 
-Expected: PASS with `all_pass=true`.
+Expected: zero failures and `all_pass=true`.
 
-- [ ] **Step 7: Commit**
+- [ ] **Step 7: Commit QA evidence**
 
 ```bash
-git add submission/code/33_validate_scientific_reports_package.py \
-        submission/qa/scientific_reports_*audit.tsv \
-        submission/qa/scientific_reports_package_validation.json \
+git add submission/code/34_validate_scientific_reports_package.py \
+        submission/qa/scientific_reports_* \
         tests/testthat/test-scientific-reports-package.R
 git commit -m "test: validate Scientific Reports submission package"
 ```
 
 ---
 
-### Task 9: Update public release metadata and manifests
+### Task 9: Freeze release metadata, open PR, merge, and publish release
 
 **Files:**
-- Create: `submission/code/34_build_scientific_reports_release_manifest.R`
+- Create: `submission/code/35_build_scientific_reports_release_manifest.R`
 - Create: `tests/testthat/test-scientific-reports-release-metadata.R`
 - Modify: `README.md`
-- Modify immediately before freeze: `CITATION.cff`
+- Modify: `CITATION.cff`
 - Regenerate: `submission/public_manifest.tsv`
 
 **Interfaces:**
-- Consumes: final Scientific Reports package and current repository metadata.
-- Produces: release-ready README, citation metadata, manifest, and metadata tests.
+- Consumes: green final package.
+- Produces: merged release snapshot and public tag.
 
-- [ ] **Step 1: Write failing release-metadata tests**
+- [ ] **Step 1: Add failing metadata tests**
 
 ```r
+repo_root <- normalizePath(file.path(testthat::test_path(), "..", ".."), winslash = "/")
+read_repo_text <- function(path) paste(readLines(file.path(repo_root, path), warn = FALSE, encoding = "UTF-8"), collapse = "\n")
+
 testthat::test_that("Scientific Reports release metadata identifies v1.1", {
   readme <- read_repo_text("README.md")
   citation <- read_repo_text("CITATION.cff")
@@ -758,125 +755,45 @@ testthat::test_that("Scientific Reports release metadata identifies v1.1", {
 
 - [ ] **Step 2: Update README without erasing JIC history**
 
-Add a release-history section that retains the immutable JIC release and identifies the Scientific Reports release as the current submission snapshot. Keep controlled-access language and OMIX accession unchanged.
+Retain `jic-submission-v1.0` as the immutable original submission snapshot and identify `scientific-reports-submission-v1.1` as the current journal-transfer snapshot. Preserve OMIX011182 and controlled-access language.
 
-- [ ] **Step 3: Update `CITATION.cff` at freeze time**
-
-Set:
+- [ ] **Step 3: Freeze CITATION on the actual intended publication date**
 
 ```yaml
 version: 1.1.0
-date-released: <actual GitHub release publication date>
+date-released: YYYY-MM-DD
 ```
 
-Do not predate the release. Keep `Hao Lyu` identity and repository URL unchanged.
+`YYYY-MM-DD` must equal the day the GitHub release will actually be published. If publication is delayed to another date, update through a small PR before creating the tag.
 
-- [ ] **Step 4: Rebuild the manifest**
+- [ ] **Step 4: Rebuild manifest**
 
-The R builder must include all public Scientific Reports files except the private Cover Letter. Write sorted relative paths, byte sizes, roles, and SHA-256 hashes.
+Run the R builder to write sorted paths, bytes, roles, and SHA-256 hashes for all public Scientific Reports files. Exclude the private Cover Letter.
 
-- [ ] **Step 5: Run metadata tests**
+- [ ] **Step 5: Run final tests**
 
 ```bash
-Rscript -e "testthat::test_file('tests/testthat/test-scientific-reports-release-metadata.R')"
-```
-
-- [ ] **Step 6: Commit**
-
-```bash
-git add README.md CITATION.cff submission/public_manifest.tsv \
-        submission/code/34_build_scientific_reports_release_manifest.R \
-        tests/testthat/test-scientific-reports-release-metadata.R
-git commit -m "chore: prepare Scientific Reports release metadata"
-```
-
----
-
-### Task 10: Run complete repository and visual QA
-
-**Files:**
-- Update: `submission/qa/scientific_reports_render_audit.tsv`
-- No scientific content changes are permitted in this task.
-
-**Interfaces:**
-- Consumes: final repository state.
-- Produces: green test logs and a page-by-page visual audit.
-
-- [ ] **Step 1: Render all DOCX deliverables**
-
-```bash
-for f in \
-  submission/manuscript_files/scientific_reports/Scientific_Reports_manuscript_clean.docx \
-  submission/manuscript_files/scientific_reports/Scientific_Reports_manuscript_highlighted.docx \
-  submission/manuscript_files/scientific_reports/Scientific_Reports_revision_report.docx \
-  submission/manuscript_files/scientific_reports/Scientific_Reports_Supplementary_Information.docx \
-  submission/manuscript_files/scientific_reports/STROBE_Scientific_Reports_completed.docx
-do
-  out="/mnt/data/render_$(basename "$f" .docx)"
-  python /home/oai/skills/docx/render_docx.py "$f" --output_dir "$out" --emit_pdf
-done
-```
-
-- [ ] **Step 2: Inspect every rendered page at 100% zoom**
-
-Record one row per file/page in `submission/qa/scientific_reports_render_audit.tsv` with columns:
-
-```text
-file	page	clipping	overlap	broken_glyph	figure_legible	table_legible	page_break_ok	status	notes
-```
-
-Every row must have `status=PASS`.
-
-- [ ] **Step 3: Run canonical and repository tests**
-
-```bash
+Rscript submission/code/35_build_scientific_reports_release_manifest.R
 Rscript -e "testthat::test_dir('tests/testthat')"
 Rscript submission/tests/test_submission_semantics.R
-Rscript submission/tests/test_sandwich_equivalence.R
-python submission/code/33_validate_scientific_reports_package.py --repo-root . --out submission/qa/scientific_reports_package_validation.json
-```
-
-Expected: zero failures, zero warnings requiring action, and `all_pass=true`.
-
-- [ ] **Step 4: Run repository hygiene checks**
-
-```bash
+python submission/code/34_validate_scientific_reports_package.py \
+  --repo-root . \
+  --private-cover-letter /mnt/data/scientific_reports_private_submission/Scientific_Reports_Cover_Letter.docx \
+  --out submission/qa/scientific_reports_package_validation.json
 git diff --check
 git status --short
 ```
 
-Expected: no whitespace errors and only the intended final QA file modification before commit.
-
-- [ ] **Step 5: Commit final QA evidence**
+- [ ] **Step 6: Commit and open PR**
 
 ```bash
-git add submission/qa/scientific_reports_render_audit.tsv \
-        submission/qa/scientific_reports_package_validation.json \
-        submission/public_manifest.tsv
-git commit -m "test: freeze Scientific Reports submission QA"
+git add README.md CITATION.cff submission/public_manifest.tsv \
+        submission/code/35_build_scientific_reports_release_manifest.R \
+        tests/testthat/test-scientific-reports-release-metadata.R \
+        submission/qa/scientific_reports_package_validation.json
+git commit -m "chore: freeze Scientific Reports submission release v1.1"
+git push origin release/scientific-reports-submission-v1.1
 ```
-
----
-
-### Task 11: Review, pull request, merge, and release
-
-**Files:**
-- No new scientific files.
-- GitHub PR and Release metadata only.
-
-**Interfaces:**
-- Consumes: green release branch.
-- Produces: merged main branch and public immutable release.
-
-- [ ] **Step 1: Verify changed-file scope**
-
-```bash
-git diff --name-status main...release/scientific-reports-submission-v1.1
-```
-
-Expected: only approved design/plan, builders, Scientific Reports submission files, QA outputs, README/CITATION, manifest, and tests. No controlled raw data or Cover Letter.
-
-- [ ] **Step 2: Push branch and open PR**
 
 PR title:
 
@@ -884,61 +801,30 @@ PR title:
 Freeze Scientific Reports submission release v1.1
 ```
 
-PR body must state:
+PR body states that the JIC release remains unchanged, no participant-level data were added, no scientific result/model/source data/figure content changed, and all QA checks passed.
 
-- JIC release remains unchanged;
-- no participant-level data were added;
-- no scientific result, model, source data, or figure content changed;
-- the change is a journal-specific editorial/reporting conversion;
-- all package and repository QA checks passed.
+- [ ] **Step 7: Review, merge, and publish**
 
-- [ ] **Step 3: Review PR changed files and GitHub Actions**
-
-Require green Data-free repository QA and confirm the changed-file list matches Step 1.
-
-- [ ] **Step 4: Merge only after author approval**
-
-Use squash merge. Record the final `main` commit SHA.
-
-- [ ] **Step 5: Create the formal release**
-
-Create tag on final `main`:
-
-```text
-scientific-reports-submission-v1.1
-```
-
-Release title:
+After author review and green GitHub Actions, squash-merge to `main`. Create tag `scientific-reports-submission-v1.1` on final `main` and release title:
 
 ```text
 Scientific Reports submission reproducibility snapshot v1.1
 ```
 
-Do not upload the Cover Letter or participant-level data. Use the actual publication date in `CITATION.cff`.
+Do not upload the Cover Letter or controlled data.
 
-- [ ] **Step 6: Verify release unauthenticated**
+- [ ] **Step 8: Verify unauthenticated release**
 
-Open an InPrivate/Incognito window and confirm:
+Confirm in an Incognito/InPrivate window:
 
-- release page is public and not 404;
-- tag is exact;
-- target is the merged final `main` commit;
-- `Latest` is shown and `Pre-release` is absent;
-- source ZIP and tar.gz download;
-- the source archive contains all expected Scientific Reports public files;
-- the Cover Letter is absent;
-- the original `jic-submission-v1.0` release remains accessible and unchanged.
+- public page is not 404;
+- tag and target commit are correct;
+- release is Latest and not Pre-release;
+- source ZIP/tar.gz download;
+- archive contains all expected public Scientific Reports files;
+- Cover Letter is absent;
+- `jic-submission-v1.0` remains publicly accessible and unchanged.
 
-- [ ] **Step 7: Final submission handoff**
+- [ ] **Step 9: Final handoff**
 
-Deliver to the author:
-
-- clean manuscript;
-- highlighted manuscript;
-- revision report;
-- private Cover Letter;
-- Supplementary Information DOCX/PDF;
-- S1-S9 workbooks;
-- STROBE checklist and audit;
-- final package-validation report;
-- public release URL.
+Deliver the clean manuscript, highlighted manuscript, revision report, private Cover Letter, Supplementary Information DOCX/PDF, Tables S1-S9, STROBE and audit, package-validation report, and new public release URL.
