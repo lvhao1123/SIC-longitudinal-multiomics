@@ -6,3 +6,25 @@ Traceback (most recent call last):
   File "/home/runner/work/SIC-longitudinal-multiomics/SIC-longitudinal-multiomics/submission/code/29_build_scientific_reports_support.py", line 252, in build_cross_audit
     raise RuntimeError("Scientific Reports cross-reference audit failed")
 RuntimeError: Scientific Reports cross-reference audit failed
+
+--- scientific_reports_cross_reference_audit.tsv ---
+item	status	notes
+Supplementary Fig. S1	PASS	Citation or composite legend present.
+Supplementary Table S1	PASS	Citation or supplementary index present.
+Supplementary Fig. S2	PASS	Citation or composite legend present.
+Supplementary Table S2	PASS	Citation or supplementary index present.
+Supplementary Fig. S3	PASS	Citation or composite legend present.
+Supplementary Table S3	FAIL	Citation or supplementary index present.
+Supplementary Fig. S4	PASS	Citation or composite legend present.
+Supplementary Table S4	FAIL	Citation or supplementary index present.
+Supplementary Fig. S5	PASS	Citation or composite legend present.
+Supplementary Table S5	FAIL	Citation or supplementary index present.
+Supplementary Fig. S6	PASS	Citation or composite legend present.
+Supplementary Table S6	FAIL	Citation or supplementary index present.
+Supplementary Fig. S7	PASS	Citation or composite legend present.
+Supplementary Table S7	PASS	Citation or supplementary index present.
+Supplementary Fig. S8	PASS	Citation or composite legend present.
+Supplementary Table S8	PASS	Citation or supplementary index present.
+Supplementary Fig. S9	PASS	Citation or composite legend present.
+Supplementary Table S9	PASS	Citation or supplementary index present.
+Residual A1-A9 labels	PASS	count=0
