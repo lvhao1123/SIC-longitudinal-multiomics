@@ -30,8 +30,12 @@ jobs:
             cat submission/code/_sr_builder_parts/part_* > submission/code/30_build_scientific_reports_manuscript.py
           fi
           test -f submission/code/30_build_scientific_reports_manuscript.py
-          echo "98c4c68cede36aa77451c15aef8b536ac93152f2eb376aa744fc6dbe28568f70  submission/code/30_build_scientific_reports_manuscript.py" | sha256sum --check
-          python -m py_compile submission/code/28_lock_scientific_reports_baseline.py \
+          if [[ -d submission/code/_sr_builder_parts ]]; then
+            echo "98c4c68cede36aa77451c15aef8b536ac93152f2eb376aa744fc6dbe28568f70  submission/code/30_build_scientific_reports_manuscript.py" | sha256sum --check
+          fi
+          python submission/code/27_patch_scientific_reports_reference_discovery.py
+          python -m py_compile submission/code/27_patch_scientific_reports_reference_discovery.py \
+            submission/code/28_lock_scientific_reports_baseline.py \
             submission/code/29_build_scientific_reports_support.py \
             submission/code/30_build_scientific_reports_manuscript.py \
             submission/code/31_build_scientific_reports_supplementary.py \
@@ -144,9 +148,9 @@ jobs:
           print(f'{len(rows)} submission assets recorded.')
           PY
 
-      - name: Remove temporary builder parts
+      - name: Remove temporary builder parts and transient diagnostics
         shell: bash
-        run: rm -rf submission/code/_sr_builder_parts
+        run: rm -rf submission/code/_sr_builder_parts submission/qa/scientific_reports_build_error.log
 
       - name: Commit generated package
         shell: bash
