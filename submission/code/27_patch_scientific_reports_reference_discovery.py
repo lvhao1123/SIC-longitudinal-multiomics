@@ -57,7 +57,7 @@ if sorted(raw_refs) != list(range(1, 30)):
         "support-map reference discovery",
     )
 
-    old_cross_audit = """    text = "\n".join([p.text for p in main_doc.paragraphs] + [p.text for p in supp_doc.paragraphs])"""
+    old_cross_audit = """    text = "\\n".join([p.text for p in main_doc.paragraphs] + [p.text for p in supp_doc.paragraphs])"""
     new_cross_audit = """    paragraph_text = [p.text for p in main_doc.paragraphs] + [p.text for p in supp_doc.paragraphs]
     table_text = [
         cell.text
@@ -66,7 +66,7 @@ if sorted(raw_refs) != list(range(1, 30)):
         for row in table.rows
         for cell in row.cells
     ]
-    text = "\n".join(paragraph_text + table_text)"""
+    text = "\\n".join(paragraph_text + table_text)"""
     replace_once(
         support,
         old_cross_audit,
