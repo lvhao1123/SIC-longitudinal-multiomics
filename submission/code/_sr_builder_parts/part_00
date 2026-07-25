@@ -1,0 +1,216 @@
+from __future__ import annotations
+
+import csv
+import re
+import shutil
+import zipfile
+from collections import OrderedDict
+from copy import deepcopy
+from pathlib import Path
+from typing import Iterable
+
+from docx import Document
+from docx.enum.section import WD_ORIENT, WD_SECTION
+from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT, WD_TABLE_ALIGNMENT
+from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_BREAK, WD_COLOR_INDEX
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
+from docx.shared import Cm, Inches, Pt, RGBColor
+
+ROOT = Path(__file__).resolve().parents[2]
+BASE = ROOT / 'submission' / 'manuscript_files'
+WORK = ROOT / 'submission' / 'manuscript_support'
+OUT = BASE / 'scientific_reports'
+OUT.mkdir(parents=True, exist_ok=True)
+
+SOURCE_MANUSCRIPT = BASE / 'JIC_manuscript_clean.docx'
+SOURCE_SUPP = BASE / 'Additional_file_1_Supplementary_methods_and_figures.docx'
+SOURCE_STROBE = BASE / 'STROBE_checklist_cohort_completed.docx'
+
+TITLE = ('Landmark-specific transcriptomic and proteomic associations with 60-day mortality '
+         'in Day-1-defined sepsis-induced coagulopathy: a multicentre longitudinal cohort study')
+AUTHORS = 'Hao Lyu¹, Lingwei Li², Jianxing Guo¹, Dong Zhang¹*'
+AFFILIATIONS = [
+    '¹ Department of Critical Care Medicine, The First Hospital of Jilin University, No. 1 Xinmin Street, Changchun, Jilin 130021, China.',
+    '² Department of Cadre Ward, The First Hospital of Jilin University, No. 1 Xinmin Street, Changchun, Jilin 130021, China.',
+]
+CORRESPONDING = '*Correspondence: Dong Zhang (zhangdong@jlu.edu.cn)'
+EMAILS = ('Hao Lyu: haolv25@mails.jlu.edu.cn; Lingwei Li: lilw24@mails.jlu.edu.cn; '
+          'Jianxing Guo: guojianxing@jlu.edu.cn')
+RELEASE_URL = ('https://github.com/lvhao1123/SIC-longitudinal-multiomics/'
+               'releases/tag/scientific-reports-submission-v1.1')
+
+ABSTRACT = (
+    'Sepsis-induced coagulopathy (SIC) reflects dysregulated interactions among inflammation, '
+    'endothelial injury and haemostasis, but the molecular features associated with mortality may '
+    'differ across illness stages. We analysed 504 adults with Day-1 SIC from a multicentre Chinese '
+    'cohort using separate Day-1, Day-3 and Day-5 landmark Cox models for 60-day mortality applied '
+    'to whole-blood RNA sequencing and plasma proteomics. Signed feature rankings underwent Hallmark '
+    'enrichment, selected pathway scores were examined across omic layers, and Day-5 RNA-seq results '
+    'were tested with positivity-supported inverse-probability weighting. Risk-valid RNA-seq sets '
+    'comprised 504/84, 420/67 and 320/53 patients/deaths; proteomic sets comprised 168/27, 147/18 '
+    'and 114/14. Heme, hypoxia and inflammatory programmes were repeatedly enriched in '
+    'mortality-associated transcriptomic rankings, whereas Day-5 rankings showed strong negative '
+    'enrichment of oxidative phosphorylation, MYC, unfolded-protein-response, E2F and DNA-repair '
+    'programmes. Later proteomic rankings were dominated by extracellular-matrix and tissue-remodelling '
+    'signals. Interferon pathways showed selective contemporaneous and forward cross-omic associations. '
+    'Weighted and unweighted Day-5 Hallmark profiles were highly concordant (Spearman ρ=0.980), although '
+    'positivity and residual balance were limited. These landmark-specific associations define stage- '
+    'and compartment-dependent prognostic biology but require independent validation and do not establish '
+    'causal mechanisms or within-patient molecular trajectories.'
+)
+KEYWORDS = ('Sepsis-induced coagulopathy; Multi-omics; Landmark analysis; Transcriptomics; '
+            'Proteomics; Mortality')
+
+AI_DISCLOSURE = (
+    'ChatGPT (OpenAI) was used as an assistive tool during manuscript drafting, restructuring, '
+    'language editing, and the development and review of analysis scripts. All analyses were executed '
+    'through the version-controlled workflow, and the reported numerical results, tables, and figures '
+    'were verified against the frozen outputs and predefined quality-assurance checks. The authors '
+    'retained final responsibility for the study design, analytical choices, interpretation, source '
+    'verification, and conclusions; critically reviewed and revised all AI-assisted material; and '
+    'approved the final manuscript. Generative AI was not used to create or modify the scientific figures.'
+)
+
+DATA_AVAILABILITY = (
+    'Individual-level clinical, transcriptomic and proteomic data are controlled-access data available '
+    'through the formal CMAISE/OMIX application process under accession OMIX011182. The authors are not '
+    'authorised to redistribute these participant-level data. Aggregate non-identifiable result tables, '
+    'figure source data and quality-assurance materials supporting this study are available in the '
+    f'versioned repository release at {RELEASE_URL}.'
+)
+
+CODE_AVAILABILITY = (
+    'Version-controlled analysis code, software-environment records, numerical-truth interfaces and '
+    'reproducibility tests for the reported analyses are archived in the immutable repository release '
+    f'at {RELEASE_URL}. The repository does not contain participant-level clinical or molecular data.'
+)
+
+ETHICS = (
+    'This study was conducted in accordance with the Declaration of Helsinki and applicable regulations. '
+    'The parent study was approved by the Ethics Committee of Sir Run Run Shaw Hospital '
+    '(Approval No. 20201014-39), with additional local ethics approvals obtained at participating centres '
+    'as required. Written informed consent was obtained from all participants or their legally authorised representatives.'
+)
+
+TRANSLATIONAL = (
+    'Clinical translation should proceed through staged validation rather than immediate construction of '
+    'a static prognostic panel. Prospective multicentre studies should prespecify sampling windows, '
+    'reconstruct contemporaneous SIC and overt disseminated intravascular coagulation status, record '
+    'treatment exposures, and test whether a reduced RNA/protein panel improves prognostic performance '
+    'beyond contemporaneous severity and coagulation measures. Cell-resolved profiling and direct '
+    'measurements of endothelial injury, coagulation and cellular metabolism could test biological '
+    'plausibility. Independently specified biomarker-by-treatment analyses or enrichment trials would '
+    'still be required before any therapeutic inference. The present findings therefore do not support '
+    'treatment selection.'
+)
+
+
+def load_paragraphs(path: Path) -> dict[int, str]:
+    doc = Document(path)
+    return {i: p.text for i, p in enumerate(doc.paragraphs)}
+
+
+SRC = load_paragraphs(SOURCE_MANUSCRIPT)
+SUPP_SRC = load_paragraphs(SOURCE_SUPP)
+
+
+def set_repeat_table_header(row):
+    tr_pr = row._tr.get_or_add_trPr()
+    tbl_header = OxmlElement('w:tblHeader')
+    tbl_header.set(qn('w:val'), 'true')
+    tr_pr.append(tbl_header)
+
+
+def prevent_row_split(row):
+    tr_pr = row._tr.get_or_add_trPr()
+    cant_split = OxmlElement('w:cantSplit')
+    tr_pr.append(cant_split)
+
+
+def set_cell_shading(cell, fill: str):
+    tc_pr = cell._tc.get_or_add_tcPr()
+    shd = tc_pr.find(qn('w:shd'))
+    if shd is None:
+        shd = OxmlElement('w:shd')
+        tc_pr.append(shd)
+    shd.set(qn('w:fill'), fill)
+
+
+def set_cell_margins(cell, top=45, start=55, bottom=45, end=55):
+    tc_pr = cell._tc.get_or_add_tcPr()
+    tc_mar = tc_pr.first_child_found_in('w:tcMar')
+    if tc_mar is None:
+        tc_mar = OxmlElement('w:tcMar')
+        tc_pr.append(tc_mar)
+    for name, value in [('top', top), ('start', start), ('bottom', bottom), ('end', end)]:
+        node = tc_mar.find(qn(f'w:{name}'))
+        if node is None:
+            node = OxmlElement(f'w:{name}')
+            tc_mar.append(node)
+        node.set(qn('w:w'), str(value))
+        node.set(qn('w:type'), 'dxa')
+
+
+def set_repeat_header_and_nosplit(table):
+    set_repeat_table_header(table.rows[0])
+    for row in table.rows:
+        prevent_row_split(row)
+
+
+def set_run_font(run, size=10.5, bold=None, italic=None, color=None):
+    run.font.name = 'Arial'
+    run.font.size = Pt(size)
+    if bold is not None:
+        run.bold = bold
+    if italic is not None:
+        run.italic = italic
+    if color:
+        run.font.color.rgb = RGBColor(*color)
+    rpr = run._element.get_or_add_rPr()
+    rfonts = rpr.get_or_add_rFonts()
+    for attr in ('ascii', 'hAnsi', 'eastAsia', 'cs'):
+        rfonts.set(qn(f'w:{attr}'), 'Arial')
+
+
+def style_paragraph(paragraph, size=10.5, bold=False, italic=False, alignment=WD_ALIGN_PARAGRAPH.LEFT,
+                    space_before=0, space_after=6, line_spacing=1.15, keep_with_next=False):
+    paragraph.alignment = alignment
+    pf = paragraph.paragraph_format
+    pf.space_before = Pt(space_before)
+    pf.space_after = Pt(space_after)
+    pf.line_spacing = line_spacing
+    pf.keep_with_next = keep_with_next
+    for run in paragraph.runs:
+        set_run_font(run, size=size, bold=bold if bold else None, italic=italic if italic else None)
+
+
+def add_page_number(footer_paragraph):
+    footer_paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = footer_paragraph.add_run()
+    fld_char1 = OxmlElement('w:fldChar')
+    fld_char1.set(qn('w:fldCharType'), 'begin')
+    instr_text = OxmlElement('w:instrText')
+    instr_text.set(qn('xml:space'), 'preserve')
+    instr_text.text = ' PAGE '
+    fld_char2 = OxmlElement('w:fldChar')
+    fld_char2.set(qn('w:fldCharType'), 'end')
+    run._r.append(fld_char1)
+    run._r.append(instr_text)
+    run._r.append(fld_char2)
+    set_run_font(run, size=9)
+
+
+def enable_line_numbering(section):
+    sect_pr = section._sectPr
+    existing = sect_pr.find(qn('w:lnNumType'))
+    if existing is not None:
+        sect_pr.remove(existing)
+    ln = OxmlElement('w:lnNumType')
+    ln.set(qn('w:countBy'), '1')
+    ln.set(qn('w:start'), '1')
+    ln.set(qn('w:restart'), 'continuous')
+    sect_pr.append(ln)
+
+
+def configure_section(secti
