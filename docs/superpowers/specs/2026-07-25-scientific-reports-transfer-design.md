@@ -72,17 +72,19 @@ The clean manuscript will use this order:
 5. Results
 6. Discussion
 7. Methods
-   - final subsection: AI-assisted tools in manuscript and code preparation
+   - includes human-research ethics and informed-consent reporting
+   - includes a subsection headed `Code availability`
+   - final subsection: `AI-assisted tools in manuscript and code preparation`
 8. Data availability
-9. Code availability
-10. References
-11. Acknowledgements
-12. Author contributions
-13. Competing interests
-14. Figure legends
-15. Table 1
+9. References
+10. Acknowledgements
+11. Author contributions
+12. Additional Information
+   - Competing interests
+13. Figure legends
+14. Table 1
 
-The standalone Conclusions section will be incorporated into the final Discussion paragraph. The document will be single-column and left aligned, with Arabic page numbers in the footer and line numbering enabled.
+This order follows the current Scientific Reports guidance that Data availability appears before References, while the journal policy requires a Methods subsection headed `Code availability`. The standalone Conclusions section will be incorporated into the final Discussion paragraph. The document will be single-column and left aligned, with Arabic page numbers in the footer and line numbering enabled.
 
 ### 5.1 Abstract and keywords
 
@@ -100,6 +102,8 @@ Keywords are limited to:
 ### 5.2 Length and readability
 
 Introduction + Results + Discussion should not exceed 4,500 words unless an exception is documented and approved. Specialist jargon will be minimised, nonstandard abbreviations defined, and landmark analysis, positivity support, and inverse-probability weighting explained for scientifically literate readers outside critical-care biostatistics.
+
+Discussion will not use subheadings unless a clear readability need is documented. The reference list should normally remain within 60 references.
 
 ## 6. Main Table 1 and Supplementary Table S9
 
@@ -173,15 +177,17 @@ Methods must include the complete human-research ethics statement:
 - compliance with the Declaration of Helsinki and applicable regulations;
 - written informed consent from participants or legally authorised representatives, as applicable to the parent study.
 
-A mandatory Data availability statement will distinguish:
+A mandatory Data availability statement, placed before References, will distinguish:
 
 - controlled participant-level clinical, transcriptomic, and proteomic data under OMIX011182;
 - the authors' lack of authority to redistribute those data;
 - public aggregate result tables, figure source data, and reproducibility materials.
 
-A separate Code availability section will point to the Scientific Reports-specific immutable release after it exists.
+Methods will contain a subsection headed `Code availability` pointing to the Scientific Reports-specific immutable release after it exists.
 
-Competing interests will state:
+Additional Information will include:
+
+### Competing interests
 
 > The authors declare no competing interests.
 
@@ -258,7 +264,7 @@ Every entry will be remapped to the final section and page. The audit will verif
 - all Supplementary Figs. S1-S9 cited;
 - Supplementary Tables S1-S9 cited or indexed appropriately;
 - main figures and tables cited in numerical order;
-- no broken figure, table, section, or reference links.
+- no broken section, display-item, or bibliography references.
 
 ### 14.3 Journal-format integrity
 
@@ -271,7 +277,9 @@ Every entry will be remapped to the final section and page. The audit will verif
 - main Table 1 no more than one page;
 - Supplementary Information below 50 MB;
 - Nature reference style;
-- no graphical abstract.
+- Data availability before References;
+- Methods subsection headed `Code availability`;
+- no graphical abstract or footnotes.
 
 ### 14.4 Document hygiene
 
@@ -305,7 +313,7 @@ New release:
 - target: final merged `main`
 - date: actual GitHub publication date
 
-The release will include the clean and highlighted manuscripts or revision report as appropriate, composite Supplementary Information DOCX/PDF, S1-S9 supplementary tables and index, updated STROBE and audit, README, CITATION metadata, manifest, hashes, and QA outputs.
+The release will include the clean manuscript, highlighted manuscript and revision report, composite Supplementary Information DOCX/PDF, S1-S9 supplementary tables and index, updated STROBE and audit, README, CITATION metadata, manifest, hashes, and QA outputs.
 
 The public release will not include the Cover Letter, participant-level data, controlled OMIX files, editorial correspondence, reviewer information, credentials, or local paths.
 
