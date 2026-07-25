@@ -1,81 +1,69 @@
 # Scientific Reports Transfer Redesign Specification
 
-## 1. Purpose
+## 1. Purpose and authoritative baseline
 
-This specification defines the journal-specific conversion of the frozen Journal of Intensive Care submission into a Scientific Reports submission while preserving the underlying scientific results, numerical outputs, figures, and analysis provenance.
+This specification defines the journal-specific conversion of the frozen Journal of Intensive Care submission into a Scientific Reports submission while preserving the scientific results, numerical outputs, figures, and analysis provenance. It is a controlled editorial and reporting transformation, not a new analysis.
 
-The conversion is not a new analysis. It is a controlled editorial, structural, and reporting transformation of the immutable `jic-submission-v1.0` release.
-
-## 2. Authoritative baseline
-
-The only authoritative source for the conversion is the public GitHub release:
-
-- Tag: `jic-submission-v1.0`
-- Repository: `lvhao1123/SIC-longitudinal-multiomics`
-
-The following release assets and tracked files define the baseline submission package:
+The only authoritative baseline is the public release `jic-submission-v1.0` in `lvhao1123/SIC-longitudinal-multiomics`, including:
 
 - `submission/manuscript_files/JIC_manuscript_clean.docx`
 - `submission/manuscript_files/Additional_file_1_Supplementary_methods_and_figures.docx`
 - `submission/manuscript_files/Additional_file_2_Supplementary_Tables_S1-S8.zip`
 - `submission/manuscript_files/STROBE_checklist_cohort_completed.docx`
-- all publication figures, source-data tables, numerical-truth layers, manifests, and QA records present in the release
+- all publication figures, source-data tables, numerical-truth layers, manifests, and QA records in that release
 
 The original release must not be edited, retagged, deleted, or overwritten.
 
-## 3. Scientific freeze
+## 2. Scientific freeze
 
-The following are immutable unless a verified inconsistency is found and separately approved by the author:
+The following are immutable unless a verified inconsistency is documented and separately approved by the author:
 
 - cohort sizes and event counts;
 - landmark risk-set definitions;
 - outcome horizon and censoring rules;
-- all hazard ratios, confidence intervals, P values, adjusted P values, FDR values, NES values, and sensitivity-analysis metrics;
+- all HRs, confidence intervals, P values, adjusted P values, FDR values, NES values, and sensitivity-analysis metrics;
 - pathway directions and significance classifications;
-- all main and supplementary scientific figures;
-- all source-data and machine-readable result tables;
+- all scientific figures, source-data tables, and machine-readable result tables;
 - all prespecified estimands, model specifications, weighting definitions, PH diagnostics, and QA outcomes.
 
-No new statistical analysis, pathway analysis, subgroup analysis, prediction model, or mechanistic experiment will be added during the transfer conversion.
+No new statistical, pathway, subgroup, prediction, or mechanistic analysis will be added. If the manuscript, figure, supplementary file, source data, numerical truth, or QA output disagree, work must stop at that item and the discrepancy must be reported before any scientific value is changed.
 
-If a discrepancy is detected among the manuscript, figure, supplementary file, source data, numerical truth table, or frozen QA outputs, work must stop at that item. The discrepancy must be documented and presented to the author before any scientific value is changed.
-
-## 4. Permitted scientific editing
+## 3. Permitted scientific editing
 
 Scientific editing may:
 
-- clarify the distinction between Day-1 cohort definition and Day-1, Day-3, and Day-5 landmark risk sets;
-- replace language implying within-patient molecular trajectories with language describing landmark-specific or stage-dependent prognostic associations where appropriate;
-- clarify that Day-5 estimates apply to the Day-5-surviving, positivity-supported analysis population;
-- strengthen explanation of concordant and discordant transcriptomic and proteomic findings;
-- organise biological interpretation into immune-inflammatory, metabolic-stress, and coagulation-tissue-injury/repair modules;
-- explain that cross-omic discordance may reflect layer-specific regulation, temporal offsets, assay coverage, and sample availability, while labelling these explanations as hypothesis-generating;
-- strengthen the methodological contribution of landmark risk-set construction, PH auditing, positivity assessment, IPW sensitivity analysis, and data-free reproducibility;
+- clarify the distinction between the Day-1-defined cohort and Day-1, Day-3, and Day-5 landmark risk sets;
+- replace wording that implies within-patient trajectories with landmark-specific or stage-dependent prognostic-association language where required;
+- clarify that Day-5 estimates apply to Day-5 survivors in the positivity-supported analysis population;
+- strengthen interpretation of concordant and discordant transcriptomic and proteomic findings;
+- organise interpretation into immune-inflammatory, metabolic-stress, and coagulation-tissue-injury/repair modules;
+- present cross-omic discordance as potentially reflecting layer-specific regulation, temporal offsets, assay coverage, or sample availability, explicitly as hypothesis-generating;
+- emphasise landmark construction, PH auditing, positivity assessment, IPW sensitivity analysis, and data-free reproducibility;
 - distinguish association discovery from causal inference, validated biomarkers, clinical prediction, and therapeutic targets;
-- add literature-supported context without adding unsupported results.
+- add verified literature-supported context without adding unsupported results.
 
 Scientific editing must not:
 
 - describe observational associations as causal mechanisms;
 - describe Hallmark enrichment as direct measurement of cellular function or cell type;
-- describe different landmark cohorts as paired within-patient trajectories unless the underlying analysis supports that claim;
-- generalise Day-5 estimates to the full Day-1 SIC population;
-- claim a clinically validated prognostic model, diagnostic biomarker, or therapeutic target;
+- describe different landmark cohorts as paired within-patient trajectories unless supported by the analysis;
+- generalise Day-5 estimates to the entire Day-1 SIC population;
+- claim a validated clinical model, diagnostic biomarker, or therapeutic target;
 - introduce numerical results absent from the frozen outputs.
 
-## 5. Journal target and article type
+## 4. Journal target, article type, and title
 
 Target journal: `Scientific Reports`
 
 Article type: `Article`
 
-The manuscript title remains unchanged:
+The title remains unchanged:
 
 > Landmark-specific transcriptomic and proteomic associations with 60-day mortality in Day-1-defined sepsis-induced coagulopathy: a multicentre longitudinal cohort study
 
-## 6. Main-manuscript structure
+## 5. Main-manuscript design
 
-The clean submission manuscript will use this order:
+The clean manuscript will use this order:
 
 1. Title page
 2. Abstract
@@ -84,34 +72,23 @@ The clean submission manuscript will use this order:
 5. Results
 6. Discussion
 7. Methods
+   - final subsection: AI-assisted tools in manuscript and code preparation
 8. Data availability
 9. Code availability
 10. References
 11. Acknowledgements
 12. Author contributions
 13. Competing interests
-14. AI-assisted tools in manuscript and code preparation
-15. Figure legends
-16. Table 1
+14. Figure legends
+15. Table 1
 
-The existing standalone Conclusions section will be incorporated into the final paragraph of the Discussion.
+The standalone Conclusions section will be incorporated into the final Discussion paragraph. The document will be single-column and left aligned, with Arabic page numbers in the footer and line numbering enabled.
 
-The manuscript must be single-column, left aligned, with Arabic page numbers in the footer. Line numbering should be enabled for review convenience.
+### 5.1 Abstract and keywords
 
-## 7. Abstract and keywords
+The abstract must be unstructured, contain no references, and contain no more than 200 words. It must introduce the problem for a broad scientific audience, state the multicentre longitudinal landmark design, report only frozen principal results, make the conditional Day-5 estimand clear, and end with a bounded non-causal implication.
 
-The abstract must:
-
-- be unstructured and contain no subheadings;
-- contain no references;
-- be no more than 200 words;
-- introduce the clinical problem for a broad scientific audience;
-- state the multicentre longitudinal landmark design;
-- report only frozen principal results;
-- make the conditional Day-5 estimand clear;
-- end with a bounded implication rather than a causal or therapeutic claim.
-
-Keywords must be limited to six:
+Keywords are limited to:
 
 1. Sepsis-induced coagulopathy
 2. Multi-omics
@@ -120,17 +97,13 @@ Keywords must be limited to six:
 5. Proteomics
 6. Mortality
 
-## 8. Main-text length and readability
+### 5.2 Length and readability
 
-The preferred limit for Introduction + Results + Discussion is 4,500 words, excluding Abstract, Methods, References, and figure legends.
+Introduction + Results + Discussion should not exceed 4,500 words unless an exception is documented and approved. Specialist jargon will be minimised, nonstandard abbreviations defined, and landmark analysis, positivity support, and inverse-probability weighting explained for scientifically literate readers outside critical-care biostatistics.
 
-The converted manuscript must minimise specialist jargon, define nonstandard abbreviations at first use, and explain landmark analysis, positivity support, and inverse-probability weighting sufficiently for scientifically literate readers outside critical-care biostatistics.
+## 6. Main Table 1 and Supplementary Table S9
 
-## 9. Main Table 1 and Supplementary Table S9
-
-The main manuscript will retain a one-page concise Table 1.
-
-The concise table will include the clinically central baseline variables agreed with the author, including:
+The main manuscript will retain a legible one-page Table 1. It will prioritise:
 
 - age;
 - sex;
@@ -144,122 +117,103 @@ The concise table will include the clinically central baseline variables agreed 
 - infection source;
 - major comorbidities.
 
-The exact variable set may be reduced only when necessary to keep the table legible on one page. Every retained value, denominator, summary statistic, P value, and footnote must match the frozen full baseline table.
+The set may be reduced only when necessary for one-page readability. Every value, denominator, summary statistic, P value, and footnote must match the frozen full table.
 
-The complete original baseline table will become `Supplementary Table S9`. The main table legend and Results text will state that complete baseline characteristics are provided in Supplementary Table S9.
+The complete baseline table will become `Supplementary Table S9`. The main table legend and Results will direct readers to Supplementary Table S9.
 
-## 10. Supplementary-information design
+## 7. Supplementary-information design
 
-The supplementary package will use a hybrid structure.
-
-### 10.1 Composite supplementary-information file
+Use a hybrid supplementary package.
 
 Create:
 
 - `Scientific_Reports_Supplementary_Information.docx`
 - `Scientific_Reports_Supplementary_Information.pdf`
 
-The first page must contain the manuscript title and complete author list.
-
-The composite file will contain:
+The first page will contain the manuscript title and full author list. The composite file will contain:
 
 - Supplementary Methods;
 - Supplementary Figs. S1-S9;
 - complete baseline characteristics as Supplementary Table S9;
 - titles, descriptions, field notes, and a file index for Supplementary Tables S1-S8.
 
-### 10.2 Machine-readable workbooks
+The existing S1-S8 `.xlsx` workbooks remain separate machine-readable files and will not be converted into long PDF tables.
 
-The existing S1-S8 `.xlsx` workbooks will remain separate machine-readable supplementary files. They will not be converted into long PDF tables.
+All former `Supplementary Figure A1-A9` items will become `Supplementary Fig. S1-S9`. This change must propagate through:
 
-### 10.3 Renumbering
-
-All previous `Supplementary Figure A1-A9` items will be renamed and cited as `Supplementary Fig. S1-S9`.
-
-The renumbering must be propagated consistently through:
-
-- main-manuscript text;
-- supplementary-information headings;
-- figure legends;
-- supplementary table and figure index;
-- file names for submission-facing copies;
+- main-manuscript citations;
+- supplementary headings and legends;
+- file indexes;
+- submission-facing file names;
 - README and manifest descriptions;
-- any validation scripts that inspect display-item references.
+- validation scripts that inspect display-item references.
 
-The internal historical JIC release file names need not be changed. New submission-facing copies may be created under Scientific Reports-specific paths.
+Historical JIC release file names remain unchanged. Every supplementary item must be cited at the appropriate point in the main manuscript, each citation must include the word `Supplementary`, and individual panels of supplementary figures must not be cited separately. The composite file must remain below 50 MB.
 
-Every supplementary item must be cited at the appropriate location in the main manuscript. The word `Supplementary` must appear in every citation. Individual panels of supplementary figures must not be cited separately.
+## 8. References
 
-The composite supplementary file must be below 50 MB.
-
-## 11. References
-
-References must use standard Nature style:
+References will use standard Nature style:
 
 - sequential numerical citations in square brackets;
-- one publication per reference number;
-- all authors listed when fewer than six;
-- first author followed by `et al.` when six or more authors;
+- one publication per number;
+- all authors when fewer than six, otherwise first author plus `et al.`;
 - surname followed by initials;
-- journal titles abbreviated and italicised;
-- volume number bold;
+- abbreviated italic journal title;
+- bold volume number;
 - full page range or article number;
 - year in parentheses.
 
-Reference conversion must preserve citation-to-reference mapping. No reference may be added solely to decorate the Discussion. New references may be added only when they directly support an approved interpretive clarification and have been verified against the primary source.
+Citation-to-reference mapping must be preserved. New references may be added only when they directly support an approved interpretive clarification and have been checked against the primary source.
 
-## 12. Ethics, data, code, and competing interests
+## 9. Ethics, data, code, and competing interests
 
-The Methods section must contain the complete human-research ethics statement, including:
+Methods must include the complete human-research ethics statement:
 
-- approving ethics committee and approval identifier;
+- approving committee and approval identifier;
 - compliance with the Declaration of Helsinki and applicable regulations;
-- confirmation of written informed consent from participants or legally authorised representatives, as applicable to the parent study.
+- written informed consent from participants or legally authorised representatives, as applicable to the parent study.
 
-The end matter must contain a mandatory Data availability statement. It will distinguish:
+A mandatory Data availability statement will distinguish:
 
-- controlled-access participant-level clinical, transcriptomic, and proteomic data under OMIX011182;
-- the authors' lack of authority to redistribute those participant-level data;
+- controlled participant-level clinical, transcriptomic, and proteomic data under OMIX011182;
+- the authors' lack of authority to redistribute those data;
 - public aggregate result tables, figure source data, and reproducibility materials.
 
-A separate Code availability section will point to the Scientific Reports-specific immutable GitHub release after that release exists.
+A separate Code availability section will point to the Scientific Reports-specific immutable release after it exists.
 
-Competing interests will use the explicit statement:
+Competing interests will state:
 
 > The authors declare no competing interests.
 
-## 13. AI-use disclosure
+## 10. AI-use disclosure
 
-The manuscript will include one disclosure subsection at the end of Methods or in the end matter immediately associated with Methods:
+The final subsection of Methods will be:
 
 ### AI-assisted tools in manuscript and code preparation
 
 > ChatGPT (OpenAI) was used as an assistive tool during manuscript drafting, restructuring, language editing, and the development and review of analysis scripts. All analyses were executed through the version-controlled workflow, and the reported numerical results, tables, and figures were verified against the frozen outputs and predefined quality-assurance checks. The authors retained final responsibility for the study design, analytical choices, interpretation, source verification, and conclusions; critically reviewed and revised all AI-assisted material; and approved the final manuscript. Generative AI was not used to create or modify the scientific figures.
 
-This disclosure must not imply AI authorship. ChatGPT must not appear in the author list or author-contribution statement.
+The disclosure must not imply AI authorship. ChatGPT must not appear in the author list or author-contribution statement.
 
-## 14. Cover letter
+## 11. Cover letter
 
-Create `Scientific_Reports_Cover_Letter.docx`.
-
-It must include:
+Create `Scientific_Reports_Cover_Letter.docx` containing:
 
 - manuscript title and article type;
-- corresponding-author affiliation and contact details exactly matching the manuscript and submission system;
-- a concise explanation of suitability for Scientific Reports based on technical validity, multicentre longitudinal design, landmark methodology, multi-omic analysis, and reproducibility;
-- a factual transfer statement:
+- corresponding-author affiliation and contact details matching the manuscript and submission system;
+- a concise explanation of fit based on technical validity, multicentre longitudinal design, landmark methodology, multi-omics, and reproducibility;
+- this factual transfer statement:
 
 > This manuscript was previously submitted to the Journal of Intensive Care and is now being submitted to Scientific Reports following a Springer Nature journal-transfer recommendation.
 
-- confirmation that the work is original, unpublished, and not under consideration elsewhere;
-- confirmation that all authors approved the submission;
-- statement that no preferred reviewers are proposed and no reviewer exclusions are requested;
-- statement that there were no prior discussions with a Scientific Reports Editorial Board Member;
-- controlled-data and public-code boundary where useful.
+- confirmation that the work is original, unpublished, not under consideration elsewhere, and approved by all authors;
+- no preferred reviewers and no reviewer exclusions;
+- no prior discussions with a Scientific Reports Editorial Board Member;
+- the controlled-data and public-code boundary where useful.
 
-The cover letter must not imply that Journal of Intensive Care completed scientific peer review or requested specific revisions.
+The letter must not imply that Journal of Intensive Care completed scientific peer review or requested specific revisions.
 
-## 15. Change-marking deliverables
+## 12. Change-marking deliverables
 
 Create:
 
@@ -267,77 +221,51 @@ Create:
 - `Scientific_Reports_manuscript_highlighted.docx`
 - `Scientific_Reports_revision_report.docx`
 
-The highlighted manuscript will use yellow highlighting only for:
+Yellow highlighting will identify newly written paragraphs, substantially rewritten interpretation, methodological-boundary clarifications, claim restrictions, and new policy disclosures. Routine section moves, formatting conversion, reference-style conversion, and systematic renumbering will be documented in the revision report instead of being highlighted throughout.
 
-- newly written paragraphs;
-- substantially rewritten scientific interpretation;
-- methodological-boundary clarifications;
-- claim restrictions;
-- newly inserted journal-policy disclosures.
+Revision-report classifications:
 
-Routine section moves, formatting conversion, reference-style conversion, and systematic renumbering will be listed in the revision report rather than highlighted throughout the document.
+- `clarification`
+- `interpretive expansion`
+- `claim restriction`
+- `journal compliance`
+- `structural relocation`
+- `cross-reference renumbering`
 
-The revision report will classify substantive edits as:
+## 13. STROBE update
 
-- `clarification`;
-- `interpretive expansion`;
-- `claim restriction`;
-- `journal compliance`;
-- `structural relocation`;
-- `cross-reference renumbering`.
-
-## 16. STROBE update
-
-STROBE will be updated only after final manuscript and supplementary pagination are stable.
+STROBE will be updated only after manuscript and supplementary pagination are stable.
 
 Create:
 
 - `STROBE_Scientific_Reports_completed.docx`
 - `STROBE_Scientific_Reports_audit.tsv`
 
-Every checklist entry must be remapped to the final Scientific Reports section and page. The audit must verify reporting of:
+Every entry will be remapped to the final section and page. The audit will verify reporting of cohort design, eligibility and Day-1 SIC definition, Day-3/Day-5 landmark risk sets, outcome, missing data, assay availability, positivity, IPW, Cox/PH diagnostics, multiplicity/FDR, sensitivity analyses, limitations, generalisability, ethics, and data/code availability.
 
-- cohort design;
-- eligibility and Day-1 SIC definition;
-- Day-3 and Day-5 landmark risk sets;
-- outcome definition;
-- missing data;
-- assay availability;
-- positivity assessment;
-- inverse-probability weighting;
-- Cox and PH diagnostics;
-- multiplicity and FDR control;
-- sensitivity analyses;
-- limitations;
-- generalisability;
-- ethics;
-- data and code availability.
+## 14. Quality assurance
 
-## 17. Quality assurance
+### 14.1 Scientific integrity
 
-The conversion must pass all of the following before release:
+- compare all manuscript numerals with frozen numerical-truth and source-data layers;
+- compare all concise Table 1 values with Supplementary Table S9;
+- introduce no new result;
+- permit no unsupported causal, therapeutic, or validation claim.
 
-### 17.1 Scientific integrity
-
-- all manuscript numerals compared against frozen numerical-truth and source-data layers;
-- all main Table 1 values compared against Supplementary Table S9;
-- no new scientific result introduced;
-- no causal or therapeutic claim unsupported by the design.
-
-### 17.2 Cross-reference integrity
+### 14.2 Cross-reference integrity
 
 - zero residual `Supplementary Figure A1-A9` citations in submission-facing files;
 - all Supplementary Figs. S1-S9 cited;
-- all Supplementary Tables S1-S9 cited or indexed appropriately;
-- all main figures and tables cited in numerical order;
+- Supplementary Tables S1-S9 cited or indexed appropriately;
+- main figures and tables cited in numerical order;
 - no broken figure, table, section, or reference links.
 
-### 17.3 Journal-format integrity
+### 14.3 Journal-format integrity
 
-- abstract no more than 200 words and unstructured;
+- unstructured abstract of no more than 200 words;
 - no more than six keywords;
-- title unchanged;
-- Introduction + Results + Discussion no more than 4,500 words unless a documented exception is approved;
+- unchanged title;
+- Introduction + Results + Discussion no more than 4,500 words unless approved;
 - no more than eight main display items;
 - each figure legend no more than 350 words;
 - main Table 1 no more than one page;
@@ -345,66 +273,51 @@ The conversion must pass all of the following before release:
 - Nature reference style;
 - no graphical abstract.
 
-### 17.4 Document hygiene
+### 14.4 Document hygiene
 
-- no unresolved comments;
-- no tracked changes in clean files;
+- no unresolved comments or tracked changes in clean files;
 - no hidden text, accidental fields, or stale hyperlinks;
-- page and line numbering visible;
-- all tables editable;
-- PDF rendering checked page by page;
-- fonts embedded or substituted safely;
-- figures remain legible at intended size.
+- visible page and line numbering;
+- editable tables;
+- page-by-page PDF rendering review;
+- safe font substitution or embedding;
+- legible figures.
 
-### 17.5 Privacy and reproducibility
+### 14.5 Privacy and reproducibility
 
-- no participant-level identifiers or controlled data added;
+- no participant identifiers or controlled data added;
 - public manifest rebuilt;
-- SHA-256 hashes regenerated for new release assets;
+- SHA-256 hashes regenerated;
 - existing privacy, semantic, repository, and canonical-hash tests rerun;
-- new Scientific Reports metadata tests added where needed.
+- Scientific Reports-specific metadata tests added where needed.
 
-## 18. Repository and release design
+## 15. Repository and release design
 
 All work will occur on:
 
-- branch: `release/scientific-reports-submission-v1.1`
+- `release/scientific-reports-submission-v1.1`
 
 The original JIC tag and release remain unchanged.
 
-The new release will use:
+New release:
 
 - tag: `scientific-reports-submission-v1.1`
 - target: final merged `main`
-- release date: actual publication date of the GitHub release
+- date: actual GitHub publication date
 
-The release will include:
+The release will include the clean and highlighted manuscripts or revision report as appropriate, composite Supplementary Information DOCX/PDF, S1-S9 supplementary tables and index, updated STROBE and audit, README, CITATION metadata, manifest, hashes, and QA outputs.
 
-- Scientific Reports clean manuscript;
-- Scientific Reports highlighted manuscript or revision report when appropriate for the repository archive;
-- composite Supplementary Information DOCX/PDF;
-- S1-S9 supplementary tables and submission-facing index;
-- updated STROBE checklist and audit;
-- updated README, CITATION metadata, manifest, hashes, and QA outputs.
+The public release will not include the Cover Letter, participant-level data, controlled OMIX files, editorial correspondence, reviewer information, credentials, or local paths.
 
-The public release will not include:
-
-- Cover Letter;
-- participant-level clinical or molecular data;
-- controlled OMIX files;
-- private editorial correspondence;
-- private reviewer recommendations;
-- internal credentials or local paths.
-
-## 19. Acceptance criteria
+## 16. Acceptance criteria
 
 The conversion is complete only when:
 
-1. the author-approved scientific freeze is preserved;
-2. the clean manuscript, highlighted manuscript, revision report, cover letter, Supplementary Information, S1-S9 files, and STROBE deliverables exist;
-3. all Scientific Reports-specific format and policy checks pass;
-4. all repository QA checks pass with zero failures;
-5. a pull request shows only expected submission-conversion changes;
+1. the scientific freeze is preserved;
+2. all manuscript, cover-letter, supplementary, table, STROBE, and change-report deliverables exist;
+3. all Scientific Reports-specific checks pass;
+4. repository QA passes with zero failures;
+5. a pull request contains only expected conversion changes;
 6. the pull request is merged after author review;
-7. `scientific-reports-submission-v1.1` is published from the final `main` commit;
-8. the release is publicly accessible in an unauthenticated browser and its source archive contains the expected files.
+7. `scientific-reports-submission-v1.1` is published from final `main`;
+8. the release is publicly accessible without authentication and its source archive contains the expected files.
