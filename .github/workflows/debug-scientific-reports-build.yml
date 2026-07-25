@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - release/scientific-reports-submission-v1.1
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened]
 
 jobs:
   debug-build:
@@ -11,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: release/scientific-reports-submission-v1.1
+          ref: ${{ github.head_ref || github.ref_name }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
