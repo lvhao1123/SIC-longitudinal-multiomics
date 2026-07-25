@@ -1,0 +1,43 @@
+{
+  "source_tag": "jic-submission-v1.0",
+  "manifest": "submission/public_manifest.tsv",
+  "files": [
+    {
+      "path": "submission/manuscript_files/JIC_manuscript_clean.docx",
+      "expected_sha256": "44155b89cba8a7db81bc2caff46709f7fa134b00ccdd99f5df9b9d7ddf0fba17",
+      "observed_sha256": "44155b89cba8a7db81bc2caff46709f7fa134b00ccdd99f5df9b9d7ddf0fba17",
+      "match": true
+    },
+    {
+      "path": "submission/manuscript_files/Additional_file_1_Supplementary_methods_and_figures.docx",
+      "expected_sha256": "ac89b96729b263b2c415d9314d1cd09f7a5d236fd3c4a4a1133745d94873165d",
+      "observed_sha256": "ac89b96729b263b2c415d9314d1cd09f7a5d236fd3c4a4a1133745d94873165d",
+      "match": true
+    },
+    {
+      "path": "submission/manuscript_files/Additional_file_2_Supplementary_Tables_S1-S8.zip",
+      "expected_sha256": "c4c61755d9f3fd8dfce44e43acf7f9baf1dea2a5a4529a79ec2f0cf6dda2e575",
+      "observed_sha256": "c4c61755d9f3fd8dfce44e43acf7f9baf1dea2a5a4529a79ec2f0cf6dda2e575",
+      "match": true
+    },
+    {
+      "path": "submission/manuscript_files/STROBE_checklist_cohort_completed.docx",
+      "expected_sha256": "00a0b42cd6c06cbb103e3dbdf804d934e3828ddff9eda8578971b295b8b3a48c",
+      "observed_sha256": "00a0b42cd6c06cbb103e3dbdf804d934e3828ddff9eda8578971b295b8b3a48c",
+      "match": true
+    },
+    {
+      "path": "submission/numeric_truth_table.tsv",
+      "expected_sha256": "85509997f832b8b978b31a45f571b7c271088f0edfd9c86a3785b93a498d0fe2",
+      "observed_sha256": "85509997f832b8b978b31a45f571b7c271088f0edfd9c86a3785b93a498d0fe2",
+      "match": true
+    },
+    {
+      "path": "submission/numeric_truth_dictionary.tsv",
+      "expected_sha256": "831e393cbf208a03aa5634688c36caa5ece6480b5fd2c7b69709de82cf0f599e",
+      "observed_sha256": "831e393cbf208a03aa5634688c36caa5ece6480b5fd2c7b69709de82cf0f599e",
+      "match": true
+    }
+  ],
+  "all_match": true
+}

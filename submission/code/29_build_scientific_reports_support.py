@@ -125,7 +125,14 @@ def build_maps(doc: Document) -> None:
     )
 
     ref_rows = []
-    for old_number, paragraph in enumerate(doc.paragraphs[167:196], start=1):
+    reference_paragraphs = [paragraph for paragraph in doc.paragraphs if re.match(r"^\d+\.\s+", paragraph.text.strip())]
+    if len(reference_paragraphs) != 29:
+        raise RuntimeError(f"Expected 29 numbered references; found {len(reference_paragraphs)}")
+    for paragraph in reference_paragraphs:
+        number_match = re.match(r"^(\d+)\.\s+", paragraph.text.strip())
+        if number_match is None:
+            continue
+        old_number = int(number_match.group(1))
         raw = re.sub(r"^\d+\.\s*", "", paragraph.text.strip())
         doi_match = re.search(r"doi:\s*([^\s]+?)\.?$", raw)
         doi = doi_match.group(1).rstrip(".") if doi_match else ""
@@ -231,7 +238,15 @@ def copy_workbooks() -> None:
 def build_cross_audit() -> None:
     main_doc = Document(OUT / "Scientific_Reports_manuscript_clean.docx")
     supp_doc = Document(OUT / "Scientific_Reports_Supplementary_Information.docx")
-    text = "\n".join([p.text for p in main_doc.paragraphs] + [p.text for p in supp_doc.paragraphs])
+    paragraph_text = [p.text for p in main_doc.paragraphs] + [p.text for p in supp_doc.paragraphs]
+    table_text = [
+        cell.text
+        for document in (main_doc, supp_doc)
+        for table in document.tables
+        for row in table.rows
+        for cell in row.cells
+    ]
+    text = "\n".join(paragraph_text + table_text)
     rows = []
     for n in range(1, 10):
         figure_ok = bool(re.search(rf"Supplementary (?:Fig\.|Figs\.)[^\n]*S{n}(?:\b|–)", text)) or f"Supplementary Fig. S{n}" in text
