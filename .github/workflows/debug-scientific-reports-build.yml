@@ -9,13 +9,18 @@ on:
       - main
     types: [opened, synchronize, reopened]
 
+permissions:
+  contents: write
+
 jobs:
   debug-build:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -25,7 +30,22 @@ jobs:
           echo "98c4c68cede36aa77451c15aef8b536ac93152f2eb376aa744fc6dbe28568f70  submission/code/30_build_scientific_reports_manuscript.py" | sha256sum --check
       - name: Install Python dependencies
         run: python -m pip install -q python-docx openpyxl
-      - name: Build main manuscript
-        run: python submission/code/30_build_scientific_reports_manuscript.py --mode manuscript
+      - name: Build main manuscript with persisted diagnostics
+        shell: bash
+        run: |
+          set +e
+          python submission/code/30_build_scientific_reports_manuscript.py --mode manuscript > "$RUNNER_TEMP/sr-build.log" 2>&1
+          status=$?
+          if [[ $status -ne 0 ]]; then
+            mkdir -p submission/qa
+            tail -n 100 "$RUNNER_TEMP/sr-build.log" > submission/qa/scientific_reports_build_error.log
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add submission/qa/scientific_reports_build_error.log
+            git commit -m 'Record Scientific Reports build diagnostic [skip generation]'
+            git push origin HEAD:release/scientific-reports-submission-v1.1
+            exit $status
+          fi
+          cat "$RUNNER_TEMP/sr-build.log"
       - name: Build supplementary DOCX
         run: python submission/code/31_build_scientific_reports_supplementary.py
