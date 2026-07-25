@@ -30,7 +30,7 @@ testthat::test_that("software and content licence boundaries are explicit", {
   testthat::expect_match(scope, "not covered", fixed = TRUE)
 })
 
-testthat::test_that("citation metadata identifies the submission release", {
+testthat::test_that("citation metadata identifies the current submission release", {
   citation <- read_repo_text("CITATION.cff")
   final_url <- "https://github.com/lvhao1123/SIC-longitudinal-multiomics"
 
@@ -44,7 +44,7 @@ testthat::test_that("citation metadata identifies the submission release", {
   )
   testthat::expect_match(
     citation,
-    "(?m)^version:\\s*1\\.0\\.0\\s*$",
+    "(?m)^version:\\s*1\\.1\\.0\\s*$",
     perl = TRUE
   )
   testthat::expect_match(
@@ -55,7 +55,7 @@ testthat::test_that("citation metadata identifies the submission release", {
 })
 
 testthat::test_that(
-  "README distinguishes controlled data and identifies the submission release",
+  "README distinguishes controlled data and preserves the JIC submission release",
   {
     readme <- read_repo_text("README.md")
     release_url <- paste0(
