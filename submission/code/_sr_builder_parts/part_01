@@ -1,0 +1,259 @@
+on, landscape=False, margins=(0.9, 0.9, 0.8, 0.8), line_numbers=True):
+    if landscape:
+        section.orientation = WD_ORIENT.LANDSCAPE
+        section.page_width, section.page_height = section.page_height, section.page_width
+    else:
+        section.orientation = WD_ORIENT.PORTRAIT
+    top, bottom, left, right = margins
+    section.top_margin = Inches(top)
+    section.bottom_margin = Inches(bottom)
+    section.left_margin = Inches(left)
+    section.right_margin = Inches(right)
+    section.header_distance = Inches(0.35)
+    section.footer_distance = Inches(0.35)
+    if line_numbers:
+        enable_line_numbering(section)
+    footer = section.footer
+    if not footer.paragraphs:
+        p = footer.add_paragraph()
+    else:
+        p = footer.paragraphs[0]
+        p.clear()
+    add_page_number(p)
+
+
+def setup_styles(doc: Document):
+    styles = doc.styles
+    normal = styles['Normal']
+    normal.font.name = 'Arial'
+    normal.font.size = Pt(10.5)
+    normal._element.rPr.rFonts.set(qn('w:ascii'), 'Arial')
+    normal._element.rPr.rFonts.set(qn('w:hAnsi'), 'Arial')
+    normal._element.rPr.rFonts.set(qn('w:eastAsia'), 'Arial')
+    for name, size in [('Title', 14), ('Heading 1', 12), ('Heading 2', 10.5), ('Heading 3', 10.5)]:
+        s = styles[name]
+        s.font.name = 'Arial'
+        s.font.size = Pt(size)
+        s.font.bold = True
+        s._element.rPr.rFonts.set(qn('w:ascii'), 'Arial')
+        s._element.rPr.rFonts.set(qn('w:hAnsi'), 'Arial')
+        s._element.rPr.rFonts.set(qn('w:eastAsia'), 'Arial')
+
+
+def add_text_paragraph(doc, text: str, *, style=None, highlight=False, bold=False, italic=False,
+                       alignment=WD_ALIGN_PARAGRAPH.LEFT, size=10.5, space_before=0, space_after=6,
+                       keep_with_next=False):
+    p = doc.add_paragraph(style=style)
+    r = p.add_run(text)
+    set_run_font(r, size=size, bold=bold if bold else None, italic=italic if italic else None)
+    if highlight:
+        r.font.highlight_color = WD_COLOR_INDEX.YELLOW
+    style_paragraph(p, size=size, bold=bold, italic=italic, alignment=alignment,
+                    space_before=space_before, space_after=space_after,
+                    keep_with_next=keep_with_next)
+    return p
+
+
+def add_heading(doc, text: str, level=1, highlight=False):
+    p = doc.add_paragraph(style=f'Heading {level}')
+    r = p.add_run(text)
+    set_run_font(r, size=12 if level == 1 else 10.5, bold=True)
+    if highlight:
+        r.font.highlight_color = WD_COLOR_INDEX.YELLOW
+    style_paragraph(p, size=12 if level == 1 else 10.5, bold=True,
+                    space_before=10 if level == 1 else 6, space_after=4,
+                    keep_with_next=True)
+    return p
+
+
+def parse_citation_group(group: str) -> list[int]:
+    nums: list[int] = []
+    for part in group.split(','):
+        part = part.strip()
+        if not part:
+            continue
+        if '-' in part or '–' in part:
+            a, b = re.split(r'[-–]', part)
+            nums.extend(range(int(a), int(b) + 1))
+        else:
+            nums.append(int(part))
+    return nums
+
+
+def compress_numbers(nums: list[int]) -> str:
+    nums = sorted(dict.fromkeys(nums))
+    out = []
+    i = 0
+    while i < len(nums):
+        j = i
+        while j + 1 < len(nums) and nums[j + 1] == nums[j] + 1:
+            j += 1
+        if j - i >= 2:
+            out.append(f'{nums[i]}–{nums[j]}')
+        elif j - i == 1:
+            out.extend([str(nums[i]), str(nums[j])])
+        else:
+            out.append(str(nums[i]))
+        i = j + 1
+    return ', '.join(out)
+
+
+CIT_RE = re.compile(r'\[([0-9,\-– ]+)\]')
+
+
+def get_citation_order(texts: Iterable[str]) -> list[int]:
+    order: list[int] = []
+    seen = set()
+    for text in texts:
+        for m in CIT_RE.finditer(text):
+            for n in parse_citation_group(m.group(1)):
+                if n not in seen:
+                    seen.add(n)
+                    order.append(n)
+    return order
+
+
+def remap_citations(text: str, mapping: dict[int, int]) -> str:
+    def repl(m):
+        old = parse_citation_group(m.group(1))
+        new = [mapping[n] for n in old]
+        return '[' + compress_numbers(new) + ']'
+    return CIT_RE.sub(repl, text)
+
+
+def parse_reference(raw: str):
+    raw = re.sub(r'^\d+\.\s*', '', raw).strip()
+    m = re.match(r'(?P<authors>.+?)\. (?P<title>.+?)\. (?P<journal>.+?) (?P<year>\d{4}), (?P<vol>[^:]+):(?P<pages>.+?)\. doi: (?P<doi>.+?)\.$', raw)
+    if not m:
+        raise ValueError(f'Could not parse reference: {raw}')
+    return m.groupdict()
+
+
+def initials_with_periods(initials: str) -> str:
+    out = []
+    for token in re.split(r'(-)', initials):
+        if token == '-':
+            out.append('-')
+        else:
+            out.append(' '.join(ch + '.' for ch in token if ch.isalpha()))
+    return ''.join(out)
+
+
+def format_authors(raw: str) -> str:
+    raw = raw.replace(', et al', ', et al.')
+    if 'et al' in raw:
+        first = raw.split(',')[0].strip()
+        # Last token is initials; the rest is surname.
+        parts = first.split()
+        surname = ' '.join(parts[:-1])
+        initials = initials_with_periods(parts[-1])
+        return f'{surname}, {initials} et al.'
+    author_chunks = [a.strip() for a in raw.split(',')]
+    formatted = []
+    for chunk in author_chunks:
+        parts = chunk.split()
+        surname = ' '.join(parts[:-1])
+        initials = initials_with_periods(parts[-1])
+        formatted.append(f'{surname}, {initials}')
+    if len(formatted) == 1:
+        return formatted[0] + '.'
+    if len(formatted) == 2:
+        return formatted[0] + ' & ' + formatted[1] + '.'
+    return ', '.join(formatted[:-1]) + ' & ' + formatted[-1] + '.'
+
+
+JOURNAL_MAP = {
+    'JAMA': 'JAMA',
+    'BMJ Open': 'BMJ Open',
+    'J Thromb Haemost': 'J. Thromb. Haemost.',
+    'Inflamm Res': 'Inflamm. Res.',
+    'Nat Med': 'Nat. Med.',
+    'Sci Transl Med': 'Sci. Transl. Med.',
+    'EBioMedicine': 'eBioMedicine',
+    'Nat Commun': 'Nat. Commun.',
+    'Thromb Res': 'Thromb. Res.',
+    'Med Res': 'Med. Res.',
+    'Scand J Stat': 'Scand. J. Stat.',
+    'Proc Natl Acad Sci': 'Proc. Natl Acad. Sci. USA',
+    'Cell Syst': 'Cell Syst.',
+    'Stat Methods Med Res': 'Stat. Methods Med. Res.',
+    'PLoS One': 'PLoS ONE',
+    'Nat Rev Immunol': 'Nat. Rev. Immunol.',
+    'Arterioscler Thromb Vasc Biol': 'Arterioscler. Thromb. Vasc. Biol.',
+    'Nat Immunol': 'Nat. Immunol.',
+    'Lancet Respir Med': 'Lancet Respir. Med.',
+    'Ann Intensive Care': 'Ann. Intensive Care',
+    'Front Immunol': 'Front. Immunol.',
+    'Am J Respir Crit Care Med': 'Am. J. Respir. Crit. Care Med.',
+}
+
+
+def add_reference_paragraph(doc, number: int, ref: dict):
+    p = doc.add_paragraph()
+    p.paragraph_format.left_indent = Inches(0.25)
+    p.paragraph_format.first_line_indent = Inches(-0.25)
+    p.paragraph_format.space_after = Pt(3)
+    p.paragraph_format.line_spacing = 1.0
+    r = p.add_run(f'{number}. {format_authors(ref["authors"])} ')
+    set_run_font(r, size=9)
+    r = p.add_run(ref['title'].rstrip('.') + '. ')
+    set_run_font(r, size=9)
+    journal = JOURNAL_MAP.get(ref['journal'], ref['journal'])
+    r = p.add_run(journal + ' ')
+    set_run_font(r, size=9, italic=True)
+    volume = re.sub(r'\(.*?\)', '', ref['vol'])
+    r = p.add_run(volume)
+    set_run_font(r, size=9, bold=True)
+    pages = ref['pages'].replace('-', '–')
+    r = p.add_run(f', {pages} ({ref["year"]}). ')
+    set_run_font(r, size=9)
+    r = p.add_run(f'https://doi.org/{ref["doi"]}')
+    set_run_font(r, size=9)
+    return p
+
+
+# Build section content from frozen manuscript paragraphs.
+intro_ids = [29, 30, 31, 32]
+result_blocks = [
+    ('Cohort construction and longitudinal molecular availability', [72, 73, 74]),
+    ('Whole-blood mortality-associated rankings differed across landmark-specific risk sets', [81, 82, 83]),
+    ('Plasma protein mortality-associated programmes concentrated on tissue remodelling', [89]),
+    ('Cross-omic concordance was pathway selective rather than global', [93]),
+    ('Interferon pathways showed selective forward cross-compartment associations', [95, 96, 97]),
+    ('Day-5 transcriptomic pathway patterns were largely preserved after availability weighting', [102, 103]),
+]
+discussion_ids = [107, 108] + list(range(110, 115)) + list(range(116, 119)) + list(range(120, 123)) + list(range(124, 127)) + [132, 133, 135]
+method_blocks = [
+    ('Study design and data source', [35]),
+    ('Analytic framework and estimands', [37]),
+    ('Participants, SIC definition and outcome', [39, 40]),
+    ('Clinical descriptive and exploratory survival analyses', [42]),
+    ('Longitudinal sample linkage and time-specific risk sets', [44]),
+    ('Molecular data generation in the parent cohort', [46]),
+    ('RNA-seq processing', [48]),
+    ('Plasma protein processing and quality control', [50]),
+    ('Time-specific molecular survival models', [52, 53]),
+    ('Hallmark gene-set enrichment', [55]),
+    ('Patient-level pathway scores and cross-omic analysis', [57, 58, 59, 60]),
+    ('Day-5 RNA-seq availability and inverse-observation-probability weighting', [62, 63, 64]),
+    ('Missing data, multiplicity and interpretation hierarchy', [66]),
+]
+
+# Approved edits. Scientific values are unchanged.
+TEXT_REPLACEMENTS = {
+    42: SRC[42] + ' A concise set of clinically central variables is shown in Table 1; complete baseline characteristics are provided in Supplementary Table S9.',
+    72: SRC[72] + ' Selected baseline characteristics are shown in Table 1, with the complete baseline table provided as Supplementary Table S9.',
+    73: SRC[73].replace('Table 1', 'Table 1 and Supplementary Table S9'),
+    74: SRC[74],
+}
+
+
+def source_text(i: int) -> str:
+    text = TEXT_REPLACEMENTS.get(i, SRC[i])
+    text = re.sub(r'Supplementary Figure A([1-9])', r'Supplementary Fig. S\1', text)
+    text = re.sub(r'Supplementary Figures A([1-9])–A([1-9])', r'Supplementary Figs. S\1–S\2', text)
+    return text
+
+
+# Build all body texts once to establish first-citation order after reordering.
+pre_m
