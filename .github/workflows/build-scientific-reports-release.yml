@@ -46,10 +46,10 @@ jobs:
       - name: Install document dependencies
         shell: bash
         run: |
-          python -m pip install --upgrade pip
-          python -m pip install python-docx openpyxl
-          sudo apt-get update
-          sudo apt-get install -y libreoffice-writer fonts-liberation
+          python -m pip install -q --upgrade pip
+          python -m pip install -q python-docx openpyxl
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq libreoffice-writer fonts-liberation >/dev/null
 
       - name: Verify immutable JIC baseline
         shell: bash
@@ -59,15 +59,24 @@ jobs:
             --manifest submission/public_manifest.tsv \
             --out submission/qa/scientific_reports_baseline_lock.json
 
-      - name: Build manuscript and Supplementary Information
+      - name: Build main manuscript
+        shell: bash
+        run: python submission/code/30_build_scientific_reports_manuscript.py --mode manuscript
+
+      - name: Build Supplementary Information DOCX
+        shell: bash
+        run: python submission/code/31_build_scientific_reports_supplementary.py
+
+      - name: Render Supplementary Information PDF
         shell: bash
         run: |
           set -euo pipefail
-          python submission/code/30_build_scientific_reports_manuscript.py --mode manuscript
-          python submission/code/31_build_scientific_reports_supplementary.py
           out='submission/manuscript_files/scientific_reports'
-          libreoffice --headless --convert-to pdf --outdir "$out" \
-            "$out/Scientific_Reports_Supplementary_Information.docx"
+          profile="file://$RUNNER_TEMP/libreoffice-profile"
+          soffice -env:UserInstallation="$profile" --headless --convert-to pdf \
+            --outdir "$RUNNER_TEMP" "$out/Scientific_Reports_Supplementary_Information.docx"
+          mv "$RUNNER_TEMP/Scientific_Reports_Supplementary_Information.pdf" \
+            "$out/Scientific_Reports_Supplementary_Information.pdf"
           test -s "$out/Scientific_Reports_Supplementary_Information.pdf"
 
       - name: Build support maps, Tables S1-S9, and STROBE
