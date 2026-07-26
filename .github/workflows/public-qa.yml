@@ -53,9 +53,44 @@ jobs:
         shell: Rscript {0}
         run: testthat::test_file("tests/testthat/test-scientific-reports-release-metadata.R", stop_on_failure = TRUE)
 
-      - name: Run repository tests
+      - name: Run repository tests by file
         shell: Rscript {0}
-        run: testthat::test_dir("tests/testthat")
+        run: |
+          files <- sort(list.files("tests/testthat", pattern = "^test.*[.]R$", full.names = TRUE))
+          rows <- lapply(files, function(file) {
+            failure <- NULL
+            tryCatch(
+              testthat::test_file(file, stop_on_failure = TRUE),
+              error = function(e) failure <<- conditionMessage(e)
+            )
+            data.frame(
+              file = gsub("\\\\", "/", file),
+              status = if (is.null(failure)) "PASS" else "FAIL",
+              message = if (is.null(failure)) "" else failure,
+              stringsAsFactors = FALSE
+            )
+          })
+          results <- do.call(rbind, rows)
+          write.table(
+            results,
+            "test-file-results.tsv",
+            sep = "\t",
+            row.names = FALSE,
+            quote = FALSE,
+            na = ""
+          )
+          print(results)
+          if (any(results$status == "FAIL")) {
+            stop("One or more repository test files failed; see test-file-results.tsv")
+          }
+
+      - name: Upload per-file test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-file-results
+          path: test-file-results.tsv
+          if-no-files-found: error
 
       - name: Run frozen submission semantic tests
         shell: pwsh
