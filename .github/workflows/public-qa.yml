@@ -37,6 +37,22 @@ jobs:
         shell: Rscript {0}
         run: source("scripts/build_public_manifest.R")
 
+      - name: Test Scientific Reports public metadata
+        shell: Rscript {0}
+        run: testthat::test_file("tests/testthat/test-public-release-metadata.R", stop_on_failure = TRUE)
+
+      - name: Test Scientific Reports final release
+        shell: Rscript {0}
+        run: testthat::test_file("tests/testthat/test-scientific-reports-final-release.R", stop_on_failure = TRUE)
+
+      - name: Test Scientific Reports package
+        shell: Rscript {0}
+        run: testthat::test_file("tests/testthat/test-scientific-reports-package.R", stop_on_failure = TRUE)
+
+      - name: Test Scientific Reports release metadata
+        shell: Rscript {0}
+        run: testthat::test_file("tests/testthat/test-scientific-reports-release-metadata.R", stop_on_failure = TRUE)
+
       - name: Run repository tests
         shell: Rscript {0}
         run: testthat::test_dir("tests/testthat")
