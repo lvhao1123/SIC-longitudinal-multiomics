@@ -32,7 +32,7 @@ testthat::test_that("software and content licence boundaries are explicit", {
   testthat::expect_match(scope, "not covered", fixed = TRUE)
 })
 
-testthat::test_that("citation metadata identifies Scientific Reports release version without a premature date", {
+testthat::test_that("citation metadata identifies the dated Scientific Reports release", {
   citation <- read_repo_text("CITATION.cff")
   final_url <- "https://github.com/lvhao1123/SIC-longitudinal-multiomics"
 
@@ -41,7 +41,7 @@ testthat::test_that("citation metadata identifies Scientific Reports release ver
   testthat::expect_match(citation, "given-names: Hao", fixed = TRUE)
   testthat::expect_match(citation, paste0("repository-code: ", final_url), fixed = TRUE)
   testthat::expect_match(citation, "(?m)^version:\\s*1\\.1\\.0\\s*$", perl = TRUE)
-  testthat::expect_false(grepl("(?m)^date-released:", citation, perl = TRUE))
+  testthat::expect_match(citation, "(?m)^date-released:\\s*2026-07-26\\s*$", perl = TRUE)
 })
 
 testthat::test_that("README identifies current and previous immutable releases", {
@@ -71,7 +71,8 @@ testthat::test_that("release history protects the JIC snapshot", {
   testthat::expect_match(history, "scientific-reports-submission-v1.1", fixed = TRUE)
   testthat::expect_match(history, "Supplementary Figure S1-S9", fixed = TRUE)
   testthat::expect_match(immutable, jic_sha, fixed = TRUE)
-  testthat::expect_match(immutable, "Baseline result: IDENTICAL", fixed = TRUE)
+  testthat::expect_match(immutable, "Final comparison result: IDENTICAL", fixed = TRUE)
+  testthat::expect_false(grepl("PENDING", immutable, fixed = TRUE))
 })
 
 testthat::test_that("OMIX accession and required source citation are documented", {
