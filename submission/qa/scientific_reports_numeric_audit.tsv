@@ -1,0 +1,127 @@
+domain	variable	column	main_value	s9_value	match
+table1_vs_s9	Age	Characteristic	Age	Age	TRUE
+table1_vs_s9	Age	Overall	68.00 [58.00, 78.00]	68.00 [58.00, 78.00]	TRUE
+table1_vs_s9	Age	Survivor/censored	67.00 [56.00, 77.00]	67.00 [56.00, 77.00]	TRUE
+table1_vs_s9	Age	Death	72.00 [63.75, 81.00]	72.00 [63.75, 81.00]	TRUE
+table1_vs_s9	Age	SMD	0.311	0.311	TRUE
+table1_vs_s9	Age	P value	0.005	0.005	TRUE
+table1_vs_s9	Lactate	Characteristic	Lactate	Lactate	TRUE
+table1_vs_s9	Lactate	Overall	2.80 [1.70, 5.20]	2.80 [1.70, 5.20]	TRUE
+table1_vs_s9	Lactate	Survivor/censored	2.67 [1.61, 4.90]	2.67 [1.61, 4.90]	TRUE
+table1_vs_s9	Lactate	Death	3.88 [1.90, 6.90]	3.88 [1.90, 6.90]	TRUE
+table1_vs_s9	Lactate	SMD	0.411	0.411	TRUE
+table1_vs_s9	Lactate	P value	0.004	0.004	TRUE
+table1_vs_s9	BUN	Characteristic	BUN	BUN	TRUE
+table1_vs_s9	BUN	Overall	11.89 [8.10, 18.20]	11.89 [8.10, 18.20]	TRUE
+table1_vs_s9	BUN	Survivor/censored	11.26 [7.88, 16.52]	11.26 [7.88, 16.52]	TRUE
+table1_vs_s9	BUN	Death	18.20 [9.80, 25.36]	18.20 [9.80, 25.36]	TRUE
+table1_vs_s9	BUN	SMD	0.530	0.530	TRUE
+table1_vs_s9	BUN	P value	<0.001	<0.001	TRUE
+table1_vs_s9	Platelet	Characteristic	Platelet	Platelet	TRUE
+table1_vs_s9	Platelet	Overall	89.00 [57.00, 132.25]	89.00 [57.00, 132.25]	TRUE
+table1_vs_s9	Platelet	Survivor/censored	86.50 [55.00, 131.00]	86.50 [55.00, 131.00]	TRUE
+table1_vs_s9	Platelet	Death	96.50 [68.00, 143.25]	96.50 [68.00, 143.25]	TRUE
+table1_vs_s9	Platelet	SMD	0.168	0.168	TRUE
+table1_vs_s9	Platelet	P value	0.064	0.064	TRUE
+table1_vs_s9	INR	Characteristic	INR	INR	TRUE
+table1_vs_s9	INR	Overall	1.38 [1.23, 1.61]	1.38 [1.23, 1.61]	TRUE
+table1_vs_s9	INR	Survivor/censored	1.37 [1.22, 1.57]	1.37 [1.22, 1.57]	TRUE
+table1_vs_s9	INR	Death	1.49 [1.31, 1.65]	1.49 [1.31, 1.65]	TRUE
+table1_vs_s9	INR	SMD	0.119	0.119	TRUE
+table1_vs_s9	INR	P value	0.007	0.007	TRUE
+table1_vs_s9	D-dimer	Characteristic	D-dimer	D-dimer	TRUE
+table1_vs_s9	D-dimer	Overall	6.06 [2.73, 14.95]	6.06 [2.73, 14.95]	TRUE
+table1_vs_s9	D-dimer	Survivor/censored	5.98 [2.73, 14.59]	5.98 [2.73, 14.59]	TRUE
+table1_vs_s9	D-dimer	Death	7.07 [2.75, 18.14]	7.07 [2.75, 18.14]	TRUE
+table1_vs_s9	D-dimer	SMD	0.187	0.187	TRUE
+table1_vs_s9	D-dimer	P value	0.584	0.584	TRUE
+table1_vs_s9	SOFA score	Characteristic	SOFA score	SOFA score	TRUE
+table1_vs_s9	SOFA score	Overall	10.00 [7.00, 12.00]	10.00 [7.00, 12.00]	TRUE
+table1_vs_s9	SOFA score	Survivor/censored	9.00 [7.00, 12.00]	9.00 [7.00, 12.00]	TRUE
+table1_vs_s9	SOFA score	Death	12.00 [10.00, 14.00]	12.00 [10.00, 14.00]	TRUE
+table1_vs_s9	SOFA score	SMD	0.636	0.636	TRUE
+table1_vs_s9	SOFA score	P value	<0.001	<0.001	TRUE
+table1_vs_s9	PF	Characteristic	PF	PF	TRUE
+table1_vs_s9	PF	Overall	243.82 [168.06, 327.52]	243.82 [168.06, 327.52]	TRUE
+table1_vs_s9	PF	Survivor/censored	249.70 [178.38, 330.45]	249.70 [178.38, 330.45]	TRUE
+table1_vs_s9	PF	Death	205.30 [122.64, 280.95]	205.30 [122.64, 280.95]	TRUE
+table1_vs_s9	PF	SMD	-0.404	-0.404	TRUE
+table1_vs_s9	PF	P value	0.001	0.001	TRUE
+table1_vs_s9	Sex, male, n (%)	Characteristic	Sex, male, n (%)	Sex, male, n (%)	TRUE
+table1_vs_s9	Sex, male, n (%)	Overall	298 (59.1%)	298 (59.1%)	TRUE
+table1_vs_s9	Sex, male, n (%)	Survivor/censored	242 (57.6%)	242 (57.6%)	TRUE
+table1_vs_s9	Sex, male, n (%)	Death	56 (66.7%)	56 (66.7%)	TRUE
+table1_vs_s9	Sex, male, n (%)	SMD	0.187	0.187	TRUE
+table1_vs_s9	Sex, male, n (%)	P value	0.145	0.145	TRUE
+table1_vs_s9	Diabetes mellitus	Characteristic	Diabetes mellitus	Diabetes mellitus	TRUE
+table1_vs_s9	Diabetes mellitus	Overall	137 (27.2%)	137 (27.2%)	TRUE
+table1_vs_s9	Diabetes mellitus	Survivor/censored	108 (25.7%)	108 (25.7%)	TRUE
+table1_vs_s9	Diabetes mellitus	Death	29 (34.5%)	29 (34.5%)	TRUE
+table1_vs_s9	Diabetes mellitus	SMD	0.193	0.193	TRUE
+table1_vs_s9	Diabetes mellitus	P value	0.107	0.107	TRUE
+table1_vs_s9	Hypertension	Characteristic	Hypertension	Hypertension	TRUE
+table1_vs_s9	Hypertension	Overall	200 (39.7%)	200 (39.7%)	TRUE
+table1_vs_s9	Hypertension	Survivor/censored	161 (38.3%)	161 (38.3%)	TRUE
+table1_vs_s9	Hypertension	Death	39 (46.4%)	39 (46.4%)	TRUE
+table1_vs_s9	Hypertension	SMD	0.164	0.164	TRUE
+table1_vs_s9	Hypertension	P value	0.180	0.180	TRUE
+table1_vs_s9	Heart failure	Characteristic	Heart failure	Heart failure	TRUE
+table1_vs_s9	Heart failure	Overall	53 (10.5%)	53 (10.5%)	TRUE
+table1_vs_s9	Heart failure	Survivor/censored	39 (9.3%)	39 (9.3%)	TRUE
+table1_vs_s9	Heart failure	Death	14 (16.7%)	14 (16.7%)	TRUE
+table1_vs_s9	Heart failure	SMD	0.221	0.221	TRUE
+table1_vs_s9	Heart failure	P value	0.052	0.052	TRUE
+table1_vs_s9	Cerebrovascular disease	Characteristic	Cerebrovascular disease	Cerebrovascular disease	TRUE
+table1_vs_s9	Cerebrovascular disease	Overall	88 (17.5%)	88 (17.5%)	TRUE
+table1_vs_s9	Cerebrovascular disease	Survivor/censored	66 (15.7%)	66 (15.7%)	TRUE
+table1_vs_s9	Cerebrovascular disease	Death	22 (26.2%)	22 (26.2%)	TRUE
+table1_vs_s9	Cerebrovascular disease	SMD	0.260	0.260	TRUE
+table1_vs_s9	Cerebrovascular disease	P value	0.027	0.027	TRUE
+table1_vs_s9	Renal failure	Characteristic	Renal failure	Renal failure	TRUE
+table1_vs_s9	Renal failure	Overall	42 (8.3%)	42 (8.3%)	TRUE
+table1_vs_s9	Renal failure	Survivor/censored	34 (8.1%)	34 (8.1%)	TRUE
+table1_vs_s9	Renal failure	Death	8 (9.5%)	8 (9.5%)	TRUE
+table1_vs_s9	Renal failure	SMD	0.050	0.050	TRUE
+table1_vs_s9	Renal failure	P value	0.666	0.666	TRUE
+table1_vs_s9	Infection source, n (%)	Characteristic	Infection source, n (%)	Infection source, n (%)	TRUE
+table1_vs_s9	Infection source, n (%)	Overall	Infection source, n (%)	Infection source, n (%)	TRUE
+table1_vs_s9	Infection source, n (%)	Survivor/censored	Infection source, n (%)	Infection source, n (%)	TRUE
+table1_vs_s9	Infection source, n (%)	Death	Infection source, n (%)	Infection source, n (%)	TRUE
+table1_vs_s9	Infection source, n (%)	SMD	Infection source, n (%)	Infection source, n (%)	TRUE
+table1_vs_s9	Infection source, n (%)	P value	Infection source, n (%)	Infection source, n (%)	TRUE
+table1_vs_s9	Abdomen	Characteristic	Abdomen	Abdomen	TRUE
+table1_vs_s9	Abdomen	Overall	90 (17.9%)	90 (17.9%)	TRUE
+table1_vs_s9	Abdomen	Survivor/censored	83 (19.8%)	83 (19.8%)	TRUE
+table1_vs_s9	Abdomen	Death	7 (8.3%)	7 (8.3%)	TRUE
+table1_vs_s9	Abdomen	SMD	-0.333	-0.333	TRUE
+table1_vs_s9	Abdomen	P value	0.003	0.003	TRUE
+table1_vs_s9	Biliary/liver	Characteristic	Biliary/liver	Biliary/liver	TRUE
+table1_vs_s9	Biliary/liver	Overall	66 (13.1%)	66 (13.1%)	TRUE
+table1_vs_s9	Biliary/liver	Survivor/censored	57 (13.6%)	57 (13.6%)	TRUE
+table1_vs_s9	Biliary/liver	Death	9 (10.7%)	9 (10.7%)	TRUE
+table1_vs_s9	Biliary/liver	SMD	-0.088	-0.088	TRUE
+table1_vs_s9	Biliary/liver	P value			TRUE
+table1_vs_s9	Lung/chest	Characteristic	Lung/chest	Lung/chest	TRUE
+table1_vs_s9	Lung/chest	Overall	194 (38.5%)	194 (38.5%)	TRUE
+table1_vs_s9	Lung/chest	Survivor/censored	148 (35.2%)	148 (35.2%)	TRUE
+table1_vs_s9	Lung/chest	Death	46 (54.8%)	46 (54.8%)	TRUE
+table1_vs_s9	Lung/chest	SMD	0.400	0.400	TRUE
+table1_vs_s9	Lung/chest	P value			TRUE
+table1_vs_s9	Others/unknown	Characteristic	Others/unknown	Others/unknown	TRUE
+table1_vs_s9	Others/unknown	Overall	36 (7.1%)	36 (7.1%)	TRUE
+table1_vs_s9	Others/unknown	Survivor/censored	31 (7.4%)	31 (7.4%)	TRUE
+table1_vs_s9	Others/unknown	Death	5 (6.0%)	5 (6.0%)	TRUE
+table1_vs_s9	Others/unknown	SMD	-0.057	-0.057	TRUE
+table1_vs_s9	Others/unknown	P value			TRUE
+table1_vs_s9	Soft tissue	Characteristic	Soft tissue	Soft tissue	TRUE
+table1_vs_s9	Soft tissue	Overall	25 (5.0%)	25 (5.0%)	TRUE
+table1_vs_s9	Soft tissue	Survivor/censored	18 (4.3%)	18 (4.3%)	TRUE
+table1_vs_s9	Soft tissue	Death	7 (8.3%)	7 (8.3%)	TRUE
+table1_vs_s9	Soft tissue	SMD	0.167	0.167	TRUE
+table1_vs_s9	Soft tissue	P value			TRUE
+table1_vs_s9	Urinary	Characteristic	Urinary	Urinary	TRUE
+table1_vs_s9	Urinary	Overall	93 (18.5%)	93 (18.5%)	TRUE
+table1_vs_s9	Urinary	Survivor/censored	83 (19.8%)	83 (19.8%)	TRUE
+table1_vs_s9	Urinary	Death	10 (11.9%)	10 (11.9%)	TRUE
+table1_vs_s9	Urinary	SMD	-0.216	-0.216	TRUE
+table1_vs_s9	Urinary	P value			TRUE

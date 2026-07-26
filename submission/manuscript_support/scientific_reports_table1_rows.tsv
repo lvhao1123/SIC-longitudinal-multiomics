@@ -1,0 +1,22 @@
+display_order	source_label	retain_in_main	supplementary_table
+1	Age	TRUE	S9
+2	Lactate	TRUE	S9
+3	BUN	TRUE	S9
+4	Platelet	TRUE	S9
+5	INR	TRUE	S9
+6	D-dimer	TRUE	S9
+7	SOFA score	TRUE	S9
+8	PF	TRUE	S9
+9	Sex, male, n (%)	TRUE	S9
+10	Diabetes mellitus	TRUE	S9
+11	Hypertension	TRUE	S9
+12	Heart failure	TRUE	S9
+13	Cerebrovascular disease	TRUE	S9
+14	Renal failure	TRUE	S9
+15	Infection source, n (%)	TRUE	S9
+16	Abdomen	TRUE	S9
+17	Biliary/liver	TRUE	S9
+18	Lung/chest	TRUE	S9
+19	Others/unknown	TRUE	S9
+20	Soft tissue	TRUE	S9
+21	Urinary	TRUE	S9

@@ -1,9 +1,8 @@
 # SIC longitudinal multi-omics analysis
 
-This repository is the data-free reproducibility snapshot supporting the
-Journal of Intensive Care submission on landmark-specific mortality-associated
-whole-blood RNA-seq and plasma protein programmes in Day-1-defined
-sepsis-induced coagulopathy.
+This repository is the data-free reproducibility archive supporting a multicentre
+longitudinal study of landmark-specific mortality-associated whole-blood RNA-seq
+and plasma protein programmes in Day-1-defined sepsis-induced coagulopathy.
 
 Final repository URL:
 
@@ -37,21 +36,21 @@ The public reproducibility layer contains:
 - frozen and provenance-verified analysis code;
 - repository-relative interfaces for authorised local execution;
 - aggregate non-identifiable result tables and figure source data;
-- publication figures and submission-support files;
+- publication figures and journal-specific submission-support files;
 - numerical-truth and SHA-256 manifest layers;
 - data-free privacy, semantic and reproducibility tests;
 - `renv.lock` and software-environment records.
 
 Public centre labels are anonymised as `Centre 01` to `Centre 30`.
-Pre-submission files under `submission/manuscript_files/` are retained for
-submission provenance but are expressly excluded from the repository content
-licence unless otherwise stated.
+Submission files under `submission/manuscript_files/` are retained for
+provenance but are expressly excluded from the repository content licence unless
+otherwise stated.
 
 ## Reproducibility scope
 
-Data-free quality-assurance tests can be run without controlled source data.
-A complete numerical rerun requires separately authorised CMAISE/OMIX011182
-files supplied locally through the documented input contract.
+Data-free quality-assurance tests can be run without controlled source data. A
+complete numerical rerun requires separately authorised CMAISE/OMIX011182 files
+supplied locally through the documented input contract.
 
 ### Data-free validation
 
@@ -121,11 +120,18 @@ the article DOI and archival DOI after publication metadata become available.
 No repository licence applies to CMAISE/OMIX011182 participant-level data,
 MSigDB Hallmark gene-set files or other third-party materials.
 
-## Release status
+## Release history
 
-This repository snapshot corresponds to the Journal of Intensive Care submission
-and is versioned as `jic-submission-v1.0`.
-
-Release URL:
+The immutable original submission snapshot for the *Journal of Intensive Care*
+is versioned as `jic-submission-v1.0`:
 
 https://github.com/lvhao1123/SIC-longitudinal-multiomics/releases/tag/jic-submission-v1.0
+
+The journal-transfer submission snapshot prepared for *Scientific Reports* is
+versioned as `scientific-reports-submission-v1.1`:
+
+https://github.com/lvhao1123/SIC-longitudinal-multiomics/releases/tag/scientific-reports-submission-v1.1
+
+The v1.1 snapshot changes journal-facing manuscript structure, reporting format,
+supplementary numbering and submission metadata. It does not change the frozen
+cohort, estimands, models, numerical results, source data or scientific figures.

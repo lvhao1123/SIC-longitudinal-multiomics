@@ -1,0 +1,35 @@
+item	status	where_reported	audit_note
+1(a)	verified	p. 1 (title identifies a multicentre longitudinal cohort study).	Reporting location verified against final manuscript pagination.
+1(b)	verified	p. 1 (unstructured Abstract summarises the design, principal findings and bounded interpretation).	Reporting location verified against final manuscript pagination.
+2	verified	p. 1 (Introduction).	Reporting location verified against final manuscript pagination.
+3	verified	p. 1 (final Introduction paragraph states objectives and the prespecified hypothesis).	Reporting location verified against final manuscript pagination.
+4	verified	p. 1 (Abstract) and pp. 9–10 (Study design and data source; Analytic framework and estimands).	Reporting location verified against final manuscript pagination.
+5	verified	pp. 9–10 (43 tertiary hospitals; November 2020–November 2024; 60-day follow-up; Days 1, 3 and 5 sampling).	Reporting location verified against final manuscript pagination.
+6(a)	verified	pp. 2 and 9–10; Figure 1 (eligibility, Day-1 SIC cohort, landmark risk sets and follow-up).	Explicitly covers the fixed Day-1 SIC cohort and separate Day-3/Day-5 landmark risk sets.
+6(b)	verified	Not applicable: this was not a matched cohort study.	Reporting location verified against final manuscript pagination.
+7	verified	pp. 9–13; Supplementary Table S1.	Reporting location verified against final manuscript pagination.
+8	verified	pp. 9–11; Supplementary Information pp. 1–2 (Supplementary Methods).	Reporting location verified against final manuscript pagination.
+9	verified	pp. 9–13 (delayed entry, centre stratification, PH diagnostics, sensitivity analyses and Day-5 availability/IPW); pp. 7–8 (limitations); Supplementary Figs. S1–S8.	Includes delayed entry, structural non-availability, positivity assessment and IPW.
+10	verified	p. 9 (all eligible Day-1 SIC participants and available molecular measurements were included; no prospective sample-size calculation).	Reporting location verified against final manuscript pagination.
+11	verified	pp. 9–13; Supplementary Tables S1–S2.	Reporting location verified against final manuscript pagination.
+12(a)	verified	pp. 9–13; Supplementary Information pp. 1–2.	Reporting location verified against final manuscript pagination.
+12(b)	verified	No subgroup analysis informed the primary conclusions. Prespecified contemporaneous, forward and reverse-order cross-omic models are described on pp. 11–12 and in Supplementary Methods.	Reporting location verified against final manuscript pagination.
+12(c)	verified	p. 13; Supplementary Methods; Supplementary Tables S1 and S8.	Separates clinical missingness from molecular sample non-observation.
+12(d)	verified	p. 10 (60-day outcome and administrative censoring). Molecular sample non-observation was examined separately on pp. 12–13 and in Supplementary Table S8.	Distinguishes outcome follow-up from assay availability.
+12(e)	verified	pp. 10–13; Supplementary Figs. S1–S8; Supplementary Tables S4, S6 and S8.	Covers PH/intensity/entry-boundary/observation-model sensitivity analyses.
+13(a)	verified	p. 2; Figure 1 (Day-1 cohort, raw measured, risk-valid and positivity-supported analysis counts).	Upstream parent-cohort screening was unavailable; the analytic source cohort and all subsequent risk sets are reported.
+13(b)	verified	p. 2; Figure 1 (structural deaths, raw-to-risk-valid exclusions and zero-observation-centre exclusions).	Reporting location verified against final manuscript pagination.
+13(c)	verified	Figure 1 (legend on p. 15).	Reporting location verified against final manuscript pagination.
+14(a)	verified	Table 1, p. 16; complete baseline characteristics in Supplementary Table S9 (Supplementary Information p. 13).	Reporting location verified against final manuscript pagination.
+14(b)	verified	p. 13; Supplementary Methods; Supplementary Tables S1 and S8.	Missingness and availability are documented in dedicated supplementary tables.
+14(c)	verified	p. 10 (60-day outcome follow-up and administrative censoring).	Reporting location verified against final manuscript pagination.
+15	verified	p. 2; Figure 1.	Reporting location verified against final manuscript pagination.
+16(a)	verified	pp. 2–4; Figures 2–4; Supplementary Tables S2–S7. Adjusted covariates and their rationale are specified on pp. 11–12.	All molecular effect estimates remain associations; no clinical prediction claim is made.
+16(b)	verified	Not applicable to the primary molecular analyses: continuous features were standardised. Clinical Cox contrasts used prespecified increments (pp. 9–10; Supplementary Table S2).	Reporting location verified against final manuscript pagination.
+16(c)	verified	Not applicable: the study characterised prognostic molecular associations and did not develop an absolute-risk model.	Reporting location verified against final manuscript pagination.
+17	verified	pp. 2–4 and 10–13; Supplementary Figs. S1–S9; Supplementary Tables S4, S6 and S8.	Includes clinical, molecular and availability-weighting secondary analyses.
+18	verified	p. 5 (opening Discussion paragraphs).	Reporting location verified against final manuscript pagination.
+19	verified	pp. 7–8 (limitations and potential sources of bias or imprecision).	Direction and likely consequences of selection, bulk-tissue and limited-event biases are discussed.
+20	verified	pp. 5–8 (Discussion, including multiplicity, alternative explanations and claim boundaries).	Reporting location verified against final manuscript pagination.
+21	verified	pp. 7–8 (need for independent validation and limits to external validity).	External validation is explicitly required.
+22	verified	p. 14 (Funding).	Reporting location verified against final manuscript pagination.
