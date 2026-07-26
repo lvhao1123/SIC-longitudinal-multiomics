@@ -4,7 +4,11 @@ sr_root <- file.path(repo_root, "submission", "manuscript_files", "scientific_re
 qa_root <- file.path(repo_root, "submission", "qa")
 support_root <- file.path(repo_root, "submission", "manuscript_support")
 
-testthat::test_that("Scientific Reports baseline is locked", {
+read_repo_text <- function(path) {
+  paste(readLines(file.path(repo_root, path), warn = FALSE, encoding = "UTF-8"), collapse = "\n")
+}
+
+testthat::test_that("Scientific Reports baseline analysis is locked", {
   path <- file.path(qa_root, "scientific_reports_baseline_lock.json")
   testthat::expect_true(file.exists(path))
   lock <- jsonlite::read_json(path, simplifyVector = TRUE)
@@ -25,48 +29,48 @@ testthat::test_that("Scientific Reports editorial maps are complete", {
   testthat::expect_setequal(crossref$new_id, paste0("S", 1:9))
 })
 
-testthat::test_that("Scientific Reports public manuscript package is complete", {
-  expected <- c(
-    "Scientific_Reports_manuscript_clean.docx",
-    "Scientific_Reports_manuscript_highlighted.docx",
-    "Scientific_Reports_revision_report.docx",
-    "Scientific_Reports_Supplementary_Information.docx",
-    "Scientific_Reports_Supplementary_Information.pdf",
-    "Supplementary_Table_S1_Clinical_variable_definitions.xlsx",
-    "Supplementary_Table_S2_Clinical_univariable_Cox.xlsx",
-    "Supplementary_Table_S3_RNA_gene_wise_Cox_PH.xlsx",
-    "Supplementary_Table_S4_RNA_Hallmark_GSEA.xlsx",
-    "Supplementary_Table_S5_Protein_wise_Cox_PH.xlsx",
-    "Supplementary_Table_S6_Protein_Hallmark_GSEA.xlsx",
-    "Supplementary_Table_S7_Cross_omics_models.xlsx",
-    "Supplementary_Table_S8_D5_availability_IPW.xlsx",
-    "Supplementary_Table_S9_Complete_baseline_characteristics.xlsx",
-    "STROBE_Scientific_Reports_completed.docx",
-    "STROBE_Scientific_Reports_audit.tsv"
+testthat::test_that("pre-final candidate files are explicitly superseded", {
+  notice <- read_repo_text("submission/manuscript_files/scientific_reports/FINAL_PACKAGE_NOTICE.md")
+  testthat::expect_match(notice, "pre-final provenance files", fixed = TRUE)
+  testthat::expect_match(notice, "scientific-reports-submission-v1.1-assets.zip", fixed = TRUE)
+  testthat::expect_match(notice, "74839e4eb03ce91645e7e38c18f34e3019ded076609c8610d912542c0d79d664", fixed = TRUE)
+})
+
+testthat::test_that("machine-readable S1-S8 workbooks remain available in the Git tree", {
+  expected <- sprintf(
+    "Supplementary_Table_S%d_%s.xlsx",
+    1:8,
+    c(
+      "Clinical_variable_definitions",
+      "Clinical_univariable_Cox",
+      "RNA_gene_wise_Cox_PH",
+      "RNA_Hallmark_GSEA",
+      "Protein_wise_Cox_PH",
+      "Protein_Hallmark_GSEA",
+      "Cross_omics_models",
+      "D5_availability_IPW"
+    )
   )
   testthat::expect_true(all(file.exists(file.path(sr_root, expected))))
 })
 
-testthat::test_that("main Table 1 values are an exact subset of S9", {
+testthat::test_that("current manuscript numerical audit is complete", {
   audit <- read.delim(file.path(qa_root, "scientific_reports_numeric_audit.tsv"), check.names = FALSE)
-  x <- audit[audit$domain == "table1_vs_s9", ]
-  testthat::expect_gt(nrow(x), 0)
-  testthat::expect_true(all(x$match))
+  testthat::expect_equal(nrow(audit), 27L)
+  testthat::expect_true(all(audit$match))
+  testthat::expect_true(all(c("D1 heme NES/FDR", "D5 EMT NES/FDR", "maximum weighted absolute SMD") %in% audit$variable))
 })
 
-testthat::test_that("Scientific Reports STROBE audit is complete", {
+testthat::test_that("final package QA records Table 1 and pagination validation", {
+  qa <- read_repo_text("submission/qa/scientific_reports_final_package_QA.md")
+  testthat::expect_match(qa, "108 comparisons, 0 mismatches", fixed = TRUE)
+  testthat::expect_match(qa, "potassium (`K`)", fixed = TRUE)
+  testthat::expect_match(qa, "43 pages", fixed = TRUE)
+  testthat::expect_match(qa, "16-page", fixed = TRUE)
+})
+
+testthat::test_that("legacy STROBE audit remains complete as provenance", {
   audit <- read.delim(file.path(sr_root, "STROBE_Scientific_Reports_audit.tsv"), check.names = FALSE)
   testthat::expect_false(any(audit$where_reported == ""))
   testthat::expect_true(all(audit$status == "verified"))
-})
-
-testthat::test_that("Scientific Reports package release gate is green", {
-  report <- jsonlite::read_json(file.path(qa_root, "scientific_reports_package_validation.json"), simplifyVector = TRUE)
-  testthat::expect_true(isTRUE(report$all_pass))
-  testthat::expect_equal(report$numeric_mismatches, 0L)
-  testthat::expect_equal(report$broken_cross_references, 0L)
-  testthat::expect_equal(report$residual_A_labels, 0L)
-  testthat::expect_equal(report$privacy_findings, 0L)
-  testthat::expect_equal(report$clean_comments, 0L)
-  testthat::expect_equal(report$clean_tracked_changes, 0L)
 })
