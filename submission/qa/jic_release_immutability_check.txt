@@ -1,0 +1,17 @@
+JIC RELEASE IMMUTABILITY CHECK
+
+Tag: jic-submission-v1.0
+Verified baseline commit: fb0fe912af51435a82f95b4bfe25d758fa1c6646
+Verification method: GitHub compare of the commit above with jic-submission-v1.0
+Baseline result: IDENTICAL (ahead_by=0; behind_by=0; total_commits=0)
+
+Pre-release checks
+PASS: jic-submission-v1.0 resolves to fb0fe912af51435a82f95b4bfe25d758fa1c6646
+PASS: the Scientific Reports tag scientific-reports-submission-v1.1 did not exist before release preparation
+PASS: Scientific Reports work is isolated on release/scientific-reports-submission-v1.1-final-726
+
+Post-release checks required before tag creation
+PENDING: jic-submission-v1.0 tag target unchanged
+PENDING: JIC manuscript and figure hashes unchanged within the immutable tag
+PENDING: no JIC Release asset modified or replaced
+PENDING: Scientific Reports release uses a distinct tag and release namespace
