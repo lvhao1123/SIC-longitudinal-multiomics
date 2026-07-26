@@ -29,11 +29,11 @@ testthat::test_that("Scientific Reports editorial maps are complete", {
   testthat::expect_setequal(crossref$new_id, paste0("S", 1:9))
 })
 
-testthat::test_that("pre-final candidate files are explicitly superseded", {
+testthat::test_that("superseded candidate files are removed and final asset is identified", {
   notice <- read_repo_text("submission/manuscript_files/scientific_reports/FINAL_PACKAGE_NOTICE.md")
-  testthat::expect_match(notice, "pre-final provenance files", fixed = TRUE)
+  testthat::expect_match(notice, "Superseded journal-submission binaries", fixed = TRUE)
   testthat::expect_match(notice, "scientific-reports-submission-v1.1-assets.zip", fixed = TRUE)
-  testthat::expect_match(notice, "74839e4eb03ce91645e7e38c18f34e3019ded076609c8610d912542c0d79d664", fixed = TRUE)
+  testthat::expect_match(notice, "07928a393f5cd937d37ca1d601492631e7c4d2c90072ab8825536f06c524afdb", fixed = TRUE)
 })
 
 testthat::test_that("machine-readable S1-S8 workbooks remain available in the Git tree", {
