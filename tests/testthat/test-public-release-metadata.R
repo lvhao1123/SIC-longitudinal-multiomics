@@ -32,7 +32,7 @@ testthat::test_that("software and content licence boundaries are explicit", {
   testthat::expect_match(scope, "not covered", fixed = TRUE)
 })
 
-testthat::test_that("citation metadata identifies Scientific Reports release version", {
+testthat::test_that("citation metadata identifies Scientific Reports release version without a premature date", {
   citation <- read_repo_text("CITATION.cff")
   final_url <- "https://github.com/lvhao1123/SIC-longitudinal-multiomics"
 
@@ -41,7 +41,7 @@ testthat::test_that("citation metadata identifies Scientific Reports release ver
   testthat::expect_match(citation, "given-names: Hao", fixed = TRUE)
   testthat::expect_match(citation, paste0("repository-code: ", final_url), fixed = TRUE)
   testthat::expect_match(citation, "(?m)^version:\\s*1\\.1\\.0\\s*$", perl = TRUE)
-  testthat::expect_match(citation, "(?m)^date-released:\\s*\\d{4}-\\d{2}-\\d{2}\\s*$", perl = TRUE)
+  testthat::expect_false(grepl("(?m)^date-released:", citation, perl = TRUE))
 })
 
 testthat::test_that("README identifies current and previous immutable releases", {
@@ -55,6 +55,8 @@ testthat::test_that("README identifies current and previous immutable releases",
   testthat::expect_match(readme, "does not replace the OMIX application process", fixed = TRUE)
   testthat::expect_match(readme, "scientific-reports-submission-v1.1", fixed = TRUE)
   testthat::expect_match(readme, current_url, fixed = TRUE)
+  testthat::expect_match(readme, "scientific-reports-submission-v1.1-assets.zip", fixed = TRUE)
+  testthat::expect_match(readme, "74839e4eb03ce91645e7e38c18f34e3019ded076609c8610d912542c0d79d664", fixed = TRUE)
   testthat::expect_match(readme, "jic-submission-v1.0", fixed = TRUE)
   testthat::expect_match(readme, "immutable", fixed = TRUE)
   testthat::expect_match(readme, "LICENSE_SCOPE.md", fixed = TRUE)

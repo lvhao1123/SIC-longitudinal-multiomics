@@ -36,15 +36,42 @@ The public reproducibility layer contains:
 - frozen and provenance-verified analysis code;
 - repository-relative interfaces for authorised local execution;
 - aggregate non-identifiable result tables and figure source data;
-- publication figures and journal-specific submission-support files;
 - numerical-truth and SHA-256 manifest layers;
 - data-free privacy, semantic and reproducibility tests;
 - `renv.lock` and software-environment records.
 
 Public centre labels are anonymised as `Centre 01` to `Centre 30`.
-Submission files under `submission/manuscript_files/` are retained for
-provenance but are expressly excluded from the repository content licence unless
-otherwise stated.
+
+## Scientific Reports v1.1 final package
+
+The exact author-confirmed final submission package is distributed with the
+GitHub Release as:
+
+`scientific-reports-submission-v1.1-assets.zip`
+
+Expected asset SHA-256:
+
+`74839e4eb03ce91645e7e38c18f34e3019ded076609c8610d912542c0d79d664`
+
+The asset contains the final manuscript, the pagination-authoritative 16-page
+Supplementary Information PDF, the editable Supplementary DOCX, the corrected
+STROBE checklist, Supplementary Tables S1-S9, the field dictionary, and
+independent PNG/TIFF/PDF files for Figures 1-4 and Supplementary Figures S1-S9.
+The corrected Supplementary Figure S2 contains all six scenario labels and the
+`Prespecified scenario` marker.
+
+The files generated in the closed draft pull request #3 under
+`submission/manuscript_files/scientific_reports/` are pre-final provenance files
+and are superseded by the Release asset. They must not be used as the submission
+copy. The cover letter is private and is not included in the repository or asset.
+
+Release QA and file mappings are documented in:
+
+- `submission/qa/scientific_reports_final_package_QA.md`;
+- `submission/qa/scientific_reports_figure_audit.tsv`;
+- `submission/qa/scientific_reports_numeric_audit.tsv`;
+- `submission/release_manifests/scientific-reports-figure-map-v1.1.tsv`;
+- `submission/release_manifests/scientific-reports-submission-v1.1-release-assets.tsv`.
 
 ## Reproducibility scope
 
@@ -127,11 +154,11 @@ is versioned as `jic-submission-v1.0`:
 
 https://github.com/lvhao1123/SIC-longitudinal-multiomics/releases/tag/jic-submission-v1.0
 
-The journal-transfer submission snapshot prepared for *Scientific Reports* is
-versioned as `scientific-reports-submission-v1.1`:
+The Scientific Reports final submission snapshot will be versioned as
+`scientific-reports-submission-v1.1`:
 
 https://github.com/lvhao1123/SIC-longitudinal-multiomics/releases/tag/scientific-reports-submission-v1.1
 
-The v1.1 snapshot changes journal-facing manuscript structure, reporting format,
-supplementary numbering and submission metadata. It does not change the frozen
-cohort, estimands, models, numerical results, source data or scientific figures.
+The v1.1 snapshot preserves the frozen cohort, estimands, models and aggregate
+source data while replacing the journal-facing package and independent figure
+files with the author-confirmed final versions.

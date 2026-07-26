@@ -6,7 +6,6 @@ title: >-
   SIC longitudinal multi-omics analysis: data-free reproducibility repository
 type: software
 version: 1.1.0
-date-released: 2026-07-25
 authors:
   - family-names: Lyu
     given-names: Hao
