@@ -1,12 +1,17 @@
-# Journal of Intensive Care submission files
+# Submission-facing files
 
-This directory contains the clean author-facing files prepared for submission:
+The current repository branch does not retain superseded journal-submission binaries.
 
-- `JIC_manuscript_clean.docx`: clean main manuscript;
-- `Additional_file_1_Supplementary_methods_and_figures.docx`: supplementary methods and figures;
-- `Additional_file_2_Supplementary_Tables_S1-S8.zip`: Supplementary Tables S1-S8 packaged as one upload;
-- `STROBE_checklist_cohort_completed.docx`: completed STROBE cohort checklist.
+Historical Journal of Intensive Care submission files remain permanently available only in the immutable `jic-submission-v1.0` tag and Release.
 
-Tracked-changes manuscripts and the Chinese revision-rationale document are retained locally for author review and are intentionally not included in the repository submission package.
+The exact final Scientific Reports submission package is distributed as the GitHub Release asset:
 
-Individual-level CMAISE clinical and molecular data are controlled-access data under OMIX011182 and are not redistributed in this repository. The repository contains analysis code, aggregate results, quality-assurance outputs and non-identifiable figure source data only.
+`scientific-reports-submission-v1.1-assets.zip`
+
+Expected SHA-256:
+
+`74839e4eb03ce91645e7e38c18f34e3019ded076609c8610d912542c0d79d664`
+
+The asset contains the author-confirmed final manuscript, 16-page Supplementary Information PDF, editable Supplementary DOCX, corrected STROBE checklist, S1-S9 tables/field dictionary and independent final figures. The cover letter is private and excluded.
+
+Machine-readable S1-S8 workbooks retained under `scientific_reports/` are reproducibility outputs and match the corresponding files in the final Release package.
