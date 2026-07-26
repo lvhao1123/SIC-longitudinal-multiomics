@@ -1,0 +1,168 @@
+source_order	source_heading	source_sha256	destination_section	destination_order	edit_class	highlight	approved_boundary
+2	Normal	b81811de73468a6e592f210fd8add40d9afbbd48bbab3411f874824c58237a0d	Title page	1	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+3	Normal	922b70e71c4c592f10c85d217630b0b9e25ee46d68133e689aa50d6a07640a6b	Title page	2	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+5	Normal	f6009a507204d2fb3538b7344ade965b8ae8b4635ce5ddbe5724391a1b28dc08	Title page	3	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+6	Normal	25ca857bc9cc9184ad4d6c528a55ea6ee597162c1afe296a9cb8e65b4073e16d	Title page	4	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+7	Normal	5803f75cb263c66812f2824835b2c6fa8ce132404358714e2fbe24d9b37d1b96	Title page	5	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+8	Normal	e1bf2558de4cb556142e9ef3435877bf2732010c8739b2a41a3ee286324be652	Title page	6	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+9	Normal	f12bc3a88e03ba01c3772a9235224040060be27b9aa3ee549776c67383b38f9f	Title page	7	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+10	Normal	77221904a45480d72dd3824de2797cf4be432f34d7b96e677aabc2c2c19250f7	Title page	8	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+17	Normal	d21b4a64a2d8656a0fdf7ab2e89a49164ac504686cfa2a3d442e87c209286330	Abstract	9	journal compliance	TRUE	Replaced by approved unstructured abstract and six-keyword interface.
+18	Normal	ea2b8a878841df5955c78edc6cae47446483b86e3f5ccb04e1a8d940cf7e59fd	Abstract	10	journal compliance	TRUE	Replaced by approved unstructured abstract and six-keyword interface.
+19	Normal	57e65348ce95045bda4a0393b2a6a3f7079f539f1e176b9e74dde678249f41cf	Abstract	11	journal compliance	TRUE	Replaced by approved unstructured abstract and six-keyword interface.
+20	Normal	8696622f344183c4f73993a175acb8daa6418a5cc29099e5d2d762cba2d6f7f2	Abstract	12	journal compliance	TRUE	Replaced by approved unstructured abstract and six-keyword interface.
+21	Normal	2f4649666a0a1315091636e7953732058b565739c3581a44528a16023b425ef6	Abstract	13	journal compliance	TRUE	Replaced by approved unstructured abstract and six-keyword interface.
+22	Normal	219c4a6c86a716e99d5dc9611b61e584deb11b57e972d87d4b773387ebc3cadd	Abstract	14	journal compliance	TRUE	Replaced by approved unstructured abstract and six-keyword interface.
+23	Normal	f8da50b271b19ffe33157b187b5e49b84c32e0b5c6482d9e59a79647237c5df0	Abstract	15	journal compliance	TRUE	Replaced by approved unstructured abstract and six-keyword interface.
+24	Normal	26201645fb14d83d4f7ae7385e5c4ef2e8411313b311d178ce54c0eb65a1bd9b	Abstract	16	journal compliance	TRUE	Replaced by approved unstructured abstract and six-keyword interface.
+25	Normal	a89b5f9031f7ce2097a6441fefcc5d052d2fcba47f87248b39b61f03e014401b	Abstract	17	journal compliance	TRUE	Replaced by approved unstructured abstract and six-keyword interface.
+26	Normal	8bfdb93cafaa91477de5fa9fa09d33946f57adae516e2ab45a309df988f36ba1	Abstract	18	journal compliance	TRUE	Replaced by approved unstructured abstract and six-keyword interface.
+27	Normal	621472a24c2ddab5641339cbeddea62c9af5fdd83c19af0d3009a8c102cd8631	Abstract	19	journal compliance	TRUE	Replaced by approved unstructured abstract and six-keyword interface.
+28	Normal	ea2b8a878841df5955c78edc6cae47446483b86e3f5ccb04e1a8d940cf7e59fd	Introduction	20	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+29	Normal	00d863caf0c054f54df5dd3310c4df256a76ef68bef7ebd21f94af4739ed0000	Introduction	21	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+30	Normal	a8f0e4c79cf8e7b5a847f3cf28f9cfd6d917ce55c07515cf5b028d575bd17d89	Introduction	22	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+31	Normal	d8999348eb980ca03835eeac22f27ceec45cf7700d8aa8d8a946d8f6bd35ec34	Introduction	23	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+32	Normal	be8c306216d457026e49403bab99dda4cb2f75779b0deecf945c526b5ca79663	Introduction	24	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+33	Normal	8696622f344183c4f73993a175acb8daa6418a5cc29099e5d2d762cba2d6f7f2	Methods	25	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+34	Normal	ed00188dad929aa1237ecaf4a9cc015eea9c59c2d980eb26feff1bea123d8c12	Methods	26	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+35	Normal	75fdbc99dead98adad99301feaf4ea1d09a164d1bb9abe9fc5e3b03dd1061947	Methods	27	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+36	Normal	b1287d90c6c66fca8ec20118dd87b82faf511a90ae9e368e643a6d54480885f8	Methods	28	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+37	Normal	b73f86dad39a1c03ed8bfa95e499d990888e739e4177333995d8a430474b0353	Methods	29	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+38	Normal	cb25fc2b75dbc5dc4f592fcbd032f26ae407583769df4a0a670a7430244ec110	Methods	30	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+39	Normal	3d40f22b89f869e9931bcbb8e075aad2172922ce553fdc1134443278467260eb	Methods	31	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+40	Normal	5f7de5c4e7ef61f8903ae9b6016198f9bece6b7526ac05e531d660b77d6826ff	Methods	32	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+41	Normal	9bc0638fc89d7343904f7ec79d6c6a2708eb50d7a4dda0f36e4f450e61c86a9e	Methods	33	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+42	Normal	1cbbdfcfd74cd15869676e44e6c7cd719a7a0b6496af8de8b7db4e0493689f8d	Methods	34	clarification	TRUE	Added exact Supplementary Table S9 linkage without changing values.
+43	Normal	9a330d1ff7cd6876d1251f6f4064a2fbe6ec1929c2114aae3844ee6c5e98123c	Methods	35	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+44	Normal	ad6f9f3f08d9558bed50cdc8fd5465d15072df54dfcc09e3cffb27541fe897a6	Methods	36	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+45	Normal	75b00f61c0290e912ded1939e2b026d6e8598e46573e0c3ef8740a9d3b62da3e	Methods	37	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+46	Normal	2414ee8eb20288ba28d919d6178f9ee2e8f1eef07f7015d93cc0d558356c03e4	Methods	38	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+47	Normal	aed062b4f49cc6e8632d86bea550eb481f5f83362d40489a394588fdcc8974d6	Methods	39	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+48	Normal	29e6d10c8ca26ad3c9c6c02850e4a0fa16a5f0bed9cefe4a8184d2a7c838b5ab	Methods	40	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+49	Normal	c0b2a46f2ce3b3b9310897ec3552e8fdc12785302e1d43fea3a09aec52c8e673	Methods	41	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+50	Normal	2a718bca4f7dd91c43fab34784e44b5e96a3f308dc69a390d512688ed174d27c	Methods	42	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+51	Normal	5f0e2c2856cc748c746aa13c9b5ddae5f05a54654a69ae700eefa15dcf2e64bb	Methods	43	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+52	Normal	fad83f612d90e8681ae1c32d41ffa5a371b196881b98859ddf8caa590b76a767	Methods	44	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+53	Normal	3fcbc49711a77303881b92ece34a22e03daca35a0385ed868dc2ef7568269886	Methods	45	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+54	Normal	cf16d3a7c50993823961e372d0f3623d8cfcadb38b0c75e3c6f4be70b2f7c31f	Methods	46	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+55	Normal	1f7443611d546da0f53a8bf7aebff9e60ed77c2dbe71c51e8e5fdfe6146e9c6d	Methods	47	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+56	Normal	fb34343f8cbfeff6e90f9c86a7293e76c2f84eb2ff638c609df9828c1537477e	Methods	48	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+57	Normal	9d552b930124e509400c3dc922fb1f2e67428b3b17f4aeb2b6bb969208c94d80	Methods	49	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+58	Normal	20bc7511b0da1d0d3aedfc9d1cb616478f57b67ae2c9846012a9a754bc19d3f5	Methods	50	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+59	Normal	aee15157008c2f7ae177acafb340c15953c377b7fc31746db26eb9af4a2ddad3	Methods	51	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+60	Normal	0d358db6c44c2572f7eca218a7c67d545d3e275e1017efbad586db69629f9e1a	Methods	52	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+61	Normal	8adee61d833c5afcd5ad2ec29cbf459b5f5c73ccc9b4d13a51c56c2163af2220	Methods	53	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+62	Normal	7eb5cc6a736e27e94ce6640bd8957956ac23e13a2b17774ce75f1e5a16b54853	Methods	54	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+63	Normal	af838e482dd5dd9a6aade306380f5fcc55bb43613f75d2498330fd5e8bfef602	Methods	55	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+64	Normal	9d1656b46a5b1bed61cdcc30d9d4e1e1f2a5cf2a06d09fa8d879b84a8d84a5d0	Methods	56	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+65	Normal	64cf85486fe1e9e0d2a9574f1421c8eb0040fb11ce153bc3399431d51137152c	Methods	57	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+66	Normal	1a2138cc217545e306b92ae14ec7fc6fe3fac89d1d295b116b78494cc3e6b2f7	Methods	58	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+67	Normal	a4e3bf75e316409be993a883a256c0ae38ffc134da8b8f494832a04958263359	Methods	59	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+68	Normal	c295644a966137a426bf3d258e867f2e4f8c762e3fc0bae994c8a18fcc3c6c86	Methods	60	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+69	Normal	975297cdcac7c7529d1fa059ce6025c55ba028158cd874db20949a1a1c0d5eef	Methods	61	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+70	Normal	219c4a6c86a716e99d5dc9611b61e584deb11b57e972d87d4b773387ebc3cadd	Methods	62	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+71	Normal	43241295dc698bea4e2dc8d2ea079c66bf5633e282756c4d997698cfff08dc26	Results	63	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+72	Normal	cf2c0b60dc05a30290d5955cd631c9ffdce4a997604b5071f5dd3f7e9862b12c	Results	64	clarification	TRUE	Added exact Supplementary Table S9 linkage without changing values.
+73	Normal	847b8b2c79a9b1917dc34f8860b02f71e641ec5af3f3f00f99a1905eaa18a428	Results	65	clarification	TRUE	Added exact Supplementary Table S9 linkage without changing values.
+74	Normal	26e6a836732a7226d6e22c479f4b8f079bc47559dbe673dfee760beb704da04d	Results	66	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+78	Figure note	c82e5ae927340c9b2a58c8a139fa68287b4b3f388a5d7c7412c71e145a6f693d	Results	67	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+80	Normal	316cec7813331b417d9682e2bdfafe2b8e99d5f94fd4d12edc4d281815d31e0b	Results	68	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+81	Normal	ea87056e1d850fea1c93d8e4e2d33df44f0236d850357262f9183be54efffea0	Results	69	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+82	Normal	b5b60c90e7b8b7540f13a1bf81acdc20b4e2d0f6f401b2321c5830390623b875	Results	70	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+83	Normal	ad3dde3ac5fa7ffba401d809f55e04314ec0944b4124338c1340a61308801f64	Results	71	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+86	Figure note	31d88db724e79502b4ce8f75f5d9cda63580c1f5309011b8c7c32b0f7149276c	Results	72	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+88	Normal	729c0b112b203ffc84fb24f46a03d00910f29f2607ff62665816c945437e0b0e	Results	73	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+89	Normal	5c3be854e58da29308ea245dd86d97da1bcde92d4dfff43e65ee86be5fd611dd	Results	74	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+90	Figure note	3b03147f03817024eaee04d630bba4f1b154eb22e577ef263278032d32f44e8b	Results	75	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+92	Normal	fd30a84020d91ca2ea5af4a5c25f2fc02d78628c1c29f0e74d84e9b7b7f2bbc0	Results	76	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+93	Normal	e2849a5f381dc2279bf18bd73eab0d4adac06f0c9ed9359d170034e9822ca0da	Results	77	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+94	Normal	fbfd45cb5b5f890002b084f27887791b0372015307af344ddca49d0b5226fd20	Results	78	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+95	Normal	bc7e431b65959848d2d08e786c16342a868f6e1e35d5a49eeaa25f0049b4530f	Results	79	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+96	Normal	56f78597999f19253992d93762d77b8e280fc81fb193329f8c735bfaf3b8c775	Results	80	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+97	Normal	1525952bd3556f81b57164aea121eb5f0d7d064972da8ebdcd006d3bcdfbcc71	Results	81	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+99	Figure note	dc99cb99ee774f095840eb9f8a062ed8393e3864a4f5d64a5fc5947d6d218c41	Results	82	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+101	Normal	cf167f115c1d2b587d2d011ed06c1db0f3a72ba99d441b310e76cc98dfd470fa	Results	83	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+102	Normal	34a1bce6f901782a280881ed333f5cb61f3bdbcade542c26e74f68fac3f0751d	Results	84	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+103	Normal	bdeaf19a65762d4e2e50d7c2104fdb076c655ba266ca6aa0c3ad897d498b1a9d	Results	85	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+105	Normal	5eb6cf647d2c5d14a044e2d103dcef4cf0cdc872434c374debc1043092bc4746	Results	86	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+106	Normal	a34df25dd131b5726003a9b2e1b118e03c98a964b984f2fd1c33ed3614508913	Discussion	87	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+107	Normal	1f8f262180ecda6872aba9124c19615572dcd37ff8ef35a6e1babfc46530beff	Discussion	88	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+108	Normal	60af1e92f2430188672a6cebe29c42143ce0a24c025cf73b6f59d247f565c536	Discussion	89	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+109	Normal	a957373a7631cae08e3d1b3f817ccbd9cf45a1e4ec199129fc3fdcbe56851773	Discussion	90	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+110	Normal	813272bbe28c77ee1a200c2fd07d8d516de3f323ee91245ad3feaf2e97ca31c5	Discussion	91	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+111	Normal	9482837fd97135b91bb0dceae9782cc740245e330e390c8d255cdc3f5ca3320e	Discussion	92	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+112	Normal	b683ac29a553af27a04791c433b65208370c5ea6a63fb202485505c51ee6cbfa	Discussion	93	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+113	Normal	0fa420ac5107eb98742b220062f746566eca6c77b767f730bc9e8fb879bfeda0	Discussion	94	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+114	Normal	37c5a8abde794797a3d2f730565ba72053b44172e6db1aa4e92cc0ba24edc769	Discussion	95	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+115	Normal	caec5680bb98f3d71f33d6beb70ccda428d6af46e247c0abbbdbe4b2c5129b7c	Discussion	96	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+116	Normal	7e5f4a7e367453c99a38d946cd9c4007c369f8bf13fde3a69e2d9d36e13c16f2	Discussion	97	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+117	Normal	53cf5c150c1de39e1568c459178251c86c8fd648ddebae49e6f7200435604f4f	Discussion	98	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+118	Normal	3054c9de9e376e833d6116b3cc0ffa871fce31d4b61059de7c6bfed44df4eadd	Discussion	99	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+119	Normal	bb42bdf1db7a6bb96128cf9fdc89a84769faa17b959a7a2f1d086e33f9b231b4	Discussion	100	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+120	Normal	b701ae161a4ffc00f897d03e13282014aadd3deaeb1d8413715a24e1b0dc63e8	Discussion	101	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+121	Normal	bd651059ffc93a7ff6c531029d0bb464cb4210c22e910fcbe2c90c0342ba9606	Discussion	102	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+122	Normal	5531b9355895a30115d02fcd6b5262590a46a1f1b287092aab8281785065d6e4	Discussion	103	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+123	Normal	671bcec54264e9b4d07703ca0d773c22591bb1eab4295a2da47a6f7b81afcb8d	Discussion	104	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+124	Normal	2ef4c0eba1c292f9855237db0d77a422e57882c532dbc203b8a0a2070eefa2a0	Discussion	105	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+125	Normal	72388535380762d57f22200fc756e1605af65424779e33eea8d92398a499c9af	Discussion	106	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+126	Normal	0715330701f6a7d2477ac0dd4d97673cbf0dfb0e132c736e48177049df27e3a3	Discussion	107	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+127	Normal	064b131a40d087f8ed1177c05a6fc84b6e5519f3dd265218d57f2f21a09210d7	Discussion	108	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+128	Normal	c226d4ce4e01f451768d8cddbeeb751f134b57442efa4445e348cf0b001e1f88	Discussion	109	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+129	Normal	e9452e514ee563dede127e81c11e900ab0418f19d91c1eac6041468672710573	Discussion	110	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+130	Normal	0f7b222bdcbd9f37ea953c4b3a2531a1b4301075b833c568335a09d9bf7a41ae	Discussion	111	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+131	Normal	d26466746bc3265e5b45b241aa2153b7ea228a51110ce9d6315e4f09698c4fc4	Discussion	112	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+132	Normal	feae342619f5c791af8b8d9485eff794d904ac46b825da8b5df2065f06d61c8f	Discussion	113	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+133	Normal	9e46f83e264c46720b529e212f63bf54568c23057e811fc9c97dc6f318093f39	Discussion	114	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+134	Normal	26201645fb14d83d4f7ae7385e5c4ef2e8411313b311d178ce54c0eb65a1bd9b	Discussion	115	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+135	Normal	60c75bfa42d76c8ea5d5dafdd9bdd2355a0f5b20d897e3e41d934bd2abc7d9d7	Discussion	116	claim restriction	TRUE	Conclusion integrated into Discussion with bounded inference.
+137	Normal	b9abcf765eedead4f3bb7ab6e49fe849854599d14a1484a01ffa61610c336f4a	Discussion	117	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+138	Normal	6964ec9ae5c6970515b90614e0aef3c0076a5008e74c7fa3eca93fc6ae0ca1f4	Discussion	118	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+139	Normal	4826cfad244c14610657d4aa58e63b76422fee57c18a0fccbe825fa47574ec87	Discussion	119	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+140	Normal	5675bb4b9ea086fdd1a2be26b472b551c4f8930d9ad7acc496cd9bf5b958ca24	Discussion	120	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+141	Normal	c625f1d54d34e51aa3e9373c8c23c8c740ad6fa383d8d431bc9fdf3c4dc5863b	Discussion	121	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+142	Normal	cc0e7035fb185138fb90c70b20c9078a3e60ce6d3d0de9f1612d27515a8bf14a	Discussion	122	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+143	Normal	a3014a36534d5612e7e04f74fc455b30bd0101d370991d349923efd6cc69ebc0	Discussion	123	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+144	Normal	f7455e5b1a0fa654761cdf79b1bb452ce500bc2f9351699373559239a4608db0	Discussion	124	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+145	Normal	f1e49590a4e9b549a3a26ee16c3adcf10267fad204d2975b3b510fb459f1dff6	Discussion	125	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+146	Normal	9abdb71c61909fcbda986b221203187a32a089656a81ea1f1147df607f367b55	Discussion	126	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+147	Normal	c9afbf8333458e9ebad4dc79254a235880ca4cb3d8dd43e1c52fe937d3ab02e5	Discussion	127	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+148	Normal	e93df741ad323efdfca3f9a08236d6aa90476b2f3ca01c9b67f062209d4fa660	End matter	128	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+149	Normal	bf20c966a124a46c93d0bd54e325aec25c786f7f04f1bbe075ccb414f88a0230	End matter	129	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+150	Normal	8fe95a3f383b5c6f691e3b208726e318fcc760389853533899961432ae3f7aef	End matter	130	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+151	Normal	176cded7b46823d2639ec348660e7524d3b1dc9b8cf3180edba149479a96a99b	End matter	131	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+152	Normal	c9015d53b90846454375a2fdf2829c66fad7a2e52de1e89e73949ca59c905e49	End matter	132	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+153	Normal	41686dc6c6c2f97d475e290c2ef97587498543aff35e9ec8a1c33b380c8ea2df	End matter	133	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+155	Normal	581138e24092d71afa03be9c350b203372d808af848ebf5ecd27a1b9fcfaa170	End matter	134	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+156	Normal	750f66f8c7d4645262c4b1e0d20b633cacdf5943f1acd845a010c297b60083e6	End matter	135	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+162	Normal	2aaa70c8dbe1cecfcd6d4b03d08c3c8ba79c07e4d9bb7eebbe0ca10f9b4e1369	End matter	136	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+163	Figure note	e9fd806a28481a8b6a8f5f37bf202f9f23798eced4a2c7d03b530d614a6ef830	End matter	137	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+165	Normal	69824d3b0e70ca6aaa0da1613b65fd914c442bf1f7ad1bb22bcdfbdfe1a05e39	End matter	138	unchanged	FALSE	Scientific wording retained or moved without changing meaning.
+166	EndNote Bibliography	59d656c61e0048d515ec1e0ac7b53ce2d06ae2a1714d15ea9f0cbbef8a298a94	References	139	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+167	EndNote Bibliography	8d8bcea8af3a806047f8c7c15cb7596edc04cbd2e3319c0d07dfdc8e065ea8e9	References	140	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+168	EndNote Bibliography	c740e935e5b8a0a7543a8dca08567d7a3c2e0cee23f743e6da66861d5f936d8a	References	141	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+169	EndNote Bibliography	3b6bdcefc6c7b8b297194af478d7593555a81a484b83622c5bc8747eafb6c4d5	References	142	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+170	EndNote Bibliography	b4c646437332af99b41789db0fb92ecd7027f868bdaadaded0489f1869907695	References	143	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+171	EndNote Bibliography	20d32c6137ce40c8f0030bdd98a3bbbee816dbcb302972a101226cb60d4647ab	References	144	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+172	EndNote Bibliography	0649e96dcf8d11e22dd0072cb065d7ac0af704d15369b62e1837c76b57cc16d1	References	145	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+173	EndNote Bibliography	7e90112e1e964d634ae598f7b6faa0ad70d8f394254fd922258cd217547f5542	References	146	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+174	EndNote Bibliography	caf968a9a730b38df03f440ece91898ac8698b4e59b3942d4d747d55584c7b69	References	147	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+175	EndNote Bibliography	8bfa3c573cd74173388b8b3b9747614fe3e9db9bbe680f0d831007fe48b2bec9	References	148	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+176	EndNote Bibliography	510cfc7e74d964cab7b8e8969087e2089bef733a41618b366efbe120714339dc	References	149	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+177	EndNote Bibliography	235d664b20f62807a1083c98d913de2d79ef5d6afcb10d162f486dfa6ad7ac40	References	150	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+178	EndNote Bibliography	1ca5575e94026cd29d82dc9a032b8dd02ff6705a2d9c71cf32e9db663919bf65	References	151	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+179	EndNote Bibliography	8feb13dfda82fc3260d144e11ffb8deb94210a669a951804016c8ac3e1a46544	References	152	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+180	EndNote Bibliography	e8815e57d0b7c99076f6122255f56f0d19554e589a747c0b0edbc52598800eb0	References	153	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+181	EndNote Bibliography	f7d9e6e90acec59145ff3ec363e46d416eb1c7d83c8a32499c5ddf88fb1df0bc	References	154	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+182	EndNote Bibliography	39d287768fb30a48f2a4c94e624bf1d1515fcf0682d7fdcd5f33a551d61d9913	References	155	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+183	EndNote Bibliography	b76854366be041e3f7e26623965c0620a7f6ed4775d84ff8d2c5e2336d163497	References	156	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+184	EndNote Bibliography	4288868e6f14ab6ad7ab2e4e5a5c71246baaf312d61281ec789c357a16dbcbf0	References	157	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+185	EndNote Bibliography	ef74768e4c49ee25dd16bd2dd56a72c7b6abe655138864eb75d0f53114603514	References	158	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+186	EndNote Bibliography	e059d0605dcdaf9fb4bd1719fcaf4d69453029ecaf26ebfec92b91826f4ad2fe	References	159	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+187	EndNote Bibliography	3a4d70e55a51c1da240331bda6152aee9951263ac419093e96e4368a15145d1b	References	160	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+188	EndNote Bibliography	614b12cb4ada09abbb819e71202d5864fc831deaec61bcaeb039a49624d80aac	References	161	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+189	EndNote Bibliography	f8e9f107c3958a8b2ee058f7777021d5f07be9405b46043c557a80cc168682f2	References	162	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+190	EndNote Bibliography	bed5abc205f92c4b28ac8116289cb2f8158aa3a66d98eefa63161649b02e5958	References	163	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+191	EndNote Bibliography	6e556c5caac592a1bf061e27920437a50b03946c07e5fab343b62be6d281e123	References	164	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+192	EndNote Bibliography	aadef3da74c7915f01aa932cdffafff8b616b4fbea3759b86985e29f72603337	References	165	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+193	EndNote Bibliography	61fee3e95e0696692e24186c69e16baa47a6b71e107b02e2c9782f69c84311bc	References	166	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.
+194	EndNote Bibliography	74c25f9617ecf2c2a533c28e7fa9374b640642ede39fc47d33930ec821bffc95	References	167	journal compliance	FALSE	Renumbered and converted to Nature style without changing citation identity.

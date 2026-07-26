@@ -1,9 +1,8 @@
 # SIC longitudinal multi-omics analysis
 
-This repository is the data-free reproducibility snapshot supporting the
-Journal of Intensive Care submission on landmark-specific mortality-associated
-whole-blood RNA-seq and plasma protein programmes in Day-1-defined
-sepsis-induced coagulopathy.
+This repository is the data-free reproducibility archive supporting a multicentre
+longitudinal study of landmark-specific mortality-associated whole-blood RNA-seq
+and plasma protein programmes in Day-1-defined sepsis-induced coagulopathy.
 
 Final repository URL:
 
@@ -37,21 +36,49 @@ The public reproducibility layer contains:
 - frozen and provenance-verified analysis code;
 - repository-relative interfaces for authorised local execution;
 - aggregate non-identifiable result tables and figure source data;
-- publication figures and submission-support files;
 - numerical-truth and SHA-256 manifest layers;
 - data-free privacy, semantic and reproducibility tests;
 - `renv.lock` and software-environment records.
 
 Public centre labels are anonymised as `Centre 01` to `Centre 30`.
-Pre-submission files under `submission/manuscript_files/` are retained for
-submission provenance but are expressly excluded from the repository content
-licence unless otherwise stated.
+
+## Scientific Reports v1.1 final package
+
+The exact author-confirmed final submission package is distributed with the
+GitHub Release as:
+
+`scientific-reports-submission-v1.1-assets.zip`
+
+Expected asset size and SHA-256:
+
+- `37,592,790` bytes
+- `07928a393f5cd937d37ca1d601492631e7c4d2c90072ab8825536f06c524afdb`
+
+The asset contains the final manuscript, the pagination-authoritative 16-page
+Supplementary Information PDF, the editable Supplementary DOCX, the corrected
+STROBE checklist, Supplementary Tables S1-S9, the field dictionary, and
+independent PNG/TIFF/PDF files for Figures 1-4 and Supplementary Figures S1-S9.
+The corrected Supplementary Figure S2 contains all six scenario labels and the
+`Prespecified scenario` marker.
+
+Superseded JIC and pre-final Scientific Reports binary files have been removed
+from the current branch. The immutable `jic-submission-v1.0` tag preserves the
+historical JIC package. The cover letter is private and is not included in the
+repository or asset.
+
+Release QA and file mappings are documented in:
+
+- `submission/qa/scientific_reports_final_package_QA.md`;
+- `submission/qa/scientific_reports_figure_audit.tsv`;
+- `submission/qa/scientific_reports_numeric_audit.tsv`;
+- `submission/release_manifests/scientific-reports-figure-map-v1.1.tsv`;
+- `submission/release_manifests/scientific-reports-submission-v1.1-release-assets.tsv`.
 
 ## Reproducibility scope
 
-Data-free quality-assurance tests can be run without controlled source data.
-A complete numerical rerun requires separately authorised CMAISE/OMIX011182
-files supplied locally through the documented input contract.
+Data-free quality-assurance tests can be run without controlled source data. A
+complete numerical rerun requires separately authorised CMAISE/OMIX011182 files
+supplied locally through the documented input contract.
 
 ### Data-free validation
 
@@ -121,11 +148,18 @@ the article DOI and archival DOI after publication metadata become available.
 No repository licence applies to CMAISE/OMIX011182 participant-level data,
 MSigDB Hallmark gene-set files or other third-party materials.
 
-## Release status
+## Release history
 
-This repository snapshot corresponds to the Journal of Intensive Care submission
-and is versioned as `jic-submission-v1.0`.
-
-Release URL:
+The immutable original submission snapshot for the *Journal of Intensive Care*
+is versioned as `jic-submission-v1.0`:
 
 https://github.com/lvhao1123/SIC-longitudinal-multiomics/releases/tag/jic-submission-v1.0
+
+The Scientific Reports final submission snapshot will be versioned as
+`scientific-reports-submission-v1.1`:
+
+https://github.com/lvhao1123/SIC-longitudinal-multiomics/releases/tag/scientific-reports-submission-v1.1
+
+The v1.1 snapshot preserves the frozen cohort, estimands, models and aggregate
+source data while replacing the journal-facing package and independent figure
+files with the author-confirmed final versions.

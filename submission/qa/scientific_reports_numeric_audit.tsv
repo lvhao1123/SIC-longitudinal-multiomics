@@ -1,0 +1,28 @@
+domain	variable	manuscript_display	locked_source_value	source	search_evidence	match
+cohort	Day-1 cohort N	504	504	Figure 1/sample source	504 patients	TRUE
+cohort	60-day deaths overall	84	84	manuscript/Table 1	84 deaths	TRUE
+risk_set	RNA D1/D3/D5 N	504/420/320	504/420/320	SourceData_Figure1_samples.tsv	504, 420 and 320	TRUE
+risk_set	RNA D1/D3/D5 deaths	84/67/53	84/67/53	locked manuscript outputs	84, 67 and 53 deaths	TRUE
+risk_set	Protein D1/D3/D5 N	168/147/114	168/147/114	SourceData_Figure1_samples.tsv	168, 147 and 114	TRUE
+risk_set	Protein D1/D3/D5 deaths	27/18/14	27/18/14	locked manuscript outputs	27, 18 and 14 deaths	TRUE
+availability	D5 survivors/estimand/observed/unobserved	491/487/320/167	491/487/320/167	SourceData_Figure1_D5_availability.tsv	491;487;320;167	TRUE
+availability	structural deaths/zero-centre exclusions	13/4	13/4	SourceData_Figure1_exclusions.tsv	13 patients; Four patients	TRUE
+RNA_GSEA	D1 heme NES/FDR	2.69/2.95e-20	2.692197/2.948671e-20	SourceData_Figure2_RNA.tsv	NES 2.69; FDR 2.95	TRUE
+RNA_GSEA	D1 hypoxia NES/FDR	2.43/1.80e-12	2.429194/1.803158e-12	SourceData_Figure2_RNA.tsv	NES 2.43; FDR 1.80	TRUE
+RNA_GSEA	D5 MYC NES/FDR	-3.13/6.19e-27	-3.130619/6.189346e-27	SourceData_Figure2_RNA.tsv	NES -3.13; FDR 6.19	TRUE
+RNA_GSEA	D5 OXPHOS NES/FDR	-2.44/1.77e-12	-2.436141/1.773112e-12	SourceData_Figure2_RNA.tsv	NES -2.44; FDR 1.77	TRUE
+Protein_GSEA	D3 EMT NES/FDR	2.38/5.86e-08	2.383396/5.861463e-08	SourceData_Figure3_Protein.tsv	NES 2.38; FDR 5.86	TRUE
+Protein_GSEA	D5 EMT NES/FDR	1.94/5.67e-06	1.937860/5.672257e-06	SourceData_Figure3_Protein.tsv	NES 1.94; FDR 5.67	TRUE
+cross_omic	D1 IFNa rho/FDR	0.516/1.15e-11	0.516496/1.154621e-11	SourceData_Figure4A_same_time.tsv	0.516;1.15	TRUE
+cross_omic	D1 IFNg rho/FDR	0.492/9.16e-11	0.492301/9.156391e-11	SourceData_Figure4A_same_time.tsv	0.492;9.16	TRUE
+cross_omic	D3 IFNa rho/FDR	0.326/5.06e-04	0.325818/5.060209e-04	SourceData_Figure4A_same_time.tsv	0.326;5.06	TRUE
+cross_omic	D1 to D3 IFNa beta/CI/FDR/N	0.343/0.188-0.498/4.21e-04/147	0.342875/0.187839-0.497910/4.209620e-04/147	Figure4B source	0.343;0.188-0.498;n=147	TRUE
+cross_omic	D3 to D5 IFNa beta/CI/FDR/N	0.310/0.141-0.478/0.0074/111	0.309642/0.141080-0.478203/0.007416/111	Figure4C source	0.310;0.141-0.478;0.0074;n=111	TRUE
+cross_omic	D3 to D5 IFNg beta/CI/FDR	0.280/0.099-0.461/0.0235	0.279574/0.098577-0.460570/0.023472	Figure4C source	0.280;0.099-0.461;0.0235	TRUE
+IPW	minimum probability	0.00505	0.005049987	Weight diagnostics	0.00505	TRUE
+IPW	maximum untruncated weight	20.85	20.852944	Weight diagnostics	20.85	TRUE
+IPW	ESS ratio	91.3%	0.9130445	Weight diagnostics	91.3%	TRUE
+IPW	maximum weighted absolute SMD	0.450	0.449853	Weight diagnostics	0.450	TRUE
+IPW	NES Spearman rho	0.980	0.979694	Scenario metrics	0.980	TRUE
+IPW	direction agreement	95.9%	0.959184	Scenario metrics	95.9%	TRUE
+IPW	significant-set Jaccard	0.88	0.88	Scenario metrics	0.88	TRUE
