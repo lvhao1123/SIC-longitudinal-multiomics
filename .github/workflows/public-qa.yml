@@ -56,7 +56,12 @@ jobs:
       - name: Run repository tests by file
         shell: Rscript {0}
         run: |
-          files <- sort(list.files("tests/testthat", pattern = "^test.*[.]R$", full.names = TRUE))
+          files <- sort(system2(
+            "git",
+            c("ls-files", "--", "tests/testthat/test*.R"),
+            stdout = TRUE
+          ))
+          stopifnot(length(files) > 0L, all(file.exists(files)))
           rows <- lapply(files, function(file) {
             failure <- NULL
             tryCatch(

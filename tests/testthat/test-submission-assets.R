@@ -21,8 +21,29 @@ testthat::test_that("required submission layers exist", {
   testthat::expect_true(file.exists(file.path(submission_root, "numeric_truth_dictionary.tsv")))
 })
 
-testthat::test_that("journal submission package is complete", {
-  expected <- file.path(
+testthat::test_that("current journal submission package is represented by a frozen Release asset", {
+  manifest_path <- file.path(
+    submission_root,
+    "release_manifests",
+    "scientific-reports-submission-v1.1-release-assets.tsv"
+  )
+  testthat::expect_true(file.exists(manifest_path))
+  assets <- read.delim(manifest_path, stringsAsFactors = FALSE, check.names = FALSE)
+  testthat::expect_equal(nrow(assets), 1L)
+  testthat::expect_equal(assets$asset, "scientific-reports-submission-v1.1-assets.zip")
+  testthat::expect_true(assets$bytes > 1000)
+  testthat::expect_match(assets$sha256, "^[0-9a-f]{64}$")
+  testthat::expect_equal(assets$status, "ready_for_release_upload")
+
+  notice <- file.path(
+    submission_root,
+    "manuscript_files",
+    "scientific_reports",
+    "FINAL_PACKAGE_NOTICE.md"
+  )
+  testthat::expect_true(file.exists(notice))
+
+  superseded <- file.path(
     submission_root,
     "manuscript_files",
     c(
@@ -32,8 +53,7 @@ testthat::test_that("journal submission package is complete", {
       "STROBE_checklist_cohort_completed.docx"
     )
   )
-  testthat::expect_true(all(file.exists(expected)))
-  testthat::expect_true(all(file.info(expected)$size > 1000))
+  testthat::expect_false(any(file.exists(superseded)))
 })
 
 testthat::test_that("public aggregate tables contain no prohibited columns", {
