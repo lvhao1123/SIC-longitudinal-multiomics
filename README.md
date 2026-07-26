@@ -49,9 +49,10 @@ GitHub Release as:
 
 `scientific-reports-submission-v1.1-assets.zip`
 
-Expected asset SHA-256:
+Expected asset size and SHA-256:
 
-`74839e4eb03ce91645e7e38c18f34e3019ded076609c8610d912542c0d79d664`
+- `37,592,790` bytes
+- `07928a393f5cd937d37ca1d601492631e7c4d2c90072ab8825536f06c524afdb`
 
 The asset contains the final manuscript, the pagination-authoritative 16-page
 Supplementary Information PDF, the editable Supplementary DOCX, the corrected
@@ -60,10 +61,10 @@ independent PNG/TIFF/PDF files for Figures 1-4 and Supplementary Figures S1-S9.
 The corrected Supplementary Figure S2 contains all six scenario labels and the
 `Prespecified scenario` marker.
 
-The files generated in the closed draft pull request #3 under
-`submission/manuscript_files/scientific_reports/` are pre-final provenance files
-and are superseded by the Release asset. They must not be used as the submission
-copy. The cover letter is private and is not included in the repository or asset.
+Superseded JIC and pre-final Scientific Reports binary files have been removed
+from the current branch. The immutable `jic-submission-v1.0` tag preserves the
+historical JIC package. The cover letter is private and is not included in the
+repository or asset.
 
 Release QA and file mappings are documented in:
 

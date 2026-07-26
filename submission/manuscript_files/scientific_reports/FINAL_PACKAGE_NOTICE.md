@@ -1,16 +1,17 @@
 # Final Scientific Reports package notice
 
-The binary documents in this directory were generated during closed draft pull
-request #3 and are retained only as pre-final provenance files. They are not the
-authoritative submission copies.
+Superseded journal-submission binaries have been removed from the current branch.
+Historical JIC binaries remain available only through the immutable
+`jic-submission-v1.0` tag and Release.
 
-The exact final package is the GitHub Release asset:
+The exact final Scientific Reports package is the GitHub Release asset:
 
 `scientific-reports-submission-v1.1-assets.zip`
 
-SHA-256:
+Size and SHA-256:
 
-`74839e4eb03ce91645e7e38c18f34e3019ded076609c8610d912542c0d79d664`
+- `37,592,790` bytes
+- `07928a393f5cd937d37ca1d601492631e7c4d2c90072ab8825536f06c524afdb`
 
 The asset contains:
 

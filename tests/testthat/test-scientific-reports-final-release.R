@@ -24,10 +24,10 @@ testthat::test_that("release asset identity is frozen", {
   )
   testthat::expect_equal(nrow(assets), 1L)
   testthat::expect_equal(assets$asset, "scientific-reports-submission-v1.1-assets.zip")
-  testthat::expect_equal(assets$bytes, 37592778)
+  testthat::expect_equal(assets$bytes, 37592790)
   testthat::expect_equal(
     assets$sha256,
-    "74839e4eb03ce91645e7e38c18f34e3019ded076609c8610d912542c0d79d664"
+    "07928a393f5cd937d37ca1d601492631e7c4d2c90072ab8825536f06c524afdb"
   )
   testthat::expect_equal(assets$status, "ready_for_release_upload")
 })

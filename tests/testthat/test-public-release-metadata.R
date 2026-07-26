@@ -56,7 +56,7 @@ testthat::test_that("README identifies current and previous immutable releases",
   testthat::expect_match(readme, "scientific-reports-submission-v1.1", fixed = TRUE)
   testthat::expect_match(readme, current_url, fixed = TRUE)
   testthat::expect_match(readme, "scientific-reports-submission-v1.1-assets.zip", fixed = TRUE)
-  testthat::expect_match(readme, "74839e4eb03ce91645e7e38c18f34e3019ded076609c8610d912542c0d79d664", fixed = TRUE)
+  testthat::expect_match(readme, "07928a393f5cd937d37ca1d601492631e7c4d2c90072ab8825536f06c524afdb", fixed = TRUE)
   testthat::expect_match(readme, "jic-submission-v1.0", fixed = TRUE)
   testthat::expect_match(readme, "immutable", fixed = TRUE)
   testthat::expect_match(readme, "LICENSE_SCOPE.md", fixed = TRUE)
