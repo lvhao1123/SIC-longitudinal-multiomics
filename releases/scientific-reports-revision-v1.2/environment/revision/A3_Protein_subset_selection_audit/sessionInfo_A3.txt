@@ -1,0 +1,25 @@
+R version 4.4.2 (2024-10-31 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26200)
+
+Matrix products: default
+
+
+locale:
+[1] C
+system code page: 65001
+
+time zone: Asia/Shanghai
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] readxl_1.4.3      data.table_1.17.8
+
+loaded via a namespace (and not attached):
+ [1] compiler_4.4.2   magrittr_2.0.3   cli_3.6.6        tools_4.4.2     
+ [5] pillar_1.9.0     glue_1.8.0       tibble_3.2.1     utf8_1.2.4      
+ [9] fansi_1.0.6      cellranger_1.1.0 vctrs_0.7.3      lifecycle_1.0.5 
+[13] pkgconfig_2.0.3  rlang_1.3.0     

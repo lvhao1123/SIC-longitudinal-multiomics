@@ -1,5 +1,19 @@
 # SIC longitudinal multi-omics analysis
 
+## Current revision release
+
+The Scientific Reports revision code and aggregate-data package is in
+[`releases/scientific-reports-revision-v1.2/`](releases/scientific-reports-revision-v1.2/).
+Use that directory as the working directory for its documented analysis,
+table-assembly and plotting entries. Earlier submission versions remain
+available through their original tags; the older root-level entries describe
+those historical versions.
+
+The revision package supports figure reconstruction from public aggregate
+source data and includes analysis code for authorised controlled-data users.
+This does not constitute independent reproduction of all patient-level
+statistical analyses. Participant-level data are not redistributed.
+
 This repository is the data-free reproducibility archive supporting a multicentre
 longitudinal study of landmark-specific mortality-associated whole-blood RNA-seq
 and plasma protein programmes in Day-1-defined sepsis-induced coagulopathy.

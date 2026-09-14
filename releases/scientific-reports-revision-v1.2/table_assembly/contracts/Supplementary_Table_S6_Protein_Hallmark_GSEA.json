@@ -1,0 +1,36 @@
+{
+  "workbook": "Supplementary_Table_S6_Protein_Hallmark_GSEA.xlsx",
+  "blocks": [
+    {
+      "sheet": "Hallmark_all_models",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S6_Protein_Hallmark_GSEA/Hallmark_all_models.csv",
+      "rows": 395,
+      "cols": 11,
+      "source_sha256": "a2f1f591c025df222cead167be48262911a4b14795dc5a56295fff0418e4ffa6",
+      "cell_types": "contracts/Supplementary_Table_S6_Protein_Hallmark_GSEA_Hallmark_all_models_types.json"
+    },
+    {
+      "sheet": "Leading_edges",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S6_Protein_Hallmark_GSEA/Leading_edges.csv",
+      "rows": 9059,
+      "cols": 5,
+      "source_sha256": "645af9dadbac4b6e43022aa85cdbb1e2e8034971a6d3de74271623af0179c373",
+      "cell_types": "contracts/Supplementary_Table_S6_Protein_Hallmark_GSEA_Leading_edges_types.json"
+    },
+    {
+      "sheet": "GSEA_diagnostics",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S6_Protein_Hallmark_GSEA/GSEA_diagnostics.csv",
+      "rows": 10,
+      "cols": 3,
+      "source_sha256": "f22233363e8bf4492410d051a276aed5c55e4ca6d04481f10813070300cf32a8",
+      "cell_types": "contracts/Supplementary_Table_S6_Protein_Hallmark_GSEA_GSEA_diagnostics_types.json"
+    }
+  ],
+  "scope": "Only declared blocks are assembled from aggregate source files; unresolved regions remain explicitly marked in STATUS.tsv."
+}

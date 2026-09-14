@@ -20,3 +20,6 @@ submission/public_manifest.tsv -text -diff
 
 # Vendored renv bootstrap is generated upstream and kept byte-for-byte.
 renv/activate.R -text -diff
+
+# Preserve the approved revision archive files and their checksums.
+releases/scientific-reports-revision-v1.2/** -text

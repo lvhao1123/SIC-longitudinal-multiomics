@@ -1,0 +1,17 @@
+args<-commandArgs(TRUE);root<-args[1]
+source(file.path(root,'analysis/validate_inputs.R'))
+source(file.path(root,'analysis/run_authorized.R'))
+checks<-list();test<-function(name,expr,fail=FALSE){result<-tryCatch({force(expr);TRUE},error=function(e)FALSE);checks[[name]]<<-data.frame(check=name,passed=identical(result,!fail))}
+x<-data.frame(PatientID=rep(1:2,3),SampleName=paste0('synthetic',1:6),day_num=rep(c(1,3,5),each=2),sTatus=rep(c(0,1),3),surv_time=rep(c(60,10),3),age=60,SOFA=9,lac=2)
+test('valid_synthetic_annotation',validate_annotation(x,2))
+bad<-x;bad$SampleName[2]<-bad$SampleName[1];test('duplicate_sample_fails',validate_annotation(bad,2),TRUE)
+bad<-x;bad$surv_time[3]<-11;test('inconsistent_followup_fails',validate_annotation(bad,2),TRUE)
+bad<-x;bad$lac[1]<-NA;test('missing_covariate_fails',validate_annotation(bad,2),TRUE)
+q<-data.frame(uniprot_id=c('synthetic1','synthetic2'),gene_symbol=c('A','B'),clinical_missing_rate=c(.1,.3),median_within_batch_linear_CV_pct=c(19.9,20),pass_CV20=c(1,0),pass_missing30=c(1,0),pass_both=c(1,0))
+test('strict_QC_boundaries',validate_qc(q));q$pass_both[2]<-1;test('incorrect_QC_flag_fails',validate_qc(q),TRUE)
+test('unspecified_output_fails',fresh_output_path('',root),TRUE)
+test('repository_output_fails',fresh_output_path(file.path(root,'new-output'),root),TRUE)
+test('existing_output_fails',fresh_output_path(tempdir(),root),TRUE)
+test('historical_inputs_eight_declared',stopifnot(length(historical_inputs('synthetic'))==8))
+report<-do.call(rbind,checks);write.table(report,args[2],sep='\t',row.names=FALSE,quote=FALSE)
+stopifnot(all(report$passed));cat('Synthetic interface tests only; no model execution.\n')

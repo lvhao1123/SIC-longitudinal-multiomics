@@ -1,0 +1,2 @@
+pathway	detected_members	ranked_features	observed_ES	permutations	seed	empirical_two_sided_P	null_mean	null_sd	null_q025	null_q975	analysis_class	primary_inference
+HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION	102	3875	0.451979369786838	10000	20260902	9.99900009999e-05	0.232693048177633	0.0411469082460904	0.152855251843197	0.314122825338627	reviewer-requested finite-permutation diagnostic	Frozen fgseaMultilevel result

@@ -1,0 +1,26 @@
+{
+  "workbook": "Supplementary_Table_S5_Protein_wise_Cox_PH.xlsx",
+  "blocks": [
+    {
+      "sheet": "Protein_Cox_PH",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S5_Protein_wise_Cox_PH/Protein_Cox_PH.csv",
+      "rows": 23251,
+      "cols": 19,
+      "source_sha256": "17f91e53d614992686990b5ac36b93847ab3a7b7f02ab6063821c9a0901b83b3",
+      "cell_types": "contracts/Supplementary_Table_S5_Protein_wise_Cox_PH_Protein_Cox_PH_types.json"
+    },
+    {
+      "sheet": "Model_diagnostics",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S5_Protein_wise_Cox_PH/Model_diagnostics.csv",
+      "rows": 7,
+      "cols": 10,
+      "source_sha256": "190ab546df770c535ae37c36578657247913f8e4d144646dcf7deaa5a7cd180e",
+      "cell_types": "contracts/Supplementary_Table_S5_Protein_wise_Cox_PH_Model_diagnostics_types.json"
+    }
+  ],
+  "scope": "Only declared blocks are assembled from aggregate source files; unresolved regions remain explicitly marked in STATUS.tsv."
+}
