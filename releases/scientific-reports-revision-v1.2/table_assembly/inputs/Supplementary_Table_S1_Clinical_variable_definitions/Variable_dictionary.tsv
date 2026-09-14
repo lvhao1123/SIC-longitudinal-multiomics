@@ -1,0 +1,37 @@
+Variable	Label	Type	Unit	Coding
+age	Age	continuous	years	Cox HR per 10 years
+height	Height	continuous	cm	Cox HR per 10 cm
+weight	Weight	continuous	kg	Cox HR per 10 kg
+BMI	Body mass index	continuous	kg/m^2	Cox HR per 5 kg/m^2
+hrmax	Maximum heart rate	continuous	beats/min	Cox HR per 10 beats/min
+mapmax	Maximum mean arterial pressure	continuous	mmHg	Cox HR per 10 mmHg
+sapmax	Maximum systolic arterial pressure	continuous	mmHg	Cox HR per 10 mmHg
+rrmax	Maximum respiratory rate	continuous	breaths/min	Cox HR per 5 breaths/min
+tmax	Maximum temperature	continuous	degrees C	Cox HR per 1 degrees C
+lac	Lactate	continuous	mmol/L	Cox HR per 1 mmol/L
+k	Potassium	continuous	mmol/L	Cox HR per 1 mmol/L
+na	Sodium	continuous	mmol/L	Cox HR per 5 mmol/L
+cl	Chloride	continuous	mmol/L	Cox HR per 5 mmol/L
+bun	Blood urea nitrogen	continuous	mg/dL	Cox HR per 5 mg/dL
+alb	Albumin	continuous	g/L	Cox HR per 5 g/L
+cr	Creatinine	continuous	micromol/L	Cox HR per 50 micromol/L
+bilirubin	Bilirubin	continuous	micromol/L	Cox HR per 10 micromol/L
+crp	C-reactive protein	continuous	mg/L	Cox HR per 10 mg/L
+wbc	White blood cell count	continuous	10^9/L	Cox HR per 1 10^9/L
+plt	Platelet count	continuous	10^9/L	Cox HR per 50 10^9/L
+inr	International normalized ratio	continuous	ratio	Cox HR per 0.5 ratio
+aptt	Activated partial thromboplastin time	continuous	seconds	Cox HR per 5 seconds
+ddimer	D-dimer	continuous	mg/L	Cox HR per 1 mg/L
+SOFA	SOFA score	continuous	points	Cox HR per 1 points
+pf	PaO2/FiO2 ratio	continuous	mmHg	Cox HR per 50 mmHg
+sex	Male sex	binary	0/1	1 vs 0
+diabete	Diabetes mellitus	binary	0/1	1 vs 0
+hyperten	Hypertension	binary	0/1	1 vs 0
+myoinfarc	Myocardial infarction	binary	0/1	1 vs 0
+cardiofailure	Heart failure	binary	0/1	1 vs 0
+cerebrovasc	Cerebrovascular disease	binary	0/1	1 vs 0
+dementia	Dementia	binary	0/1	1 vs 0
+copd	Chronic obstructive pulmonary disease	binary	0/1	1 vs 0
+paralysis	Paralysis	binary	0/1	1 vs 0
+renafailure	Renal failure	binary	0/1	1 vs 0
+infectionSite_SD	Infection source	categorical	category	Reference: Lung/Chest

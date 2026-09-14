@@ -1,0 +1,7 @@
+﻿omic	time	features	fits_successful	nominal_PH_fail_n	nominal_PH_fail_pct	PH_FDR_lt_0.05_n	PH_pass_nominal_definition
+Whole-blood RNA-seq	D1	14541	14541	519	3.569218073034867	0	PH_p >= 0.05
+Whole-blood RNA-seq	D3	14541	14541	306	2.1043944708066844	0	PH_p >= 0.05
+Whole-blood RNA-seq	D5	14541	14541	2161	14.86142631180799	0	PH_p >= 0.05
+Plasma proteomics	D1	3875	3875	481	12.412903225806451	0	PH_p >= 0.05
+Plasma proteomics	D3	3875	3875	143	3.6903225806451614	0	PH_p >= 0.05
+Plasma proteomics	D5	3875	3875	287	7.406451612903226	2	PH_p >= 0.05

@@ -1,0 +1,27 @@
+Time	entry_day	eligible_patients	measured_patients	empirical_centres	zero_observation_centres	partial_observation_centres	all_observation_centres	minimum_positive_fraction	median_fraction	maximum_fraction	record_type	variable	level	SMD	risk_eligible_N	measured_N	unmeasured_N	max_absolute_SMD	analysis_class
+D3	2	498	147	30	26	3	1	0.209302325581395	0	1	centre_support								
+D5	4	491	114	30	26	3	1	0.13953488372093	0	1	centre_support								
+D3	2										baseline_SMD	age		0.245928382988637	498	147	351	2.30488611432322	reviewer-requested descriptive proteomic-selection audit
+D3	2										baseline_SMD	baseline_SOFA		-0.198806562817453	498	147	351	2.30488611432322	reviewer-requested descriptive proteomic-selection audit
+D3	2										baseline_SMD	baseline_lactate		-0.0932395696238645	498	147	351	2.30488611432322	reviewer-requested descriptive proteomic-selection audit
+D3	2										baseline_SMD	sex_male		0.194608432145552	498	147	351	2.30488611432322	reviewer-requested descriptive proteomic-selection audit
+D3	2										baseline_SMD	subsequent_60_day_death		-0.13738070606654	498	147	351	2.30488611432322	reviewer-requested descriptive proteomic-selection audit
+D3	2										baseline_SMD	empirical_centre_support		2.30488611432322	498	147	351	2.30488611432322	reviewer-requested descriptive proteomic-selection audit
+D3	2										baseline_SMD	infection_source	Abdomen	-0.163086114038526	498	147	351	2.30488611432322	reviewer-requested descriptive proteomic-selection audit
+D3	2										baseline_SMD	infection_source	Biliary/Liver	-0.0342695913467469	498	147	351	2.30488611432322	reviewer-requested descriptive proteomic-selection audit
+D3	2										baseline_SMD	infection_source	Lung/Chest	0.097331906849923	498	147	351	2.30488611432322	reviewer-requested descriptive proteomic-selection audit
+D3	2										baseline_SMD	infection_source	Others/Unknown	0.188919538278561	498	147	351	2.30488611432322	reviewer-requested descriptive proteomic-selection audit
+D3	2										baseline_SMD	infection_source	SoftTissue	-0.0168958455688926	498	147	351	2.30488611432322	reviewer-requested descriptive proteomic-selection audit
+D3	2										baseline_SMD	infection_source	Urinary	-0.0613728011942243	498	147	351	2.30488611432322	reviewer-requested descriptive proteomic-selection audit
+D5	4										baseline_SMD	age		0.232370646507551	491	114	377	2.02006068257622	reviewer-requested descriptive proteomic-selection audit
+D5	4										baseline_SMD	baseline_SOFA		-0.187200121394931	491	114	377	2.02006068257622	reviewer-requested descriptive proteomic-selection audit
+D5	4										baseline_SMD	baseline_lactate		-0.0229657654117598	491	114	377	2.02006068257622	reviewer-requested descriptive proteomic-selection audit
+D5	4										baseline_SMD	sex_male		0.339146145879734	491	114	377	2.02006068257622	reviewer-requested descriptive proteomic-selection audit
+D5	4										baseline_SMD	subsequent_60_day_death		-0.0826262073185349	491	114	377	2.02006068257622	reviewer-requested descriptive proteomic-selection audit
+D5	4										baseline_SMD	empirical_centre_support		2.02006068257622	491	114	377	2.02006068257622	reviewer-requested descriptive proteomic-selection audit
+D5	4										baseline_SMD	infection_source	Abdomen	-0.11159469014625	491	114	377	2.02006068257622	reviewer-requested descriptive proteomic-selection audit
+D5	4										baseline_SMD	infection_source	Biliary/Liver	-0.17436732188302	491	114	377	2.02006068257622	reviewer-requested descriptive proteomic-selection audit
+D5	4										baseline_SMD	infection_source	Lung/Chest	0.130574528999406	491	114	377	2.02006068257622	reviewer-requested descriptive proteomic-selection audit
+D5	4										baseline_SMD	infection_source	Others/Unknown	0.188473044190158	491	114	377	2.02006068257622	reviewer-requested descriptive proteomic-selection audit
+D5	4										baseline_SMD	infection_source	SoftTissue	-0.04281207795019	491	114	377	2.02006068257622	reviewer-requested descriptive proteomic-selection audit
+D5	4										baseline_SMD	infection_source	Urinary	-0.0266181538871591	491	114	377	2.02006068257622	reviewer-requested descriptive proteomic-selection audit

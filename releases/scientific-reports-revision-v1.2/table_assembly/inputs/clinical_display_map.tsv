@@ -1,0 +1,42 @@
+﻿variable	level	display_label
+age		Age
+height		Height
+weight		Weight
+BMI		BMI
+hrmax		HRmax
+mapmax		MAPmax
+sapmax		SBPmax
+rrmax		RRmax
+tmax		Tmax
+lac		Lactate
+k		K
+na		Na
+cl		Cl
+bun		BUN
+alb		Albumin
+cr		Creatinine
+bilirubin		Bilirubin
+crp		CRP
+wbc		WBC
+plt		Platelet
+inr		INR
+aptt		APTT
+ddimer		D-dimer
+SOFA		SOFA score
+pf		PF
+sex	1 vs 0	Male sex
+diabete	1 vs 0	Diabetes mellitus
+hyperten	1 vs 0	Hypertension
+myoinfarc	1 vs 0	Myocardial infarction
+cardiofailure	1 vs 0	Heart failure
+cerebrovasc	1 vs 0	Cerebrovascular disease
+dementia	1 vs 0	Dementia
+copd	1 vs 0	COPD
+paralysis	1 vs 0	Paralysis
+renafailure	1 vs 0	Renal failure
+infectionSite_SD	Abdomen	  Abdomen
+infectionSite_SD	Biliary/Liver	  Biliary/Liver
+infectionSite_SD	Lung/Chest	  Lung/Chest
+infectionSite_SD	Others/Unknown	  Others/Unknown
+infectionSite_SD	SoftTissue	  SoftTissue
+infectionSite_SD	Urinary	  Urinary

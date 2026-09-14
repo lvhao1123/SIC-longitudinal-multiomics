@@ -1,0 +1,11 @@
+﻿metric	value
+risk_valid_N	114
+subsequent_deaths	14
+proteins_fitted	3875
+fits_successful	3875
+nominal_PH_fail	287
+PH_FDR_lt_0.05	2
+EMT_NES	1.9378599732838
+EMT_BH_FDR	5.67225701777406e-06
+EMT_log2err	0.218740739393273
+leading_edge_proteins	39

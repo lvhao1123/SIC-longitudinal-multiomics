@@ -1,0 +1,10 @@
+site_raw,site_final,N
+Abdomen,Abdomen,70
+Intestine,Abdomen,20
+Biliary/Liver,Biliary/Liver,66
+Lung/Chest,Lung/Chest,194
+BloodStream,Others/Unknown,14
+Brain,Others/Unknown,4
+Others/Unknown,Others/Unknown,18
+SoftTissue,SoftTissue,25
+Urinary,Urinary,93

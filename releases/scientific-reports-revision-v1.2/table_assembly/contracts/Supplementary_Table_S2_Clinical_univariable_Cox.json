@@ -1,0 +1,26 @@
+{
+  "workbook": "Supplementary_Table_S2_Clinical_univariable_Cox.xlsx",
+  "blocks": [
+    {
+      "sheet": "Univariable_Cox",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S2_Clinical_univariable_Cox/Univariable_Cox.tsv",
+      "rows": 41,
+      "cols": 19,
+      "source_sha256": "24ad052914a865eabe2e65908135969095a2b1349958fc98cbbb0761a4e39048",
+      "cell_types": "contracts/Supplementary_Table_S2_Clinical_univariable_Cox_Univariable_Cox_types.json"
+    },
+    {
+      "sheet": "Diagnostics",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S2_Clinical_univariable_Cox/Diagnostics.tsv",
+      "rows": 13,
+      "cols": 2,
+      "source_sha256": "9835239b03d8aaa8e6524a130ba1f174ccfef57393766a941eed7a8308527aac",
+      "cell_types": "contracts/Supplementary_Table_S2_Clinical_univariable_Cox_Diagnostics_types.json"
+    }
+  ],
+  "scope": "Declared aggregate inputs populate cleared numeric blocks; labels and methods are presentation metadata."
+}

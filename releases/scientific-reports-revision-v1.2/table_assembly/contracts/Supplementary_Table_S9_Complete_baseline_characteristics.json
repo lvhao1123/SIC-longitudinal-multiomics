@@ -1,0 +1,16 @@
+{
+  "workbook": "Supplementary_Table_S9_Complete_baseline_characteristics.xlsx",
+  "blocks": [
+    {
+      "sheet": "S9_baseline",
+      "start_row": 5,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S9_Complete_baseline_characteristics/S9_baseline.tsv",
+      "rows": 42,
+      "cols": 6,
+      "source_sha256": "60f5b971b8afbd845c049ca4ed801141e39d16b5ff7439ad3c9971e47ad81c2b",
+      "cell_types": "contracts/Supplementary_Table_S9_Complete_baseline_characteristics_S9_baseline_types.json"
+    }
+  ],
+  "scope": "Declared aggregate inputs populate cleared numeric blocks; labels and methods are presentation metadata."
+}

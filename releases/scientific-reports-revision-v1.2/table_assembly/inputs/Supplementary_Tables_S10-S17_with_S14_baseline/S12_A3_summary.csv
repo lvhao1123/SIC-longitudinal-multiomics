@@ -1,0 +1,7 @@
+metric,value
+cohort_N,504
+protein_D1_measured_N,168
+protein_D1_unmeasured_N,336
+events_measured,27
+events_unmeasured,57
+max_absolute_SMD,0.251298955568854

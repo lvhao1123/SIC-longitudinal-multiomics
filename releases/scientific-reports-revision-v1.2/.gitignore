@@ -1,0 +1,8 @@
+private/
+private_outputs/
+controlled_data/
+*.RData
+*.Rhistory
+*.rds
+.Renviron
+~$*

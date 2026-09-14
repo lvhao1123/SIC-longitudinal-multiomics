@@ -1,0 +1,12 @@
+statement	value	interpretation
+surv_time provenance	Hospital_days for deaths; administrative 60-day censoring for non-deaths	Nominal Day-1 study-time origin; exact sample timestamps are unavailable
+deaths	84	Audit value
+censored	420	Audit value
+event_over_60	0	Audit value
+event_at_or_before_zero	0	Audit value
+censored_not_60	0	Audit value
+minimum_event_time	0.0111111111111111	Audit value
+maximum_event_time	46	Audit value
+structural_at_entry_lower	11	Excluded from the corresponding delayed-entry risk set
+structural_at_entry_primary	13	Excluded from the corresponding delayed-entry risk set
+structural_at_entry_upper	13	Excluded from the corresponding delayed-entry risk set

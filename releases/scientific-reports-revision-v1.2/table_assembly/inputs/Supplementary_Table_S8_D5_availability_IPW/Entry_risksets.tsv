@@ -1,0 +1,4 @@
+entry_name	entry	source_N	structural_N	risk_N	support_N	observed_N	unobserved_N	observed_events
+lower	3.75	504	11	493	489	321	168	54
+primary	4	504	13	491	487	320	167	53
+upper	4.25	504	13	491	487	320	167	53

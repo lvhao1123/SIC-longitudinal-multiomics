@@ -1,0 +1,13 @@
+﻿Metric	Value
+Patients	504
+Deaths	84
+Survivors/censored	420
+Continuous contrasts	25
+Binary contrasts	10
+Infection-source contrasts	5
+Clinical association BH family	40
+Nominal Cox P<0.05	14
+Cox BH-FDR<0.05	10
+Nominal PH P<0.05	2
+Missing PH tests	0
+Sparse-event rows	0

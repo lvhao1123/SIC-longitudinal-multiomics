@@ -1,0 +1,5 @@
+spec	N	observed	unobserved	parameters	rank	rank_deficient	separation
+SOFA_D3	427	260	167	26	26	FALSE	FALSE
+SOFA_noD3	427	260	167	25	25	FALSE	FALSE
+PF_PLT_D3	427	260	167	27	27	FALSE	FALSE
+PF_PLT_noD3	427	260	167	26	26	FALSE	FALSE
