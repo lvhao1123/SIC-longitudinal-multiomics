@@ -1,0 +1,11 @@
+metric,value
+N,504
+Events,84
+genes_attempted,14541
+genes_fit_ok,14541
+nominal_PH_fail,498
+primary_vs_adjusted_NES_Spearman,0.876428571428571
+direction_agreement,0.897959183673469
+significant_set_Jaccard,0.612903225806452
+primary_FDR05_pathways,30
+adjusted_FDR05_pathways,20

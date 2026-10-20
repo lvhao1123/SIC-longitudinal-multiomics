@@ -1,0 +1,36 @@
+{
+  "workbook": "Supplementary_Table_S4_RNA_Hallmark_GSEA.xlsx",
+  "blocks": [
+    {
+      "sheet": "Hallmark_GSEA",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S4_RNA_Hallmark_GSEA/Hallmark_GSEA.csv",
+      "rows": 295,
+      "cols": 12,
+      "source_sha256": "5f002191b4790f323cb3cffe1a5f0f67e160e7dd9c96b02fabcd2ea19fa73e5f",
+      "cell_types": "contracts/Supplementary_Table_S4_RNA_Hallmark_GSEA_Hallmark_GSEA_types.json"
+    },
+    {
+      "sheet": "Leading_edges",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S4_RNA_Hallmark_GSEA/Leading_edges.csv",
+      "rows": 12592,
+      "cols": 6,
+      "source_sha256": "adc72fd451cd08687eddeb49a1c9a0f86c6c78bee39c583db2e29292a5f854bc",
+      "cell_types": "contracts/Supplementary_Table_S4_RNA_Hallmark_GSEA_Leading_edges_types.json"
+    },
+    {
+      "sheet": "GSEA_diagnostics",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S4_RNA_Hallmark_GSEA/GSEA_diagnostics.csv",
+      "rows": 7,
+      "cols": 4,
+      "source_sha256": "024c4eab9981329ca5d9e704138603a6d581428f959cfdf942fc962b0b4a3293",
+      "cell_types": "contracts/Supplementary_Table_S4_RNA_Hallmark_GSEA_GSEA_diagnostics_types.json"
+    }
+  ],
+  "scope": "Only declared blocks are assembled from aggregate source files; unresolved regions remain explicitly marked in STATUS.tsv."
+}

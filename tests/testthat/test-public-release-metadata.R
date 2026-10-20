@@ -40,8 +40,8 @@ testthat::test_that("citation metadata identifies the dated Scientific Reports r
   testthat::expect_match(citation, "family-names: Lyu", fixed = TRUE)
   testthat::expect_match(citation, "given-names: Hao", fixed = TRUE)
   testthat::expect_match(citation, paste0("repository-code: ", final_url), fixed = TRUE)
-  testthat::expect_match(citation, "(?m)^version:\\s*1\\.1\\.0\\s*$", perl = TRUE)
-  testthat::expect_match(citation, "(?m)^date-released:\\s*2026-07-26\\s*$", perl = TRUE)
+  testthat::expect_match(citation, "(?m)^version:\\s*1\\.3\\.0\\s*$", perl = TRUE)
+  testthat::expect_match(citation, "(?m)^date-released:\\s*2026-10-20\\s*$", perl = TRUE)
 })
 
 testthat::test_that("README identifies current and previous immutable releases", {
@@ -52,6 +52,7 @@ testthat::test_that("README identifies current and previous immutable releases",
   )
 
   testthat::expect_match(readme, "controlled-access data", fixed = TRUE)
+  testthat::expect_match(readme, "releases/scientific-reports-revision-v1.3/", fixed = TRUE)
   testthat::expect_match(readme, "does not replace the OMIX application process", fixed = TRUE)
   testthat::expect_match(readme, "scientific-reports-submission-v1.1", fixed = TRUE)
   testthat::expect_match(readme, current_url, fixed = TRUE)

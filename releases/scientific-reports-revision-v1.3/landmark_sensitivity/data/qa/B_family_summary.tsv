@@ -1,0 +1,7 @@
+Omics	Time	Entry	N	Events	Total_pathways	Nfamily	Insufficient_coverage	Estimated	Failed_eligible	FDR_below_0_05	BH_denominator
+"RNA"	"D1"	0	504	84	50	50	0	50	0	2	50
+"RNA"	"D3"	2	420	67	50	50	0	50	0	3	50
+"RNA"	"D5"	4	320	53	50	50	0	50	0	6	50
+"Protein"	"D1"	0	168	27	50	48	2	48	0	8	48
+"Protein"	"D3"	2	147	18	50	48	2	48	0	0	48
+"Protein"	"D5"	4	114	14	50	48	2	48	0	0	48

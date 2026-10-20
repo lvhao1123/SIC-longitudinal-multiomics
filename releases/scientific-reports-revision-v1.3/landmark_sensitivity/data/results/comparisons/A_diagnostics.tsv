@@ -1,0 +1,7 @@
+Omics	Time	N	Events	features	fits_ok	warnings	PH_nominal_below_05	GSEA_eligible	GSEA_estimable	GSEA_precision_retries
+RNA	D1	317	53	14541	14541	0	2570	49	49	0
+RNA	D3	317	53	14541	14541	0	1368	49	49	0
+RNA	D5	317	53	14541	14541	0	2201	49	49	0
+Protein	D1	114	14	3875	3875	0	52	44	44	0
+Protein	D3	114	14	3875	3875	0	116	44	44	0
+Protein	D5	114	14	3875	3875	0	287	44	44	0

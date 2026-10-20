@@ -1,0 +1,4 @@
+Time,N,Events,genes_attempted,fits_ok,gene_FDR05,nominal_PH_fail,PH_FDR05
+D1,504,84,14541,14541,17,519,0
+D3,420,67,14541,14541,796,306,0
+D5,320,53,14541,14541,2024,2161,0

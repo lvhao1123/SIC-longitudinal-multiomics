@@ -1,0 +1,16 @@
+{
+  "protein": "<authorised-local-path-for-protein>",
+  "qc": "<authorised-local-path-for-qc>",
+  "clinical": "<authorised-local-path-for-clinical>",
+  "hallmark": "<authorised-local-path-for-hallmark>",
+  "reference_objects": "<authorised-local-path-for-reference_objects>",
+  "reference_cox": "<authorised-local-path-for-reference_cox>",
+  "reference_gsea": "<authorised-local-path-for-reference_gsea>",
+  "reference_session": "<authorised-local-path-for-reference_session>",
+  "reference_code": "<authorised-local-path-for-reference_code>",
+  "reference_gsea_code": "<authorised-local-path-for-reference_gsea_code>",
+  "figure3": "<authorised-local-path-for-figure3>",
+  "s5": "<authorised-local-path-for-s5>",
+  "s6": "<authorised-local-path-for-s6>",
+  "manuscript": "<authorised-local-path-for-manuscript>"
+}

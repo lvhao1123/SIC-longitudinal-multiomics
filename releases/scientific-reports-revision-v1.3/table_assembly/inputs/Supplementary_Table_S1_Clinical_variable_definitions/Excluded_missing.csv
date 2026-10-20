@@ -1,0 +1,3 @@
+Variable,Label,Missing_N,Missing_percent,Formal_Cox_included,Reason
+pha,Arterial pH,2,0.396825396825397,FALSE,Prespecified exclusion because of missing baseline observations
+ca,Calcium,8,1.58730158730159,FALSE,Prespecified exclusion because of missing baseline observations

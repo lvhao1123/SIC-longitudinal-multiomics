@@ -1,0 +1,46 @@
+{
+  "workbook": "Supplementary_Table_S7_Cross_omics_models.xlsx",
+  "blocks": [
+    {
+      "sheet": "Same_time",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S7_Cross_omics_models/Same_time.csv",
+      "rows": 46,
+      "cols": 6,
+      "source_sha256": "fcd963eb3550e75d8f72bf7bfe8b195d38e01b35dac89dff0cbb2d59eeb35499",
+      "cell_types": "contracts/Supplementary_Table_S7_Cross_omics_models_Same_time_types.json"
+    },
+    {
+      "sheet": "Forward_models",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S7_Cross_omics_models/Forward_models.csv",
+      "rows": 31,
+      "cols": 9,
+      "source_sha256": "42ff377da3b1eedaae81e899bb0f8af64c5e36986c05164c2245e92ab7b3d4a1",
+      "cell_types": "contracts/Supplementary_Table_S7_Cross_omics_models_Forward_models_types.json"
+    },
+    {
+      "sheet": "Reverse_models",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S7_Cross_omics_models/Reverse_models.csv",
+      "rows": 31,
+      "cols": 9,
+      "source_sha256": "098eb8092dbcc3685983c28dc46176d49f6ebe554628a04b99f487e565b84ff5",
+      "cell_types": "contracts/Supplementary_Table_S7_Cross_omics_models_Reverse_models_types.json"
+    },
+    {
+      "sheet": "Feature_coverage",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S7_Cross_omics_models/Feature_coverage.csv",
+      "rows": 31,
+      "cols": 5,
+      "source_sha256": "9e88e55305baf912bef29d01e1dc7975a25631ff9147cd1dbed70a6e39a3cd00",
+      "cell_types": "contracts/Supplementary_Table_S7_Cross_omics_models_Feature_coverage_types.json"
+    }
+  ],
+  "scope": "Only declared blocks are assembled from aggregate source files; unresolved regions remain explicitly marked in STATUS.tsv."
+}
