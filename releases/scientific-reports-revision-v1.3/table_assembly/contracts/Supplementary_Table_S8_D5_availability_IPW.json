@@ -1,0 +1,156 @@
+{
+  "workbook": "Supplementary_Table_S8_D5_availability_IPW.xlsx",
+  "blocks": [
+    {
+      "sheet": "Entry_risksets",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S8_D5_availability_IPW/Entry_risksets.tsv",
+      "rows": 4,
+      "cols": 9,
+      "source_sha256": "f0f478cbcebba0e22ca69eeb1dc2baed3661a47369487a1b6f6d6a697b14ae37",
+      "cell_types": "contracts/Supplementary_Table_S8_D5_availability_IPW_Entry_risksets_types.json"
+    },
+    {
+      "sheet": "Centre_positivity",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S8_D5_availability_IPW/Centre_positivity.tsv",
+      "rows": 91,
+      "cols": 7,
+      "source_sha256": "da5cf61fd7c92dd6f0c71d032708be7a463f365b96e5735fbe09ad9227343fde",
+      "cell_types": "contracts/Supplementary_Table_S8_D5_availability_IPW_Centre_positivity_types.json"
+    },
+    {
+      "sheet": "Time_origin_audit",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S8_D5_availability_IPW/Time_origin_audit.tsv",
+      "rows": 12,
+      "cols": 3,
+      "source_sha256": "b08571ad6ec1581cddbcd1de8243a709154c10eb2827aa031cf362cf944b7bc6",
+      "cell_types": "contracts/Supplementary_Table_S8_D5_availability_IPW_Time_origin_audit_types.json"
+    },
+    {
+      "sheet": "Covariate_missingness",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S8_D5_availability_IPW/Covariate_missingness.tsv",
+      "rows": 43,
+      "cols": 4,
+      "source_sha256": "f619f2d77a1498f47105f9887ef44d569d5dde44069cd9d4ac027d94e3bf9016",
+      "cell_types": "contracts/Supplementary_Table_S8_D5_availability_IPW_Covariate_missingness_types.json"
+    },
+    {
+      "sheet": "Protein_availability",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S8_D5_availability_IPW/Protein_availability.tsv",
+      "rows": 2,
+      "cols": 8,
+      "source_sha256": "cfbbdc2e908088df50f04bd9423883f0afb4f621392de3b808d390b5345cc6cc",
+      "cell_types": "contracts/Supplementary_Table_S8_D5_availability_IPW_Protein_availability_types.json"
+    },
+    {
+      "sheet": "Prefit_diagnostics",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S8_D5_availability_IPW/Prefit_diagnostics.tsv",
+      "rows": 5,
+      "cols": 8,
+      "source_sha256": "7a68d2daece7dfaa6d1fc6469a2157aa3e6f8c8ad976d36d09040b0f200593ea",
+      "cell_types": "contracts/Supplementary_Table_S8_D5_availability_IPW_Prefit_diagnostics_types.json"
+    },
+    {
+      "sheet": "Weight_diagnostics",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S8_D5_availability_IPW/Weight_diagnostics.tsv",
+      "rows": 7,
+      "cols": 21,
+      "source_sha256": "dce281c0c7f0470bd6e87d745611ccf804104238b85660c8d6b52480efa53399",
+      "cell_types": "contracts/Supplementary_Table_S8_D5_availability_IPW_Weight_diagnostics_types.json"
+    },
+    {
+      "sheet": "Balance_SMD",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S8_D5_availability_IPW/Balance_SMD.tsv",
+      "rows": 247,
+      "cols": 6,
+      "source_sha256": "aa02478f35b3b5cd8d78e027b06653d01935548b17334ff0c434cb6d4fe0595d",
+      "cell_types": "contracts/Supplementary_Table_S8_D5_availability_IPW_Balance_SMD_types.json"
+    },
+    {
+      "sheet": "Transform_constants",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S8_D5_availability_IPW/Transform_constants.tsv",
+      "rows": 43,
+      "cols": 6,
+      "source_sha256": "11edd1d07927341a6aa952a09d0ee1e79f08e43c0039922857b0dde56fa2934b",
+      "cell_types": "contracts/Supplementary_Table_S8_D5_availability_IPW_Transform_constants_types.json"
+    },
+    {
+      "sheet": "Cox_PH_audit",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S8_D5_availability_IPW/Cox_PH_audit.tsv",
+      "rows": 7,
+      "cols": 9,
+      "source_sha256": "8d4b07d4d5f67e1536c2e950c8ae5f09685763e2627b21e9fdc33115a9fdb660",
+      "cell_types": "contracts/Supplementary_Table_S8_D5_availability_IPW_Cox_PH_audit_types.json"
+    },
+    {
+      "sheet": "Hallmark_all_models",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S8_D5_availability_IPW/Hallmark_all_models.tsv",
+      "rows": 344,
+      "cols": 10,
+      "source_sha256": "3a8d64d814fe1ddca1e824341d3775d65c23e336cbb795059be2844e4256f3ce",
+      "cell_types": "contracts/Supplementary_Table_S8_D5_availability_IPW_Hallmark_all_models_types.json"
+    },
+    {
+      "sheet": "Hallmark_leading_edges",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S8_D5_availability_IPW/Hallmark_leading_edges.tsv",
+      "rows": 14757,
+      "cols": 3,
+      "source_sha256": "b9f9d5744ba33d24e53f21ec761ba704d3fe7df55a3985d67bbc58b381c8ae9e",
+      "cell_types": "contracts/Supplementary_Table_S8_D5_availability_IPW_Hallmark_leading_edges_types.json"
+    },
+    {
+      "sheet": "Hallmark_comparison",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S8_D5_availability_IPW/Hallmark_comparison.tsv",
+      "rows": 295,
+      "cols": 12,
+      "source_sha256": "4c0fc2f8af82ccc4e63e832bf468482398b84fbd81e4c2f5ec4e797ad1897009",
+      "cell_types": "contracts/Supplementary_Table_S8_D5_availability_IPW_Hallmark_comparison_types.json"
+    },
+    {
+      "sheet": "Scenario_metrics",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S8_D5_availability_IPW/Scenario_metrics.tsv",
+      "rows": 7,
+      "cols": 4,
+      "source_sha256": "2009610cae2728a579f53b01fcfc5ccf6f02d7a77c455eb0b73635cb57cc1de5",
+      "cell_types": "contracts/Supplementary_Table_S8_D5_availability_IPW_Scenario_metrics_types.json"
+    },
+    {
+      "sheet": "Analysis_consistency",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S8_D5_availability_IPW/Analysis_consistency.tsv",
+      "rows": 12,
+      "cols": 2,
+      "source_sha256": "0abe1c4e39a49e82cee77c548a9fb33bedc15a0f4c48501c40848c58a0776af5",
+      "cell_types": "contracts/Supplementary_Table_S8_D5_availability_IPW_Analysis_consistency_types.json"
+    }
+  ],
+  "scope": "Only declared blocks are assembled from aggregate source files; unresolved regions remain explicitly marked in STATUS.tsv."
+}

@@ -1,0 +1,5 @@
+{
+  "source_root": "controlled_inputs/processed",
+  "clinical": "controlled_inputs/clinical_landmarks.csv",
+  "hallmark": "reference/h.all.v2026.1.Hs.symbols.gmt"
+}

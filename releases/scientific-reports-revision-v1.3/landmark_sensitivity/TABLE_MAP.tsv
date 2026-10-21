@@ -1,0 +1,7 @@
+table	workbook	worksheet	source_tsv	analysis_code	summary_code
+S19	supplementary_tables/Supplementary_Table_S19_Common_patient_analysis.xlsx	Summary	data/results/comparisons/A_summary.tsv	R/run_A.R	scripts/summarise.py
+S19	supplementary_tables/Supplementary_Table_S19_Common_patient_analysis.xlsx	Hallmark comparison	data/results/comparisons/A_all_Hallmark_vs_original.tsv	R/run_A.R	scripts/summarise.py
+S19	supplementary_tables/Supplementary_Table_S19_Common_patient_analysis.xlsx	Cross landmark	data/results/comparisons/A_cross_time_correlations.tsv	R/run_A.R	scripts/summarise.py
+S19	supplementary_tables/Supplementary_Table_S19_Common_patient_analysis.xlsx	Diagnostics	data/results/comparisons/A_diagnostics.tsv	R/run_A.R	scripts/summarise.py
+S20	supplementary_tables/Supplementary_Table_S20_Pathway_score_survival.xlsx	Family summary	data/qa/B_family_summary.tsv	R/run_B.R	NA
+S20	supplementary_tables/Supplementary_Table_S20_Pathway_score_survival.xlsx	Pathway Cox	data/results/comparisons/B_all_pathways_with_original_GSEA.tsv	R/run_B.R	scripts/summarise.py

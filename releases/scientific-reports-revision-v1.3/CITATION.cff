@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite the associated publication and the specific software version used."
+title: "SIC longitudinal multi-omics analysis code and aggregate results"
+type: software
+authors:
+  - family-names: Lyu
+    given-names: Hao
+  - family-names: Li
+    given-names: Lingwei
+  - family-names: Guo
+    given-names: Jianxing
+  - family-names: Zhang
+    given-names: Dong
+repository-code: "https://github.com/lvhao1123/SIC-longitudinal-multiomics"

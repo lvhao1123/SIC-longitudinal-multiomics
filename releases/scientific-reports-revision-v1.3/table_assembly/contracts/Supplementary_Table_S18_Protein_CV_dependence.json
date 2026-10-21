@@ -1,0 +1,26 @@
+{
+  "workbook": "Supplementary_Table_S18_Protein_CV_dependence.xlsx",
+  "blocks": [
+    {
+      "sheet": "Hallmark_comparison",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S18_Protein_CV_dependence/Hallmark_comparison.tsv",
+      "rows": 151,
+      "cols": 36,
+      "source_sha256": "139dc0f85c223fe3b2812e2a8d6eaa38dc8349e4038a6409452d0fbb5a66733f",
+      "cell_types": "contracts/Supplementary_Table_S18_Protein_CV_dependence_Hallmark_comparison_types.json"
+    },
+    {
+      "sheet": "Selected_associations",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S18_Protein_CV_dependence/Selected_associations.tsv",
+      "rows": 15,
+      "cols": 8,
+      "source_sha256": "26c66c67b62c6b5e38ca4a1faec41918f9278c4cf32f0db201e22bdc06234297",
+      "cell_types": "contracts/Supplementary_Table_S18_Protein_CV_dependence_Selected_associations_types.json"
+    }
+  ],
+  "scope": "Only declared blocks are assembled from aggregate source files; unresolved regions remain explicitly marked in STATUS.tsv."
+}

@@ -1,0 +1,7 @@
+Omics	Time	features	original_N	original_events	A_N	A_events
+"RNA"	"D1"	14541	504	84	317	53
+"RNA"	"D3"	14541	420	67	317	53
+"RNA"	"D5"	14541	320	53	317	53
+"Protein"	"D1"	3875	168	27	114	14
+"Protein"	"D3"	3875	147	18	114	14
+"Protein"	"D5"	3875	114	14	114	14

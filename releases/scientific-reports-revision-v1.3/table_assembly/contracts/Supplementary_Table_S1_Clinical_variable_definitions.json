@@ -1,0 +1,46 @@
+{
+  "workbook": "Supplementary_Table_S1_Clinical_variable_definitions.xlsx",
+  "blocks": [
+    {
+      "sheet": "Variable_dictionary",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S1_Clinical_variable_definitions/Variable_dictionary.tsv",
+      "rows": 37,
+      "cols": 5,
+      "source_sha256": "b146ed2b54e3981accc02754e58b410c2afbb65c2bddb14305e470e2cf3cea5d",
+      "cell_types": "contracts/Supplementary_Table_S1_Clinical_variable_definitions_Variable_dictionary_types.json"
+    },
+    {
+      "sheet": "Infection_mapping",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S1_Clinical_variable_definitions/Infection_mapping.csv",
+      "rows": 10,
+      "cols": 3,
+      "source_sha256": "11f89b094885c04a9c21954c3c4e527718445243f1124a15263f3868caaa2a8e",
+      "cell_types": "contracts/Supplementary_Table_S1_Clinical_variable_definitions_Infection_mapping_types.json"
+    },
+    {
+      "sheet": "Excluded_missing",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S1_Clinical_variable_definitions/Excluded_missing.csv",
+      "rows": 3,
+      "cols": 6,
+      "source_sha256": "f9f13df8da4a1424df45e3b8cbf0c578e03c4295d5944a1544424be8eb0fe4f4",
+      "cell_types": "contracts/Supplementary_Table_S1_Clinical_variable_definitions_Excluded_missing_types.json"
+    },
+    {
+      "sheet": "Sparse_event_audit",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S1_Clinical_variable_definitions/Sparse_event_audit.csv",
+      "rows": 27,
+      "cols": 7,
+      "source_sha256": "509b2a6204960f47dd3365c99a3c985b71d8c4e5ab4cf346dae1e927708d8b10",
+      "cell_types": "contracts/Supplementary_Table_S1_Clinical_variable_definitions_Sparse_event_audit_types.json"
+    }
+  ],
+  "scope": "Only declared blocks are assembled from aggregate source files; unresolved regions remain explicitly marked in STATUS.tsv."
+}

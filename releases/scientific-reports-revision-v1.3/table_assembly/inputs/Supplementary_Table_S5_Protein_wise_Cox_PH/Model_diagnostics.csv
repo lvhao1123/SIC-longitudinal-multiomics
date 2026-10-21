@@ -1,0 +1,7 @@
+Time,model,N,Events,features,fits_ok,positive_z_fraction,feature_FDR05,nominal_PH_fail,PH_FDR05
+D1,center_primary,168,27,3875,3875,0.849806451612903,853,481,0
+D1,median_center_sensitivity,168,27,3875,3875,0.474064516129032,467,471,1
+D3,center_primary,147,18,3875,3875,0.366451612903226,29,143,0
+D3,median_center_sensitivity,147,18,3875,3875,0.436387096774194,142,141,0
+D5,center_primary,114,14,3875,3875,0.950967741935484,684,287,2
+D5,median_center_sensitivity,114,14,3875,3875,0.459870967741936,35,280,0

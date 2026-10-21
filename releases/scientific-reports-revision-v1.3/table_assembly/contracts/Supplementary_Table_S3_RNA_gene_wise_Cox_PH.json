@@ -1,0 +1,26 @@
+{
+  "workbook": "Supplementary_Table_S3_RNA_gene_wise_Cox_PH.xlsx",
+  "blocks": [
+    {
+      "sheet": "Gene_Cox_PH",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S3_RNA_gene_wise_Cox_PH/Gene_Cox_PH.csv",
+      "rows": 43624,
+      "cols": 18,
+      "source_sha256": "ebbc3d3be39f1475d6abe1d15ad53a07e6cae048eec809eba3d58c86f472359e",
+      "cell_types": "contracts/Supplementary_Table_S3_RNA_gene_wise_Cox_PH_Gene_Cox_PH_types.json"
+    },
+    {
+      "sheet": "Cox_diagnostics",
+      "start_row": 1,
+      "start_col": 1,
+      "source": "inputs/Supplementary_Table_S3_RNA_gene_wise_Cox_PH/Cox_diagnostics.csv",
+      "rows": 4,
+      "cols": 8,
+      "source_sha256": "1d4dc96ed3bb2761548bc95585eaedc29362f1b6e100bad6eec7edbdfd8a135a",
+      "cell_types": "contracts/Supplementary_Table_S3_RNA_gene_wise_Cox_PH_Cox_diagnostics_types.json"
+    }
+  ],
+  "scope": "Only declared blocks are assembled from aggregate source files; unresolved regions remain explicitly marked in STATUS.tsv."
+}

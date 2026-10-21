@@ -3,11 +3,18 @@
 ## Current revision release
 
 The Scientific Reports revision code and aggregate-data package is in
-[`releases/scientific-reports-revision-v1.2/`](releases/scientific-reports-revision-v1.2/).
+[`releases/scientific-reports-revision-v1.3/`](releases/scientific-reports-revision-v1.3/).
 Use that directory as the working directory for its documented analysis,
 table-assembly and plotting entries. Earlier submission versions remain
 available through their original tags; the older root-level entries describe
 those historical versions.
+
+Version 1.3 includes the common-patient and pathway-score sensitivity analyses
+and 13 supplementary workbooks covering Tables S1–S20. Download
+`SIC_code_and_aggregate_results.zip` from the v1.3 Release for the standalone
+code and aggregate-data package. This explicit asset is distinct from GitHub's
+automatically generated source-code snapshots. Manuscripts, response letters,
+cover letters and STROBE checklists are not part of the v1.3 package.
 
 The revision package supports figure reconstruction from public aggregate
 source data and includes analysis code for authorised controlled-data users.
